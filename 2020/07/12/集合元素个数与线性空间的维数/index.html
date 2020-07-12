@@ -16,12 +16,13 @@
 
   <!-- 页面元数据 -->
   
-    <title>测试文档 - Jun&#39;s Blog</title>
+    <title>集合元素个数与线性空间的维数 - Jun&#39;s Blog</title>
   
-    <meta name="keywords" content="测试,试验">
+    <meta name="keywords" content="数学,代数,抽象代数">
   
   
-    <meta name="description" content="此文档用于测试网站兼容性，路人请忽略此文档。">
+    <meta name="description" content="证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常见的手法.
+下面给出几个例子.">
   
 
   <!-- feed -->
@@ -317,8 +318,8 @@
         
           
   <h1 class="title">
-    <a href="/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/">
-      测试文档
+    <a href="/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/">
+      集合元素个数与线性空间的维数
     </a>
   </h1>
 
@@ -343,9 +344,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/' rel="nofollow">
+    <a href='/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>使用说明及测试</p>
+      <p>数学/代数</p>
     </a>
   </div>
 
@@ -356,7 +357,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年7月4日 11:46</p>
+    <p>发布于：2020年7月12日 15:22</p>
   </a>
 </div>
 
@@ -380,30 +381,97 @@
         <div class="article-entry" itemprop="articleBody">
           
           
-          <p>此文档用于测试网站兼容性，路人请忽略此文档。</p>
+          <p>证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常见的手法.</p>
+<p>下面给出几个例子.</p>
 <a id="more"></a>
-<h2 id="数学测试">数学测试</h2>
-<p>这是一个测试文档，我们将在这里进行网站内容发布的一些测试。</p>
-<p>首先是数学公式测试</p>
-<p>行内公式 <span class="math inline">\(\int_0^1 \sin x dx = -\cos x|_0^1\)</span> 测试。</p>
-<p>行间公式测试 <span class="math display">\[
-e^{i\pi}=-1
+<blockquote>
+<p><strong>问题 1</strong> 设<span class="math inline">\(V\)</span>为 n 维实线性空间, <span class="math inline">\(M\subseteq\mathrm{End}V\)</span>, 满足</p>
+<ol type="1">
+<li><p><span class="math inline">\(\mathrm{id}\in M,0\notin M\)</span>;</p></li>
+<li><p>若<span class="math inline">\(\mathscr{A},\mathscr{B}\in M\)</span>, 则<span class="math inline">\(\mathscr{AB}\in M\)</span>或<span class="math inline">\(\mathscr{BA}\in M\)</span>;</p></li>
+<li><p>若<span class="math inline">\(\mathscr{A},\mathscr{B}\in M\)</span>, 则<span class="math inline">\(\mathscr{AB}=\mathscr{BA}\)</span>或<span class="math inline">\(\mathscr{AB}=-\mathscr{BA}\)</span>;</p></li>
+<li><p>若<span class="math inline">\(\mathscr{A}\in M\)</span>且<span class="math inline">\(\mathscr{A}\neq\pm\mathrm{id}\)</span>, 则存在<span class="math inline">\(\mathscr{B}\in M\)</span>, s.t. <span class="math inline">\(\mathscr{AB=-BA}\)</span></p></li>
+</ol>
+<p>证明: <span class="math inline">\(M\)</span>中的元素个数不超过<span class="math inline">\(2n^{2}\)</span>.</p>
+</blockquote>
+<p>证明: (提示: 证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 此处<span class="math inline">\(n^{2}\)</span>暗示维数, <span class="math inline">\(\mathscr{A},-\mathscr{A}\)</span>可以同时出现, 所以有个 2 倍.)</p>
+<p>首先证明<span class="math inline">\(\forall\mathscr{A}\in M\)</span>, 都有<span class="math inline">\(\mathscr{A}^{2}=\pm\mathrm{id}\)</span>.</p>
+<p>任取<span class="math inline">\(\mathscr{A}\in M\)</span> , 由(2)得<span class="math inline">\(\mathscr{A}^{2}\in M\)</span>. 如果<span class="math inline">\(\mathscr{A}^{2}\neq\pm\mathrm{id}\)</span> , 则由(4), <span class="math inline">\(\exists\mathscr{B}\in M\)</span>, s.t. <span class="math inline">\(\mathscr{A}^{2}\mathscr{B}=-\mathscr{BA}^{2}\)</span>.</p>
+<p>另一方面, 若<span class="math inline">\(\mathscr{AB}=\mathscr{BA}\)</span>, 则<span class="math inline">\(\mathscr{A}^{2}\mathscr{B}=\mathscr{A}(\mathscr{AB})=\mathscr{A}(\mathscr{BA})=(\mathscr{AB})\mathscr{A}=\mathscr{B}\mathscr{A}^{2}\)</span>; 若<span class="math inline">\(\mathscr{AB}=-\mathscr{BA}\)</span>, 则<span class="math inline">\(\mathscr{A}^{2}\mathscr{B}=\mathscr{A}(\mathscr{AB})=\mathscr{A}(-\mathscr{BA})=-(\mathscr{AB})\mathscr{A}=\mathscr{B}\mathscr{A}^{2}\)</span>. 即总有<span class="math inline">\(\mathscr{A}^{2}\mathscr{B}=\mathscr{B}\mathscr{A}^{2}\)</span>. 所以<span class="math inline">\(M\ni\mathscr{A}^{2}\mathscr{B}=0\)</span>, 这与(1)矛盾.</p>
+<p>然后证明<span class="math inline">\(M\)</span>中不同且不互为相反数的元素线性无关.</p>
+<p>(反证法)假设<span class="math inline">\(M\)</span>中不同且不互为相反数的元素线性相关, 那么一定可以找到一个最小的<span class="math inline">\(n\)</span>, 使得<span class="math inline">\(M\)</span>中不同且不互为相反数的<span class="math inline">\(n\)</span>个元素线性相关.</p>
+<p>设<span class="math inline">\(\mathscr{A}_{1}, \mathscr{A}_{2}, \cdots, \mathscr{A}_{n}\in M\)</span>互不相同且<span class="math inline">\(\forall i\neq j\)</span>, <span class="math inline">\(\mathscr{A}_{i}+\mathscr{A}_{j}\neq0\)</span>, <span class="math inline">\(\mathscr{A}_{1}, \mathscr{A}_{2}, \cdots, \mathscr{A}_{n}\)</span>线性相关.</p>
+<p>$ k_{i} $ , 使得 <span class="math inline">\(\sum_{i=1}^{n} k_{i} \mathscr{A}_{i}=0\)</span>. 不妨设<span class="math inline">\(\mathscr{A}_{1}=\pm\mathrm{id}\)</span> (否则考虑<span class="math inline">\(\sum_{i=1}^{n} k_{i} \mathscr{A}_{1} \mathscr{A}_{i}=0\)</span>) , 则$ <em>{2}, , </em>{n}$.</p>
+<p><span class="math inline">\(\mathscr{A}_{n}\neq\pm\mathrm{id}\)</span>和(4)可知<span class="math inline">\(\mathscr{C}\in M\)</span>, s.t. <span class="math inline">\(\mathscr{A}_{n}\mathscr{C}=-\mathscr{C}\mathscr{A}_{n}\)</span>.</p>
+<p>不妨假设对<span class="math inline">\(1\leq i\leq t\)</span>, <span class="math inline">\(\mathscr{A}_{i}\mathscr{C}=\mathscr{C}\mathscr{A}_{i}\)</span>; 对<span class="math inline">\(t+1\leq i\leq n-1\)</span>, <span class="math inline">\(\mathscr{A}_{i}\mathscr{C}=-\mathscr{C}\mathscr{A}_{i}\)</span>. 对式子</p>
+<p><span class="math display">\[
+\sum_{i=1}^{n-1}k_{i}\mathscr{A}_{i}=-k_{n}\mathscr{A}_{n}
+\]</span></p>
+<p>分别用<span class="math inline">\(\mathscr{C}\)</span>左作用和右作用, 得</p>
+<p><span class="math display">\[
+\sum_{i=1}^{t}k_{i}\mathscr{C}\mathscr{A}_{i}+\sum_{i=t}^{n-1}k_{i}\mathscr{C}\mathscr{A}_{i}=-k_{n}\mathscr{C}\mathscr{A}_{n}
 \]</span></p>
 <p><span class="math display">\[
-\left(\dfrac{n+1}{e}\right)^{n}&lt;n!&lt;e\left(\dfrac{n+1}{e}\right)^{n+1}
+\sum_{i=1}^{t}k_{i}\mathscr{A}_{i}\mathscr{C}+\sum_{i=t}^{n-1}k_{i}\mathscr{A}_{i}\mathscr{C}=-k_{n}\mathscr{A}_{n}\mathscr{C}
 \]</span></p>
+<p>由于对<span class="math inline">\(t+1\leq i\leq n\)</span>, <span class="math inline">\(\mathscr{A}_{i}\mathscr{C}=-\mathscr{C}\mathscr{A}_{i}\)</span>. 故将两式相加, 得到</p>
 <p><span class="math display">\[
-\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{n}&lt;\ln(n+1)&lt;1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}
+\sum_{i=1}^{t}k_{i}\mathscr{C}\mathscr{A}_{i}=0
 \]</span></p>
-<p>行间公式测试完毕。</p>
-<h2 id="代码测试">代码测试</h2>
-<p>下面是一段C++代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j, n = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">2</span>; j &lt; <span class="built_in">sqrt</span>(i); j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%j == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j &gt; <span class="built_in">sqrt</span>(i)) <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="string">"\t"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="图片测试">图片测试</h2>
-<p>下面插入一张图片</p>
-<figure>
-<img src="https://cdn.jsdelivr.net/gh/JunyuanHe/MyBlog/source/_posts/测试文档/wp2497026.jpg" alt><figcaption>世界地图</figcaption>
-</figure>
+<p>而<span class="math inline">\(t\leq n-1\)</span>, 与<span class="math inline">\(n\)</span>的最小性矛盾.</p>
+<p>因此, <span class="math inline">\(M\)</span>中不同且不互为相反数的元素线性无关. 而<span class="math inline">\(\dim M\leq n^{2}\)</span>. 故<span class="math inline">\(\left|M\right|\leq2n^{2}\)</span>. <span class="math inline">\(\square\)</span></p>
+<blockquote>
+<p><strong>问题 2</strong> [Dedekind-Artin] 设<span class="math inline">\(G\)</span>是一个幺半群, <span class="math inline">\(\mathbb{K}\)</span>是一个域 (则<span class="math inline">\(K^{*} := \mathbb{K}-\{0\}\)</span>是一个群). <span class="math inline">\(\sigma_{1},\sigma_{2},\ldots,\sigma_{n}\)</span>是两两不同的非零同态<span class="math inline">\(G\rightarrow K^{*}\)</span>, 则它们在<span class="math inline">\(\mathbb{K}\)</span>上线性无关.</p>
+</blockquote>
+<p>证明: 假设存在这样的一组非零同态, 使得它们在<span class="math inline">\(\mathbb{K}\)</span>上线性无关, 则一定能找到其中元素个数最少的一组. 设<span class="math inline">\(n\)</span>是满足</p>
+<p><span class="math display">\[
+a_{1}\sigma_{1}+\cdots+a_{n}\sigma_{n}=0,\ a_{i}\in\mathbb{K}\text{不全为}0
+\]</span></p>
+<p>的最小的正整数. 则<span class="math inline">\(n\geq2\)</span>, <span class="math inline">\(a_{i}\)</span>均不为 0.</p>
+<p>因为<span class="math inline">\(\sigma_{1},\sigma_{2}\)</span>不同, 故<span class="math inline">\(\exists z\in G\)</span>使得<span class="math inline">\(\sigma_{1}(z)\neq\sigma_{2}(z)\)</span>. 对于任意<span class="math inline">\(x\in G\)</span>, 都有 <span class="math display">\[
+a_{1}\sigma_{1}(xz)+\cdots+a_{n}\sigma_{n}(xz)=0
+\]</span></p>
+<p>由于<span class="math inline">\(\sigma_{i}\)</span>是同态, 则有</p>
+<p><span class="math display">\[
+a_{1}\sigma_{1}(z)\sigma_{1}+\cdots+a_{n}\sigma_{n}(z)\sigma_{n}=0
+\]</span></p>
+<p>两边同除<span class="math inline">\(\sigma_{1}\)</span>并与第一个式子相减, 得</p>
+<p><span class="math display">\[
+\left(a_{2}\dfrac{\sigma_{2}(z)}{\sigma_{1}(z)}-a_{2}\right)\sigma_{2}+\cdots+\left(a_{n}\dfrac{\sigma_{n}(z)}{\sigma_{1}(z)}-a_{n}\right)\sigma_{n}=0
+\]</span></p>
+<p>其第一个系数就不为 0, 且比第一个式子少一个元素, 这与<span class="math inline">\(n\)</span>的最小性矛盾.</p>
+<p>因此, 任意一组两两不同的非零同态<span class="math inline">\(G\rightarrow K^{*}\)</span>在<span class="math inline">\(\mathbb{K}\)</span>上线性无关. <span class="math inline">\(\square\)</span></p>
+<blockquote>
+<p><strong>问题 3</strong> [Artin] 设<span class="math inline">\(\mathbb{E}\)</span>为数域, <span class="math inline">\(G\)</span>为<span class="math inline">\(\mathrm{Aut}\mathbb{E}\)</span>的有限子群, 则<span class="math inline">\(\left|G\right|\geq\left[\mathbb{E}:\mathbb{F}\right]\)</span>.</p>
+</blockquote>
+<p>证明: 设<span class="math inline">\(G=\{\sigma_{1}=\mathrm{id},\sigma_{2},\ldots,\sigma_{n}\}\)</span>. 要证<span class="math inline">\(\left[\mathbb{E}:\mathbb{F}\right]\leq\left|G\right|=n\)</span>, 只要证<span class="math inline">\(\mathbb{E}\)</span>上任意<span class="math inline">\(n+1\)</span>个元素在<span class="math inline">\(\mathbb{F}\)</span>上线性相关.</p>
+<p><span class="math inline">\(\forall\alpha_{1},\alpha_{2},\ldots,\alpha_{n},\alpha_{n+1}\in\mathbb{E}\)</span>, 则<span class="math inline">\(\mathbb{E}\)</span>上的线性方程组</p>
+<p><span class="math display">\[
+\begin{pmatrix}\sigma_{1}(\alpha_{1}) &amp; \sigma_{1}(\alpha_{2}) &amp; \cdots &amp; \sigma_{1}(\alpha_{n+1})\\
+\sigma_{2}(\alpha_{1}) &amp; \sigma_{2}(\alpha_{2}) &amp; \cdots &amp; \sigma_{2}(\alpha_{n+1})\\
+\vdots &amp; \vdots &amp;  &amp; \vdots\\
+\sigma_{n}(\alpha_{1}) &amp; \sigma_{n}(\alpha_{2}) &amp; \cdots &amp; \sigma_{1}(\alpha_{n+1})
+\end{pmatrix}_{n\times(n+1)}\begin{pmatrix}x_{1}\\
+x_{2}\\
+\vdots\\
+x_{n+1}
+\end{pmatrix}=0
+\]</span></p>
+<p>必有非 0 解 (未知数的个数大于方程个数).</p>
+<p>考虑其中包含非 0 元素最少的非零解<span class="math inline">\(\begin{pmatrix}b_{1} &amp; b_{2} &amp; \cdots &amp; b_{m} &amp; 0 &amp; \cdots &amp; 0\end{pmatrix}\)</span>, 其中<span class="math inline">\(b_{i}\neq0,i=1,2,\ldots,m\)</span>. 不妨设<span class="math inline">\(b_{1}=1\)</span>, (否则考虑<span class="math inline">\(\begin{pmatrix}1 &amp; \dfrac{b_{2}}{b_{1}} &amp; \cdots &amp; \dfrac{b_{m}}{b_{1}} &amp; 0 &amp; \cdots &amp; 0\end{pmatrix}\)</span>).</p>
+<p>方程组两边用<span class="math inline">\(\sigma_{i}\)</span>作用, 由<span class="math inline">\(\sigma_{i}\)</span>是同态, 可以得到<span class="math inline">\(\begin{pmatrix}\sigma_{i}(b_{1}) &amp; \sigma_{i}(b_{2}) &amp; \cdots &amp; \sigma_{i}(b_{m}) &amp; 0 &amp; \cdots &amp; 0\end{pmatrix}\)</span>是一组非零解, 其中<span class="math inline">\(\sigma_{i}(b_{1})=\sigma_{i}(1)=1\)</span>. 将两组解相减, 得</p>
+<p><span class="math display">\[
+\begin{pmatrix}0 &amp; \sigma_{i}(b_{2})-b_{2} &amp; \cdots &amp; \sigma_{i}(b_{m})-b_{m} &amp; 0 &amp; \cdots &amp; 0\end{pmatrix}
+\]</span></p>
+<p>也是一组非零解. 但这组解比<span class="math inline">\(\begin{pmatrix}b_{1} &amp; b_{2} &amp; \cdots &amp; b_{m} &amp; 0 &amp; \cdots &amp; 0\end{pmatrix}\)</span>含有更少的非零元, 因此它只能是零解, 即</p>
+<p><span class="math display">\[
+\sigma_{i}(b_{j})=b_{j},\ \forall1\leq i\leq n,\ 1\leq j\leq m
+\]</span></p>
+<p>由<span class="math inline">\(\mathbb{F}\)</span>的定义知<span class="math inline">\(b_{j}\in\mathbb{F},\ \forall1\leq j\leq m\)</span>. 所以</p>
+<p><span class="math display">\[
+0=\sum_{j=1}^{n+1}\sigma_{1}(\alpha_{j})b_{j}=\sum_{j=1}^{n+1}\mathrm{id}(\alpha_{j})b_{j}=\sum_{j=1}^{n+1}b_{j}\alpha_{j}
+\]</span></p>
+<p>这表明<span class="math inline">\(\alpha_{1},\ldots,\alpha_{n+1}\)</span>在<span class="math inline">\(\mathbb{F}\)</span>上线性相关. <span class="math inline">\(\square\)</span></p>
 
           
             <div class='article_footer'>
@@ -412,6 +480,49 @@ e^{i\pi}=-1
   
     
     
+
+
+  
+
+<section class="widget list references  desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i><span class='name'>参考资料</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="/" href="/"
+          
+          
+          id="home"
+          >
+          <div class='name'>
+            
+            朱富海. 给大一学生的Galois理论
+          </div>
+          
+        </a></li>
+      
+        <li><a class="flat-box" title="https://book.douban.com/subject/1462025/" href="https://book.douban.com/subject/1462025/"
+          
+          
+          id="https:bookdoubancomsubject1462025"
+          >
+          <div class='name'>
+            
+            Serge Lang. Algebra
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
 
 
 
@@ -440,7 +551,7 @@ e^{i\pi}=-1
           
         
           
-            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/>https://junyuanhe.github.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</a></p>
+            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/>https://junyuanhe.github.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/</a></p>
           
         
       </blockquote>
@@ -465,10 +576,10 @@ e^{i\pi}=-1
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-05T20:57:04+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-12T15:22:52+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年7月5日 20:57</p>
+    <p>更新于：2020年7月12日 15:22</p>
   </a>
 </div>
 
@@ -477,7 +588,7 @@ e^{i\pi}=-1
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%B5%8B%E8%AF%95/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>测试</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%AF%95%E9%AA%8C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>试验</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%95%B0%E5%AD%A6/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>数学</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E4%BB%A3%E6%95%B0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>代数</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>抽象代数</p></a></div>
 
 
         
@@ -492,7 +603,8 @@ e^{i\pi}=-1
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/&title=测试文档 - Jun's Blog&summary=此文档用于测试网站兼容性，路人请忽略此文档。"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/&title=集合元素个数与线性空间的维数 - Jun's Blog&summary=证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常见的手法.
+下面给出几个例子."
           
           >
           
@@ -504,7 +616,8 @@ e^{i\pi}=-1
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/&title=测试文档 - Jun's Blog&summary=此文档用于测试网站兼容性，路人请忽略此文档。"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/&title=集合元素个数与线性空间的维数 - Jun's Blog&summary=证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常见的手法.
+下面给出几个例子."
           
           >
           
@@ -516,7 +629,8 @@ e^{i\pi}=-1
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/&title=测试文档 - Jun's Blog&summary=此文档用于测试网站兼容性，路人请忽略此文档。"
+          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/&title=集合元素个数与线性空间的维数 - Jun's Blog&summary=证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常见的手法.
+下面给出几个例子."
           
           >
           
@@ -530,7 +644,7 @@ e^{i\pi}=-1
         <div class='hoverbox'>
           <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYCAAAAAAzB7ucAAAEZklEQVR42u3aQZLjMAgF0Nz/0jP7meoyfJCSdD3t4jiS/OQFEF5/jCPjhQAsWAMsWLAG2Cuwr3D8N+EP15++//d6d73q9z+tU/1d1QMsWLBgwYIFCxbsXdhyANwE6s7X/fw0b/eFmHqABQsWLFiwYMGCfQ9sN7A+nVikB9Pdx5oHWLBgwYIFCxYs2K+C3U4YyoXlNxfewYIFCxYsWLBgwf5u2O2DedrfVsICFixYsGDBggUL9jtgp4XlKdDpho2t+cGCBQsWLFiwYMF+BmwaWP/Wz7EHWLBgwYIFCxYs2Cuw01GFnxa4nxKRdD/dhODRAyxYsGDBggULFuwV2DRArhZ+nx68WjBP97tdIH/cH1iwYMGCBQsWLNgrsGljQgoyHVOorcRmrdANFixYsGDBggULdgV2GqBvF8DThpFqYJ8Wwn+8DhYsWLBgwYIFC/YK7Hbg3z2ArUJ2CpPOAxYsWLBgwYIFC/a9sFsNDKcD8uo8txOH+B8EsGDBggULFixYsCPY6YN0N3aqYL51UF1QsGDBggULFixYsJ8BOy38dgvZU/h0/mlBv/0PAliwYMGCBQsWLNhV2HSi7QOJA/Lh5+4BPyYUYMGCBQsWLFiwYK/AdgvD3QQhDeynhfWtfbefAyxYsGDBggULFuxV2GkBeBqAp4nB1ovRnTfuhAELFixYsGDBggV7BLa78LQxYrpeCjJdP+6EAQsWLFiwYMGCBXsUtgqV3jcdpwvgccIDFixYsGDBggUL9i2w6fVu4F79XXfdLtRWowpYsGDBggULFizYu7BVgGmDw7QQPm3UOJ24gAULFixYsGDBgr0L2y0gd4G7G08D/i3waaICFixYsGDBggUL9g7s9oOnsNPAvQqzVaAfZ15gwYIFCxYsWLBgR7DdxKB6PX2AboCeAqQH0M68wIIFCxYsWLBgwR6B3V6o3eAwhOqCpQdZvh8sWLBgwYIFCxbsFdjqD9IGirTxoR2YDw8yPbhy5gUWLFiwYMGCBQt2FbZbWJ4G6tOC+PT+aYMJWLBgwYIFCxYs2M+ATRfYvn8L4FbiABYsWLBgwYIFC/azYLsBchxIhwX27YSi25DxeB0sWLBgwYIFCxbsVdhuY0R3oynYNBGprrvVaAIWLFiwYMGCBQv2s2DTQnLa2LHVIFI9sO4LARYsWLBgwYIFC/YzYaeNDdtQ3d+/Lg2wYMGCBQsWLFiw74GdjinIVgPFdoNI/OKBBQsWLFiwYMGCvQK7XahONzRNONJ50vvKhW6wYMGCBQsWLFiwR2HTQLsb6KfA0wQkbchYa9gACxYsWLBgwYIFexR22rAxLVinBzUt1G81boAFCxYsWLBgwYL9XbDTeauB/DRhSQ8eLFiwYMGCBQsW7HfCbjVWpHBpw0b1RXhboRssWLBgwYIFCxbskYaN7sa630/3efvFAQsWLFiwYMGCBXsXNm5QOFQI7wb+3X1PGzjKCQJYsGDBggULFizYI7DG7gALFqwBFixYA+zR8RfQpRhcrJJkggAAAABJRU5ErkJggg==">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -550,18 +664,13 @@ e^{i\pi}=-1
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Excerpts of Where the Crawdads Sing</p>
+            
+              <a class='next' href='/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/'>
+                <p class='title'>Excerpts of Where the Crawdads Sing<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
                 <p class='content'>Excerpts made when reading the novel Where the Crawdads Sing.
 
 
 Secretly Kya hoped not to catc...</p>
-              </a>
-            
-            
-              <a class='next' href='/2020/07/04/hello-world/'>
-                <p class='title'>Hello World<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
               </a>
             
           </div>
@@ -661,7 +770,7 @@ Secretly Kya hoped not to catc...</p>
 
   <script>
     window.subData = {
-      title: '测试文档',
+      title: '集合元素个数与线性空间的维数',
       tools: true
     }
   </script>
@@ -675,20 +784,6 @@ Secretly Kya hoped not to catc...</p>
     
 
 
-
-  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
-    
-  <header>
-    
-      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数学测试"><span class="toc-number">1.</span> <span class="toc-text">数学测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码测试"><span class="toc-number">2.</span> <span class="toc-text">代码测试</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片测试"><span class="toc-number">3.</span> <span class="toc-text">图片测试</span></a></li></ol>
-    </div>
-  </section>
 
 
   
