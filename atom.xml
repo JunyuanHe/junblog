@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://junyuanhe.github.io/"/>
-  <updated>2020-07-26T12:08:02.056Z</updated>
+  <updated>2020-07-26T12:16:19.636Z</updated>
   <id>https://junyuanhe.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://junyuanhe.github.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
     <id>https://junyuanhe.github.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/</id>
     <published>2020-07-26T08:43:01.000Z</published>
-    <updated>2020-07-26T12:08:02.056Z</updated>
+    <updated>2020-07-26T12:16:19.636Z</updated>
     
     <content type="html"><![CDATA[<p>本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。</p><a id="more"></a><h2 id="来由">来由</h2><p>前几天在Deepin系统上试图安装Lyx，但是Lyx在Deepin软件源中的版本滞后，无法打开我之前的Lyx文档。于是我便试图在Deepin中加载Ubuntu的软件源。一开始，一切似乎都无比正常，<code>sudo apt-get update</code>顺利执行，说明软件源加载成功。然后，我用<code>sudo apt-cache policy lyx</code>检查了软件源中Lyx的版本，由原来的<code>2.2.2</code>提升到了<code>2.3.5.2</code>，是最新的stable版本。大喜之下，一行<code>sudo apt-get install lyx</code>开始安装，提示要添加三百多个软件包，更新四百多个，删除两百多个。也没多想，就敲了Y，漫长的更新过程大概持续了十几分钟。然后怀着迫切的心情，我立即查看是否安装成功，打开Lyx正常，版本号正确。但很快，我就发现了事情的严重性，开始菜单无法弹出，深度监视器无法打开，最糟糕的是——无法关机，无法重启！只好强制关机，可谁知，关机后便再也无法进入系统（卡在Deepin的徽标界面）。网友们给出的解释是Deepin的图形界面相关的软件包被卸载或者更新，而更新后的软件包可能与其它模块不兼容，因此无法进入系统。</p><p>所以，总结一下，<strong>第一个坑：不要在Deepin上加载Ubuntu软件源！</strong></p><p>LaTeX对于我是刚需，而Lyx对于喜欢记记杂碎问题的我是一大利器。于是，我决定果断放弃Deepin。</p><h2 id="初识linux-mint">初识Linux Mint</h2><p>在网上进行了一番比较，似乎对于个人家用，Ubuntu和Linux Mint是首选，而Linux Mint基于Ubuntu，在图形界面上占优势。便挑选了Linux Mint。</p><p>一番常规操作之后，我用U盘作为启动盘进入了安装程序，磁盘分区可把我分的头都大了，本来就是双硬盘双系统，分出的区特别多。这里建议<strong>可以事先在Windows上用DiskGenius查看原本有哪些分区，分别对应什么，然后手机拍照记录下来</strong>。这样等到真正分区的时候就不会乱了。</p><p>麻烦的事情发生了：我选择将启动引导器安装到<code>dev/sdb</code>（我的SSD），可是却报错</p><blockquote><p>Ubuntu Error: The partition table format in use on your disks normally requires you to create a separate partition for boot loader code. This partition should be marked for use as a "Reserved BIOS boot area" and should be at least 1MB in size. Note that this is not the same as a partition mounted on <code>/boot</code>.</p></blockquote><p>于是，我按照它的提示，创建了一个保留BIOS分区。选择安装启动引导器到该分区，没有报错。但这只是冰山一角。</p><p>安装即将结束的时候，报错：</p><blockquote><p>fatal error: 执行 ‘grub-install /dev/sdb' 失败，这是一个致命错误</p></blockquote><p>解决方案：<strong>制作Linux Mint启动盘不可以用Ultra ISO</strong>，它会默认选择UEFI的启动模式，而且Linux Mint的原生安装包实际上还缺失两个文件，需要制作时补上。那么如何制作呢？<strong>使用rufus，避开UEFI启动的选项</strong>，制作前，它会提示自动下载那两个文件。使用重新制作的启动盘，那两个错误都不会出现。并且<strong>启动引导器就直接安装在硬盘上，不要安装在分区中，更无需创建保留BIOS分区</strong>。</p><p>Linux Mint刚刚打开的时候，第一眼注意到的就是它优美的图形界面。字体或许有点小，但这是容易调节的。</p><h2 id="安装texlive和lyx">安装Texlive和Lyx</h2><p>LaTeX是刚需，自然少不了安装相关的环境。安装Texlive和Lyx除了耗时较长以外，没有出现错误信息。问题出现在全部安装完毕，打开Lyx编写文档时。我选择“从模版新建”，并选择ctex.lyx ，这时弹出提示信息ctexart.cls和一些sty找不到，导致无法编译文档。经过检查，Texlive已经完整安装，ctexart.cls和相关sty文件都存在。</p><p>解决方案：<strong>终端中执行<code>texhash</code> ，然后在Lyx中“重新配置Lyx“</strong>。</p><h2 id="一些其它的坑">一些其它的坑</h2><p>关于Linux分区大小问题：最好一次到位，后面调整比较麻烦。要充分预估后面安装的软件数量。我这次的分区为： <code>/boot</code> 500MB；<code>/</code> 46GB；<code>/home</code> 45GB</p><p>但是实际使用过程中发现，安装完必备的软件（主要是Texlive较大）已经占用了27GB <code>/</code> 下的空间了，而 <code>/home</code> 才放了不到2GB的文件。实际上，<code>/home</code> 的用处不是很大，因为在Windows和Linux双系统中，可以挂载Windows下的磁盘，也就是说，Linux下可以访问Windows系统的文件（但Windows下不能直接访问Linux的文件，原因是磁盘文件系统不同（Linux为ext4））。所以，在Linux下我们存储文件可以存放在磁盘的任意位置，不需要存放于 <code>/home</code> 中，在分区时根目录 <code>/</code> 应该适当预留大一些，而 <code>/home</code> 则不需要太大。</p><p>如果让我重新分区，我会分为 <strong><code>/boot</code> 500MB；<code>/</code> 71GB；<code>/home</code> 20GB</strong> <strong>这是Linux Mint和Windows双系统中比较合适的比例。</strong></p>]]></content>
     
@@ -41,7 +41,7 @@
     
       <category term="Linux" scheme="https://junyuanhe.github.io/tags/Linux/"/>
     
-      <category term="Linux Mint" scheme="https://junyuanhe.github.io/tags/Linux-Mint/"/>
+      <category term="LinuxMint" scheme="https://junyuanhe.github.io/tags/LinuxMint/"/>
     
       <category term="LaTeX" scheme="https://junyuanhe.github.io/tags/LaTeX/"/>
     
