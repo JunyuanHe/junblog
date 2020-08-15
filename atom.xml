@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://junyuanhe.github.io/"/>
-  <updated>2020-07-26T12:16:19.636Z</updated>
+  <updated>2020-08-15T13:24:36.520Z</updated>
   <id>https://junyuanhe.github.io/</id>
   
   <author>
@@ -15,6 +15,87 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++程序设计基础(3) - 选择结构与循环结构</title>
+    <link href="https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/"/>
+    <id>https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</id>
+    <published>2020-08-15T13:02:56.000Z</published>
+    <updated>2020-08-15T13:24:36.520Z</updated>
+    
+    <content type="html"><![CDATA[<p>介绍两种基本的结构: 选择结构与循环结构</p><a id="more"></a><h2 id="if语句">if语句</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;...&#125;</span><br></pre></td></tr></table></figure><h2 id="条件表达式">条件表达式</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">表达式<span class="number">1</span> ? 表达式<span class="number">2</span> : 表达式<span class="number">3</span></span><br></pre></td></tr></table></figure><p>表达式1为true时计算表达式2的值作为结果, 为false时计算表达式3的值作为结果.</p><h2 id="switch语句">switch语句</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(整数表达式)   <span class="comment">//包括int及其派生类型、字符类型、逻辑类型</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> 常量表达式<span class="number">1</span>: 语句序列<span class="number">1</span></span><br><span class="line"><span class="keyword">case</span> 常量表达式<span class="number">2</span>: 语句序列<span class="number">2</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">case</span> 常量表达式n: 语句序列n</span><br><span class="line"><span class="keyword">default</span>: 语句序列n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>例子:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(grade)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'A'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">90</span>~<span class="number">100</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'B'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">80</span>~<span class="number">89</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'C'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">70</span>~<span class="number">79</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'D'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">60</span>~<span class="number">69</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'E'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">0</span>~<span class="number">59</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="while语句和do...while语句">while语句和do...while语句</h2><p>while语句:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(表达式)&#123;...&#125;</span><br></pre></td></tr></table></figure><p>do...while语句:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;...&#125;<span class="keyword">while</span>(表达式);</span><br></pre></td></tr></table></figure><p>两者的区别是while语句先进行判断再决定是否执行语句, 而do...while先执行一次内嵌语句再进行判断.</p><h2 id="for语句">for语句</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>; 表达式<span class="number">2</span>; 表达式<span class="number">3</span>)&#123;...&#125;</span><br></pre></td></tr></table></figure><p>其中 表达式1为初始操作; 表达式2为循环条件; 表达式3在内嵌语句后执行</p><blockquote><p><strong>算法. 求最大公约数(辗转相除法)</strong> 求a, b两个整数的最大公约数 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b; b!=<span class="number">0</span>; r=a%b, a=b, b=r);</span><br></pre></td></tr></table></figure> 则得到的a为最大公约数.</p></blockquote><h2 id="break和continue语句">break和continue语句</h2><p>break跳出循环, 但只跳出一层循环. continue终止本次循环, 进入下一次循环.</p><blockquote><p><strong>算法. 判断是否为素数</strong> 设输入的数据为n, 判断其是否为素数 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (sqrtn = <span class="built_in">sqrt</span>((<span class="keyword">double</span>)n), i = <span class="number">2</span>; i &lt;= sqrtn; i++);</span><br><span class="line"><span class="keyword">if</span> (n % i == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">if</span> (n &gt;= <span class="number">2</span> &amp;&amp; i &gt; sqrtn) <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; “ is prime” &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; “ is <span class="keyword">not</span> prime” &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;介绍两种基本的结构: 选择结构与循环结构&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++程序设计基础(2) - 数据与运算</title>
+    <link href="https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/"/>
+    <id>https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/</id>
+    <published>2020-08-15T13:00:34.000Z</published>
+    <updated>2020-08-15T13:17:57.491Z</updated>
+    
+    <content type="html"><![CDATA[<p>主要介绍C++的基本数据类型和运算符, 略去了较为简单的内容</p><a id="more"></a><h2 id="c标识符">C++标识符</h2><ul><li><p>C++标识符的含义: C++中使用的名字, 如变量名、类型名、函数名等</p></li><li><p>合法的C++标识符：由字母、数字、下划线构成，首字母不能是数字.</p></li></ul><h2 id="常量">常量</h2><ul><li><p>八进制: 前缀为<code>0</code>十六进制: 前缀为<code>0x</code>或<code>0X</code></p></li><li><p>转义序列(预定义): 换行<code>\n</code> (newline), 跳格<code>\t</code> (tab), 回车<code>\r</code> (return), 警报<code>\a</code> (alarm), 回退一个字符<code>\b</code> (backspace), 反斜杠<code>\\</code>, 单引号<code>\'</code> 转义序列(ASCII): 用最多3位八进制(如<code>\103</code>) 或 <code>x</code>加上最多2位十六进制(如<code>\x6f</code>)表示字符.</p></li><li><p>最大整数 <code>maxInt = 0x7fffffff</code>, 最小整数 <code>minInt = 0x80000000</code></p></li><li><p>八进制输出 <code>cout &lt;&lt; oct &lt;&lt; maxInt;</code> 十六进制输出 <code>cout &lt;&lt; hex &lt;&lt; maxInt;</code> 十进制输出 <code>cout &lt;&lt; dec &lt;&lt; maxInt;</code></p></li></ul><h2 id="基本运算及表达式">基本运算及表达式</h2><ul><li><p>结合方向从右向左:</p><ol type="1"><li>部分一元运算: <code>*</code>(指向),<code>&amp;</code>(取地址), <code>new</code>, <code>delete</code>, <code>!</code>, <code>~</code>, <code>++</code>, <code>--</code>, <code>-</code>(取负), <code>sizeof()</code>, 显式转换</li><li>三元运算: <code>? :</code></li><li>赋值运算: <code>=</code>, <code>+=</code>, <code>-=</code>,<code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&amp;=</code>, <code>^=</code>, <code>|=</code></li></ol></li><li><p>左值: 表示存储单元的表达式, 可被赋值. 在C++中, 前置增量/减量运算, 赋值运算的结果是左值. 右值: 不是左值的表达式, 不可被赋值. 常量和计算值是右值.</p></li><li><p>连续输入数据, 以Ctrl^Z结束的方式: <code>while (cin &gt;&gt; x){...}</code></p></li><li><p>显式类型转换: 若定义<code>int a = 3;</code> 将其转换为double类型的方法如下<code>double(a);</code> 或 <code>(double)a;</code> 或 <code>static_cast&lt;double&gt;(a);</code></p></li><li><p>短路表达式: 逻辑表达式(与、或)一旦有了最终结果就不再计算.</p></li></ul><h2 id="位运算">位运算</h2><p>与运算 <code>&amp;</code> : 都为1, 结果才为1.</p><p>或运算 <code>|</code> :只要有一个为1, 结果就为1.</p><p>非运算(取反运算) <code>~</code> : 0变1, 1变0.</p><p>异或运算 <code>^</code> : 不进位加法</p><p>移位运算: 左移 <code>&lt;&lt;</code> (右边补0), 右移 <code>&gt;&gt;</code> (左边拓展高位数字, 有符号类型进行符号拓展, 无符号类型进行0拓展)</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要介绍C++的基本数据类型和运算符, 略去了较为简单的内容&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>C++程序设计基础(1) - 计算机基础知识</title>
+    <link href="https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <published>2020-08-15T12:36:59.000Z</published>
+    <updated>2020-08-15T13:16:35.750Z</updated>
+    
+    <content type="html"><![CDATA[<p>主要介绍进制的转换和计算机数值表示</p><a id="more"></a><h2 id="进制的转换">进制的转换</h2><ol type="1"><li>其它进制转换为十进制</li></ol><p>利用展开式直接计算。例如：将八进制数<span class="math inline">\((137.45)_{8}\)</span>转换为十进制</p><p><span class="math display">\[(137.45)_{8}=1\times8^{2}+3\times8^{1}+7\times8^{0}+4\times8^{-1}+5\times8^{-2}\]</span></p><ol start="2" type="1"><li>十进制转换为其它进制</li></ol><p>整数用短除法(反复除以进制数), 余数倒排. 小数反复乘以进制数, 余数部分依次排列</p><ol start="3" type="1"><li>二进制与八进制, 二进制与十六进制转换</li></ol><p>它们有直接的对应关系, 每3位二进制对应1位八进制, 每4位二进制对应1位十六进制.</p><h2 id="计算机数值表示">计算机数值表示</h2><p>1个<strong>字节</strong>由8位二进位组成, 是计算机的基本存储单位.</p><h3 id="整数表示">整数表示</h3><ul><li><p>无符号整数(unsigned类型): 直接用二进制表示, 高位补0.</p></li><li><p>有符号整数(signed类型): 使用<strong>补码</strong>表示. 规定: 补码的最高位是符号位, 正数为0, 负数为1; 其余的位数用来表示数值.</p></li></ul><p>正数直接用二进制表示, 负数用与正数二进制数相补的数表示(相加进位).</p><h3 id="实数表示-ieee标准">实数表示 (IEEE标准)</h3><p>实数采用二进制标准化科学计数法表示: 先写成二进制小数再使用科学计数法. 如:</p><p><span class="math display">\[+0.001=\underset{\text{符号位}}{+}\underset{\text{尾数部分(小数点以后)}}{1.0000011\ 00010010\ 01101110\ 10010111\ \cdots}\times\underset{\text{指数部分}}{2^{-10}}\]</span></p><p>数据分为三个部分存储: 符号位、指数部分、尾数部分.</p><ul><li><p>符号位: 正数用0, 负数用1.</p></li><li><p>指数部分: 采用<strong>移码</strong>表示法. 对指数部分加上 <span class="math inline">\((0111\cdots111)_{2}\)</span> , 得到的二进制数称为移码. (加上一个大整数是为了将负数转化为正数)</p></li><li><p>尾数部分: 截断时舍入规则为0舍1入. 注意: 单精度和双精度格式的尾数部分只保存小数点后的小数, 而扩展精度的要保存整数部分的1.</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主要介绍进制的转换和计算机数值表示&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux Mint安装及LaTeX-Lyx配置踩坑记</title>

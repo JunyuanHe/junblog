@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>分类：数学 - Jun&#39;s Blog</title>
+    <title>C++程序设计基础(1) - 计算机基础知识 - Jun&#39;s Blog</title>
   
+    <meta name="keywords" content="计算机,C++">
+  
+  
+    <meta name="description" content="主要介绍进制的转换和计算机数值表示">
   
 
   <!-- feed -->
@@ -299,25 +301,12 @@
     <div class='body-wrapper'>
       
 
-
 <div class='l_main'>
   
-    
-      
-  <section class="post-list ">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
+
   
+    <article id="post" class="post white-box reveal blur article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -327,11 +316,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/">
-      集合元素个数与线性空间的维数
+  <h1 class="title">
+    <a href="/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
+      C++程序设计基础(1) - 计算机基础知识
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -354,9 +343,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/' rel="nofollow">
+    <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>数学/代数</p>
+      <p>计算机/C++</p>
     </a>
   </div>
 
@@ -367,14 +356,9 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年7月12日 15:22</p>
+    <p>发布于：2020年8月15日 20:36</p>
   </a>
 </div>
-
-            
-          
-            
-              
 
             
           
@@ -392,36 +376,284 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>主要介绍进制的转换和计算机数值表示</p>
+<a id="more"></a>
+<h2 id="进制的转换">进制的转换</h2>
+<ol type="1">
+<li>其它进制转换为十进制</li>
+</ol>
+<p>利用展开式直接计算。例如：将八进制数<span class="math inline">\((137.45)_{8}\)</span>转换为十进制</p>
+<p><span class="math display">\[
+(137.45)_{8}=1\times8^{2}+3\times8^{1}+7\times8^{0}+4\times8^{-1}+5\times8^{-2}
+\]</span></p>
+<ol start="2" type="1">
+<li>十进制转换为其它进制</li>
+</ol>
+<p>整数用短除法(反复除以进制数), 余数倒排. 小数反复乘以进制数, 余数部分依次排列</p>
+<ol start="3" type="1">
+<li>二进制与八进制, 二进制与十六进制转换</li>
+</ol>
+<p>它们有直接的对应关系, 每3位二进制对应1位八进制, 每4位二进制对应1位十六进制.</p>
+<h2 id="计算机数值表示">计算机数值表示</h2>
+<p>1个<strong>字节</strong>由8位二进位组成, 是计算机的基本存储单位.</p>
+<h3 id="整数表示">整数表示</h3>
+<ul>
+<li><p>无符号整数(unsigned类型): 直接用二进制表示, 高位补0.</p></li>
+<li><p>有符号整数(signed类型): 使用<strong>补码</strong>表示. 规定: 补码的最高位是符号位, 正数为0, 负数为1; 其余的位数用来表示数值.</p></li>
+</ul>
+<p>正数直接用二进制表示, 负数用与正数二进制数相补的数表示(相加进位).</p>
+<h3 id="实数表示-ieee标准">实数表示 (IEEE标准)</h3>
+<p>实数采用二进制标准化科学计数法表示: 先写成二进制小数再使用科学计数法. 如:</p>
+<p><span class="math display">\[
++0.001=\underset{\text{符号位}}{+}\underset{\text{尾数部分(小数点以后)}}{1.0000011\ 00010010\ 01101110\ 10010111\ \cdots}\times\underset{\text{指数部分}}{2^{-10}}
+\]</span></p>
+<p>数据分为三个部分存储: 符号位、指数部分、尾数部分.</p>
+<ul>
+<li><p>符号位: 正数用0, 负数用1.</p></li>
+<li><p>指数部分: 采用<strong>移码</strong>表示法. 对指数部分加上 <span class="math inline">\((0111\cdots111)_{2}\)</span> , 得到的二进制数称为移码. (加上一个大整数是为了将负数转化为正数)</p></li>
+<li><p>尾数部分: 截断时舍入规则为0舍1入. 注意: 单精度和双精度格式的尾数部分只保存小数点后的小数, 而扩展精度的要保存整数部分的1.</p></li>
+</ul>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+  
+
+<section class="widget list references  desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i><span class='name'>参考资料</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
       
-        <p>证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常见的手法.</p>
-<p>下面给出几个例子.</p>
+        <li><a class="flat-box" title="http://product.dangdang.com/25239691.html" href="http://product.dangdang.com/25239691.html"
+          
+          
+          id="http:productdangdangcom25239691html"
+          >
+          <div class='name'>
+            
+            邵荣. C++程序设计(第二版)
+          </div>
+          
+        </a></li>
       
-    </div>
+    </ul>
+  </div>
+</section>
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  ">
+  <div class='content'>
+    
+      <blockquote>
+        
+          
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议。转载请保留原文链接和作者。</p>
+
+          
+        
+          
+            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/>https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a></p>
+          
+        
+      </blockquote>
+    
+  </div>
+</section>
+
+  
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-15T21:16:35+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年8月15日 21:16</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>计算机</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div>
+
+
+        
+      
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
       
-        <div class="button readmore">
-          <a href="/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=C++程序设计基础(1) - 计算机基础知识 - Jun's Blog&summary=主要介绍进制的转换和计算机数值表示"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=C++程序设计基础(1) - 计算机基础知识 - Jun's Blog&summary=主要介绍进制的转换和计算机数值表示"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=C++程序设计基础(1) - 计算机基础知识 - Jun's Blog&summary=主要介绍进制的转换和计算机数值表示"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,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">
+          </div>
         </div>
       
     
-  </section>
-</article>
+  </div>
+</div>
 
-          </div>
+
+
         
       
-    
+    </div>
   </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++程序设计基础(2) - 数据与运算</p>
+                <p class='content'>主要介绍C++的基本数据类型和运算符, 略去了较为简单的内容
+
+C++标识符
+
+C++标识符的含义: C++中使用的名字, 如变量名、类型名、函数名等
+合法的C++标识符：由字母、数字...</p>
+              </a>
+            
+            
+              <a class='next' href='/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/'>
+                <p class='title'>Linux Mint安装及LaTeX-Lyx配置踩坑记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。
+
+来由
+前几天在Deepin系统上试图安装Lyx，但是Lyx在Deepin...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
   
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-      <script>
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+        <p cst>读者们可以在此处进行交流</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+  <script>
   // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
   if (typeof MathJax === 'undefined') {
     window.MathJax = {
@@ -473,13 +705,16 @@
   }
 </script>
 
-    
-
-  
 
 
-    
-  
+
+  <script>
+    window.subData = {
+      title: 'C++程序设计基础(1) - 计算机基础知识',
+      tools: true
+    }
+  </script>
+
 
 </div>
 <aside class='l_side'>
@@ -488,136 +723,19 @@
     
     
 
-<section class="widget blogger blur desktop mobile">
-  <div class='content'>
-    
-      
-        <a class='avatar flat-box' href='/aboutme/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/JunyuanHe/cdn-assets@master/img/GeographicObjects2.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Jun</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Jun's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="mailto:hejunyuan02@126.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=63035382"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
 
-  
 
-  
-    
-    
-  
-
-  <section class="widget category blur desktop mobile">
+  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/English/" href="/categories/English/"
-            id="categoriesEnglish"
-            ><div class='name'>English</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/" href="/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/"
-            id="categoriesE4BDBFE794A8E8AFB4E6988EE58F8AE6B58BE8AF95"
-            ><div class='name'>使用说明及测试</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E5%AD%A6/" href="/categories/%E6%95%B0%E5%AD%A6/"
-            id="categoriesE695B0E5ADA6"
-            ><div class='name'>数学</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/" href="/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/"
-            id="categoriesE695B0E5ADA6E4BBA3E695B0"
-            ><div class='name'>代数</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"
-            id="categoriesE8AEA1E7AE97E69CBA"
-            ><div class='name'>计算机</div><div class='badge'>(4)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"
-            id="categoriesE8AEA1E7AE97E69CBAC"
-            ><div class='name'>C++</div><div class='badge'>(3)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/"
-            id="categoriesE8AEA1E7AE97E69CBALinux"
-            ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-  
-
-  
-    
-    
-  
-
-  <section class="widget tagcloud blur desktop mobile">
-    
-  <header>
-    
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <a href="/tags/C/" style="font-size: 19px; color: #777">C++</a> <a href="/tags/English/" style="font-size: 14px; color: #999">English</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/LinuxMint/" style="font-size: 14px; color: #999">LinuxMint</a> <a href="/tags/Lyx/" style="font-size: 14px; color: #999">Lyx</a> <a href="/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/tags/excerpt/" style="font-size: 14px; color: #999">excerpt</a> <a href="/tags/novel/" style="font-size: 14px; color: #999">novel</a> <a href="/tags/%E4%BB%A3%E6%95%B0/" style="font-size: 14px; color: #999">代数</a> <a href="/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" style="font-size: 14px; color: #999">抽象代数</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 14px; color: #999">数学</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" style="font-size: 24px; color: #555">计算机</a> <a href="/tags/%E8%AF%95%E9%AA%8C/" style="font-size: 14px; color: #999">试验</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#进制的转换"><span class="toc-number">1.</span> <span class="toc-text">进制的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机数值表示"><span class="toc-number">2.</span> <span class="toc-text">计算机数值表示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整数表示"><span class="toc-number">2.1.</span> <span class="toc-text">整数表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实数表示-ieee标准"><span class="toc-number">2.2.</span> <span class="toc-text">实数表示 (IEEE标准)</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -797,6 +915,60 @@
 
 
 
+
+  
+    
+<script src="/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "dogUA2FSKGTo029M1SEwGROT-MdYXbMMI",
+    appKey: "u0NdtQ8nvHoMdJPSYqm1LRxE",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'true',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
 
 
 

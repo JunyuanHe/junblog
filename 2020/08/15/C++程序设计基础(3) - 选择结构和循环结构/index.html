@@ -16,12 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>Linux Mint安装及LaTeX-Lyx配置踩坑记 - Jun&#39;s Blog</title>
+    <title>C++程序设计基础(3) - 选择结构与循环结构 - Jun&#39;s Blog</title>
   
-    <meta name="keywords" content="计算机,Linux,LinuxMint,LaTeX,Lyx">
+    <meta name="keywords" content="计算机,C++">
   
   
-    <meta name="description" content="本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。">
+    <meta name="description" content="介绍两种基本的结构: 选择结构与循环结构">
   
 
   <!-- feed -->
@@ -317,8 +317,8 @@
         
           
   <h1 class="title">
-    <a href="/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/">
-      Linux Mint安装及LaTeX-Lyx配置踩坑记
+    <a href="/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/">
+      C++程序设计基础(3) - 选择结构与循环结构
     </a>
   </h1>
 
@@ -343,9 +343,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/' rel="nofollow">
+    <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>计算机/Linux</p>
+      <p>计算机/C++</p>
     </a>
   </div>
 
@@ -356,7 +356,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年7月26日 16:43</p>
+    <p>发布于：2020年8月15日 21:02</p>
   </a>
 </div>
 
@@ -380,33 +380,34 @@
         <div class="article-entry" itemprop="articleBody">
           
           
-          <p>本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。</p>
+          <p>介绍两种基本的结构: 选择结构与循环结构</p>
 <a id="more"></a>
-<h2 id="来由">来由</h2>
-<p>前几天在Deepin系统上试图安装Lyx，但是Lyx在Deepin软件源中的版本滞后，无法打开我之前的Lyx文档。于是我便试图在Deepin中加载Ubuntu的软件源。一开始，一切似乎都无比正常，<code>sudo apt-get update</code>顺利执行，说明软件源加载成功。然后，我用<code>sudo apt-cache policy lyx</code>检查了软件源中Lyx的版本，由原来的<code>2.2.2</code>提升到了<code>2.3.5.2</code>，是最新的stable版本。大喜之下，一行<code>sudo apt-get install lyx</code>开始安装，提示要添加三百多个软件包，更新四百多个，删除两百多个。也没多想，就敲了Y，漫长的更新过程大概持续了十几分钟。然后怀着迫切的心情，我立即查看是否安装成功，打开Lyx正常，版本号正确。但很快，我就发现了事情的严重性，开始菜单无法弹出，深度监视器无法打开，最糟糕的是——无法关机，无法重启！只好强制关机，可谁知，关机后便再也无法进入系统（卡在Deepin的徽标界面）。网友们给出的解释是Deepin的图形界面相关的软件包被卸载或者更新，而更新后的软件包可能与其它模块不兼容，因此无法进入系统。</p>
-<p>所以，总结一下，<strong>第一个坑：不要在Deepin上加载Ubuntu软件源！</strong></p>
-<p>LaTeX对于我是刚需，而Lyx对于喜欢记记杂碎问题的我是一大利器。于是，我决定果断放弃Deepin。</p>
-<h2 id="初识linux-mint">初识Linux Mint</h2>
-<p>在网上进行了一番比较，似乎对于个人家用，Ubuntu和Linux Mint是首选，而Linux Mint基于Ubuntu，在图形界面上占优势。便挑选了Linux Mint。</p>
-<p>一番常规操作之后，我用U盘作为启动盘进入了安装程序，磁盘分区可把我分的头都大了，本来就是双硬盘双系统，分出的区特别多。这里建议<strong>可以事先在Windows上用DiskGenius查看原本有哪些分区，分别对应什么，然后手机拍照记录下来</strong>。这样等到真正分区的时候就不会乱了。</p>
-<p>麻烦的事情发生了：我选择将启动引导器安装到<code>dev/sdb</code>（我的SSD），可是却报错</p>
+<h2 id="if语句">if语句</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;...&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="条件表达式">条件表达式</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">表达式<span class="number">1</span> ? 表达式<span class="number">2</span> : 表达式<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>表达式1为true时计算表达式2的值作为结果, 为false时计算表达式3的值作为结果.</p>
+<h2 id="switch语句">switch语句</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(整数表达式)   <span class="comment">//包括int及其派生类型、字符类型、逻辑类型</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> 常量表达式<span class="number">1</span>: 语句序列<span class="number">1</span></span><br><span class="line"><span class="keyword">case</span> 常量表达式<span class="number">2</span>: 语句序列<span class="number">2</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">case</span> 常量表达式n: 语句序列n</span><br><span class="line"><span class="keyword">default</span>: 语句序列n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例子:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(grade)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'A'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">90</span>~<span class="number">100</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'B'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">80</span>~<span class="number">89</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'C'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">70</span>~<span class="number">79</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'D'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">60</span>~<span class="number">69</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'E'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">0</span>~<span class="number">59</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="while语句和do...while语句">while语句和do...while语句</h2>
+<p>while语句:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(表达式)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>do...while语句:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;...&#125;<span class="keyword">while</span>(表达式);</span><br></pre></td></tr></table></figure>
+<p>两者的区别是while语句先进行判断再决定是否执行语句, 而do...while先执行一次内嵌语句再进行判断.</p>
+<h2 id="for语句">for语句</h2>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>; 表达式<span class="number">2</span>; 表达式<span class="number">3</span>)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 表达式1为初始操作; 表达式2为循环条件; 表达式3在内嵌语句后执行</p>
 <blockquote>
-<p>Ubuntu Error: The partition table format in use on your disks normally requires you to create a separate partition for boot loader code. This partition should be marked for use as a "Reserved BIOS boot area" and should be at least 1MB in size. Note that this is not the same as a partition mounted on <code>/boot</code>.</p>
+<p><strong>算法. 求最大公约数(辗转相除法)</strong> 求a, b两个整数的最大公约数 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b; b!=<span class="number">0</span>; r=a%b, a=b, b=r);</span><br></pre></td></tr></table></figure> 则得到的a为最大公约数.</p>
 </blockquote>
-<p>于是，我按照它的提示，创建了一个保留BIOS分区。选择安装启动引导器到该分区，没有报错。但这只是冰山一角。</p>
-<p>安装即将结束的时候，报错：</p>
+<h2 id="break和continue语句">break和continue语句</h2>
+<p>break跳出循环, 但只跳出一层循环. continue终止本次循环, 进入下一次循环.</p>
 <blockquote>
-<p>fatal error: 执行 ‘grub-install /dev/sdb' 失败，这是一个致命错误</p>
+<p><strong>算法. 判断是否为素数</strong> 设输入的数据为n, 判断其是否为素数 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (sqrtn = <span class="built_in">sqrt</span>((<span class="keyword">double</span>)n), i = <span class="number">2</span>; i &lt;= sqrtn; i++);</span><br><span class="line">	<span class="keyword">if</span> (n % i == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">if</span> (n &gt;= <span class="number">2</span> &amp;&amp; i &gt; sqrtn) <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; “ is prime” &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; “ is <span class="keyword">not</span> prime” &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>解决方案：<strong>制作Linux Mint启动盘不可以用Ultra ISO</strong>，它会默认选择UEFI的启动模式，而且Linux Mint的原生安装包实际上还缺失两个文件，需要制作时补上。那么如何制作呢？<strong>使用rufus，避开UEFI启动的选项</strong>，制作前，它会提示自动下载那两个文件。使用重新制作的启动盘，那两个错误都不会出现。并且<strong>启动引导器就直接安装在硬盘上，不要安装在分区中，更无需创建保留BIOS分区</strong>。</p>
-<p>Linux Mint刚刚打开的时候，第一眼注意到的就是它优美的图形界面。字体或许有点小，但这是容易调节的。</p>
-<h2 id="安装texlive和lyx">安装Texlive和Lyx</h2>
-<p>LaTeX是刚需，自然少不了安装相关的环境。安装Texlive和Lyx除了耗时较长以外，没有出现错误信息。问题出现在全部安装完毕，打开Lyx编写文档时。我选择“从模版新建”，并选择ctex.lyx ，这时弹出提示信息ctexart.cls和一些sty找不到，导致无法编译文档。经过检查，Texlive已经完整安装，ctexart.cls和相关sty文件都存在。</p>
-<p>解决方案：<strong>终端中执行<code>texhash</code> ，然后在Lyx中“重新配置Lyx“</strong>。</p>
-<h2 id="一些其它的坑">一些其它的坑</h2>
-<p>关于Linux分区大小问题：最好一次到位，后面调整比较麻烦。要充分预估后面安装的软件数量。我这次的分区为： <code>/boot</code> 500MB；<code>/</code> 46GB；<code>/home</code> 45GB</p>
-<p>但是实际使用过程中发现，安装完必备的软件（主要是Texlive较大）已经占用了27GB <code>/</code> 下的空间了，而 <code>/home</code> 才放了不到2GB的文件。实际上，<code>/home</code> 的用处不是很大，因为在Windows和Linux双系统中，可以挂载Windows下的磁盘，也就是说，Linux下可以访问Windows系统的文件（但Windows下不能直接访问Linux的文件，原因是磁盘文件系统不同（Linux为ext4））。所以，在Linux下我们存储文件可以存放在磁盘的任意位置，不需要存放于 <code>/home</code> 中，在分区时根目录 <code>/</code> 应该适当预留大一些，而 <code>/home</code> 则不需要太大。</p>
-<p>如果让我重新分区，我会分为 <strong><code>/boot</code> 500MB；<code>/</code> 71GB；<code>/home</code> 20GB</strong> <strong>这是Linux Mint和Windows双系统中比较合适的比例。</strong></p>
 
           
             <div class='article_footer'>
@@ -415,6 +416,37 @@
   
     
     
+
+
+  
+
+<section class="widget list references  desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i><span class='name'>参考资料</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="http://product.dangdang.com/25239691.html" href="http://product.dangdang.com/25239691.html"
+          
+          
+          id="http:productdangdangcom25239691html"
+          >
+          <div class='name'>
+            
+            邵荣. C++程序设计(第二版)
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
 
 
 
@@ -443,7 +475,7 @@
           
         
           
-            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/>https://junyuanhe.github.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/</a></p>
+            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/>https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/</a></p>
           
         
       </blockquote>
@@ -468,10 +500,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-26T20:16:19+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-15T21:24:36+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年7月26日 20:16</p>
+    <p>更新于：2020年8月15日 21:24</p>
   </a>
 </div>
 
@@ -480,7 +512,7 @@
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>计算机</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Linux/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Linux</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LinuxMint/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LinuxMint</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/LaTeX/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>LaTeX</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Lyx/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>Lyx</p></a></div>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>计算机</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div>
 
 
         
@@ -495,7 +527,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/&title=Linux Mint安装及LaTeX-Lyx配置踩坑记 - Jun's Blog&summary=本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/&title=C++程序设计基础(3) - 选择结构与循环结构 - Jun's Blog&summary=介绍两种基本的结构: 选择结构与循环结构"
           
           >
           
@@ -507,7 +539,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/&title=Linux Mint安装及LaTeX-Lyx配置踩坑记 - Jun's Blog&summary=本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/&title=C++程序设计基础(3) - 选择结构与循环结构 - Jun's Blog&summary=介绍两种基本的结构: 选择结构与循环结构"
           
           >
           
@@ -519,7 +551,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/&title=Linux Mint安装及LaTeX-Lyx配置踩坑记 - Jun's Blog&summary=本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。"
+          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/&title=C++程序设计基础(3) - 选择结构与循环结构 - Jun's Blog&summary=介绍两种基本的结构: 选择结构与循环结构"
           
           >
           
@@ -533,7 +565,7 @@
         <div class='hoverbox'>
           <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -553,23 +585,15 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++程序设计基础(1) - 计算机基础知识</p>
-                <p class='content'>主要介绍进制的转换和计算机数值表示
-
-进制的转换
-
-其它进制转换为十进制
-
-利用展开式直接计算。例如：将八进制数\((137.45)_{8}\)转换为十进制
-\[
-(137.45...</p>
-              </a>
             
-            
-              <a class='next' href='/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/'>
-                <p class='title'>集合元素个数与线性空间的维数<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常...</p>
+              <a class='next' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/'>
+                <p class='title'>C++程序设计基础(2) - 数据与运算<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>主要介绍C++的基本数据类型和运算符, 略去了较为简单的内容
+
+C++标识符
+
+C++标识符的含义: C++中使用的名字, 如变量名、类型名、函数名等
+合法的C++标识符：由字母、数字...</p>
               </a>
             
           </div>
@@ -616,7 +640,7 @@
 
   <script>
     window.subData = {
-      title: 'Linux Mint安装及LaTeX-Lyx配置踩坑记',
+      title: 'C++程序设计基础(3) - 选择结构与循环结构',
       tools: true
     }
   </script>
@@ -641,7 +665,7 @@
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#来由"><span class="toc-number">1.</span> <span class="toc-text">来由</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#初识linux-mint"><span class="toc-number">2.</span> <span class="toc-text">初识Linux Mint</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装texlive和lyx"><span class="toc-number">3.</span> <span class="toc-text">安装Texlive和Lyx</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一些其它的坑"><span class="toc-number">4.</span> <span class="toc-text">一些其它的坑</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#if语句"><span class="toc-number">1.</span> <span class="toc-text">if语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#条件表达式"><span class="toc-number">2.</span> <span class="toc-text">条件表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switch语句"><span class="toc-number">3.</span> <span class="toc-text">switch语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#while语句和do...while语句"><span class="toc-number">4.</span> <span class="toc-text">while语句和do...while语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#for语句"><span class="toc-number">5.</span> <span class="toc-text">for语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#break和continue语句"><span class="toc-number">6.</span> <span class="toc-text">break和continue语句</span></a></li></ol>
     </div>
   </section>
 
