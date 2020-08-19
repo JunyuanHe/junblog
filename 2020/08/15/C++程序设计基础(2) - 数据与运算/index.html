@@ -383,30 +383,19 @@
           <p>主要介绍C++的基本数据类型和运算符, 略去了较为简单的内容</p>
 <a id="more"></a>
 <h2 id="c标识符">C++标识符</h2>
-<ul>
-<li><p>C++标识符的含义: C++中使用的名字, 如变量名、类型名、函数名等</p></li>
-<li><p>合法的C++标识符：由字母、数字、下划线构成，首字母不能是数字.</p></li>
-</ul>
+<p>• C++标识符的含义: C++中使用的名字, 如变量名、类型名、函数名等</p>
+<p>• 合法的C++标识符：由字母、数字、下划线构成，首字母不能是数字.</p>
 <h2 id="常量">常量</h2>
-<ul>
-<li><p>八进制: 前缀为<code>0</code>十六进制: 前缀为<code>0x</code>或<code>0X</code></p></li>
-<li><p>转义序列(预定义): 换行<code>\n</code> (newline), 跳格<code>\t</code> (tab), 回车<code>\r</code> (return), 警报<code>\a</code> (alarm), 回退一个字符<code>\b</code> (backspace), 反斜杠<code>\\</code>, 单引号<code>\'</code> 转义序列(ASCII): 用最多3位八进制(如<code>\103</code>) 或 <code>x</code>加上最多2位十六进制(如<code>\x6f</code>)表示字符.</p></li>
-<li><p>最大整数 <code>maxInt = 0x7fffffff</code>, 最小整数 <code>minInt = 0x80000000</code></p></li>
-<li><p>八进制输出 <code>cout &lt;&lt; oct &lt;&lt; maxInt;</code> 十六进制输出 <code>cout &lt;&lt; hex &lt;&lt; maxInt;</code> 十进制输出 <code>cout &lt;&lt; dec &lt;&lt; maxInt;</code></p></li>
-</ul>
+<p>• 八进制: 前缀为<code>0</code>十六进制: 前缀为<code>0x</code>或<code>0X</code></p>
+<p>• 转义序列(预定义): 换行<code>\n</code> (newline), 跳格<code>\t</code> (tab), 回车<code>\r</code> (return), 警报<code>\a</code> (alarm), 回退一个字符<code>\b</code> (backspace), 反斜杠<code>\\</code>, 单引号<code>\'</code> 转义序列(ASCII): 用最多3位八进制(如<code>\103</code>) 或 <code>x</code>加上最多2位十六进制(如<code>\x6f</code>)表示字符.</p>
+<p>• 最大整数 <code>maxInt = 0x7fffffff</code>, 最小整数 <code>minInt = 0x80000000</code></p>
+<p>• 八进制输出 <code>cout &lt;&lt; oct &lt;&lt; maxInt;</code> 十六进制输出 <code>cout &lt;&lt; hex &lt;&lt; maxInt;</code> 十进制输出 <code>cout &lt;&lt; dec &lt;&lt; maxInt;</code></p>
 <h2 id="基本运算及表达式">基本运算及表达式</h2>
-<ul>
-<li><p>结合方向从右向左:</p>
-<ol type="1">
-<li>部分一元运算: <code>*</code>(指向),<code>&amp;</code>(取地址), <code>new</code>, <code>delete</code>, <code>!</code>, <code>~</code>, <code>++</code>, <code>--</code>, <code>-</code>(取负), <code>sizeof()</code>, 显式转换</li>
-<li>三元运算: <code>? :</code></li>
-<li>赋值运算: <code>=</code>, <code>+=</code>, <code>-=</code>,<code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&amp;=</code>, <code>^=</code>, <code>|=</code></li>
-</ol></li>
-<li><p>左值: 表示存储单元的表达式, 可被赋值. 在C++中, 前置增量/减量运算, 赋值运算的结果是左值. 右值: 不是左值的表达式, 不可被赋值. 常量和计算值是右值.</p></li>
-<li><p>连续输入数据, 以Ctrl^Z结束的方式: <code>while (cin &gt;&gt; x){...}</code></p></li>
-<li><p>显式类型转换: 若定义<code>int a = 3;</code> 将其转换为double类型的方法如下<code>double(a);</code> 或 <code>(double)a;</code> 或 <code>static_cast&lt;double&gt;(a);</code></p></li>
-<li><p>短路表达式: 逻辑表达式(与、或)一旦有了最终结果就不再计算.</p></li>
-</ul>
+<p>• 结合方向从右向左: (1) 部分一元运算: <code>*</code>(指向),<code>&amp;</code>(取地址), <code>new</code>, <code>delete</code>, <code>!</code>, <code>~</code>, <code>++</code>, <code>--</code>, <code>-</code>(取负), <code>sizeof()</code>, 显式转换 (2) 三元运算: <code>? :</code> (3) 赋值运算: <code>=</code>, <code>+=</code>, <code>-=</code>,<code>*=</code>, <code>/=</code>, <code>%=</code>, <code>&lt;&lt;=</code>, <code>&gt;&gt;=</code>, <code>&amp;=</code>, <code>^=</code>, <code>|=</code></p>
+<p>• 左值: 表示存储单元的表达式, 可被赋值. 在C++中, 前置增量/减量运算, 赋值运算的结果是左值. 右值: 不是左值的表达式, 不可被赋值. 常量和计算值是右值.</p>
+<p>• 连续输入数据, 以Ctrl^Z结束的方式: <code>while (cin &gt;&gt; x){...}</code></p>
+<p>• 显式类型转换: 若定义<code>int a = 3;</code> 将其转换为double类型的方法如下<code>double(a);</code> 或 <code>(double)a;</code> 或 <code>static_cast&lt;double&gt;(a);</code></p>
+<p>• 短路表达式: 逻辑表达式(与、或)一旦有了最终结果就不再计算.</p>
 <h2 id="位运算">位运算</h2>
 <p>与运算 <code>&amp;</code> : 都为1, 结果才为1.</p>
 <p>或运算 <code>|</code> :只要有一个为1, 结果就为1.</p>
@@ -505,10 +494,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-16T19:20:39+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-19T19:42:46+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年8月16日 19:20</p>
+    <p>更新于：2020年8月19日 19:42</p>
   </a>
 </div>
 
@@ -590,13 +579,14 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++程序设计基础(3) - 选择结构与循环结构</p>
+              <a class='prev' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++程序设计基础(3) - 结构化程序设计</p>
                 <p class='content'>介绍两种基本的结构: 选择结构与循环结构
 
-选择结构
-if语句
-12345if(表达式) &#123;...&#125;else if(表达式) &#123;...&#125;...el...</p>
+语句
+语句是C++程序的基本执行单位. 在C++中, 一个语句后面加分号表示语句的结束.
+C++中的语句分为单语句、复合语句和结构性语句.
+...</p>
               </a>
             
             

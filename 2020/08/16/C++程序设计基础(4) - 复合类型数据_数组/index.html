@@ -383,27 +383,23 @@
           <p>介绍数组和C风格字符串的处理, 以及一些十分常用的数组算法.</p>
 <a id="more"></a>
 <h2 id="一维数组">一维数组</h2>
-<ul>
-<li><p><strong>数组的定义</strong>: <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]; <span class="keyword">double</span> b[<span class="number">20</span>]; <span class="keyword">char</span> c[<span class="number">80</span>];</span><br></pre></td></tr></table></figure> 数组的大小必须是正的整数类型的常量表达式.</p></li>
-<li><p><strong>一维数组赋初值</strong>: <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; </span><br><span class="line"><span class="keyword">int</span> a1[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> a2[<span class="number">5</span>] = &#123;<span class="number">1</span>&#125;; <span class="comment">//后面默认初值为0</span></span><br></pre></td></tr></table></figure> 注意: 如果数组未赋初值, 则数组中元素的值是不确定的(有的编译器会清为特定的值, 有的编译器保留残留值)</p></li>
-<li><p><strong>计算数组元素个数</strong>: <code>sizeof(a)/sizeof(a[0])</code></p></li>
-</ul>
+<p>• <strong>数组的定义</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">10</span>]; <span class="keyword">double</span> b[<span class="number">20</span>]; <span class="keyword">char</span> c[<span class="number">80</span>];</span><br></pre></td></tr></table></figure>
+<p>数组的大小必须是正的整数类型的常量表达式.</p>
+<p>• <strong>一维数组赋初值</strong>:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">5</span>] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; </span><br><span class="line"><span class="keyword">int</span> a1[] = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;;</span><br><span class="line"><span class="keyword">int</span> a2[<span class="number">5</span>] = &#123;<span class="number">1</span>&#125;; <span class="comment">//后面默认初值为0</span></span><br></pre></td></tr></table></figure>
+<p>注意: 如果数组未赋初值, 则数组中元素的值是不确定的(有的编译器会清为特定的值, 有的编译器保留残留值)</p>
+<p>• <strong>计算数组元素个数</strong>: <code>sizeof(a)/sizeof(a[0])</code></p>
 <h2 id="多维数组">多维数组</h2>
-<ul>
-<li><strong>多维数组的定义</strong>: <code>int a[2][3][4];</code></li>
-<li><strong>多维数组在内存中的存储</strong>: 按<code>a[0][0][0], a[0][0][1], a[0][0][2], a[0][0][3], a[0][1][0], a[0][1][1], a[0][1][2], a[0][1][3], a[0][2][0], ...</code> 依次存放, 占据连续空间</li>
-<li><strong>多维数组赋初值</strong>:</li>
-</ul>
+<p>• 多维数组的定义: <code>int a[2][3][4];</code></p>
+<p>• <strong>多维数组在内存中的存储</strong>: 按<code>a[0][0][0], a[0][0][1], a[0][0][2], a[0][0][3], a[0][1][0], a[0][1][1], a[0][1][2], a[0][1][3], a[0][2][0], ...</code> 依次存放, 占据连续空间</p>
+<p>• <strong>多维数组赋初值</strong>:</p>
 <p>​ (1) 按行形式: <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">4</span>] = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>&#125;,&#123;<span class="number">8</span>&#125;,&#123;<span class="number">0</span>&#125;&#125;; <span class="comment">//每行初值不足补0</span></span><br><span class="line"><span class="keyword">int</span> b[][<span class="number">4</span>] = &#123;&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;,&#123;<span class="number">5</span>,<span class="number">6</span>&#125;,&#123;<span class="number">8</span>&#125;,&#123;<span class="number">0</span>&#125;&#125;; <span class="comment">//第一维大小可以省略,由初值行数确定. 但第二维大小不可省略.</span></span><br></pre></td></tr></table></figure> ​ (2) 按整体形式: <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">4</span>][<span class="number">4</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">9</span>&#125;; <span class="comment">//数据按照内存中存放的顺序依次存储</span></span><br><span class="line"><span class="keyword">int</span> b[][<span class="number">4</span>] = &#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">9</span>&#125;; <span class="comment">//第一维大小由初值个数所能构成的行数确定, 此处为2.</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="c风格字符串字符数组">C风格字符串(字符数组)</h2>
-<ul>
-<li><strong>C风格字符串</strong>: 用字符数组存放并用 '\0' 结束字符串, 用字符串首地址来使用字符串.</li>
-<li><strong>赋初值</strong>: 可以按照普通字符数组赋初值的方式(不提倡, 繁琐且容易遗漏串结束标志<code>\0</code>), 通常按照赋字符串初值的方式. 见下例:</li>
-</ul>
+<p>• <strong>C风格字符串</strong>: 用字符数组存放并用 '\0' 结束字符串, 用字符串首地址来使用字符串.</p>
+<p>• <strong>赋初值</strong>: 可以按照普通字符数组赋初值的方式(不提倡, 繁琐且容易遗漏串结束标志<code>\0</code>), 通常按照赋字符串初值的方式. 见下例:</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s1[<span class="number">10</span>] = &#123;<span class="string">'H'</span>,<span class="string">'e'</span>,<span class="string">'l'</span>,<span class="string">'l'</span>,<span class="string">'o'</span>&#125;;  <span class="comment">//遗漏了串结束标志</span></span><br><span class="line"><span class="keyword">char</span> s2[] = &#123;<span class="string">'H'</span>,<span class="string">'e'</span>,<span class="string">'l'</span>,<span class="string">'l'</span>,<span class="string">'o'</span>,<span class="string">'\0'</span>&#125;;  <span class="comment">//正确</span></span><br><span class="line"><span class="keyword">char</span> s3[] = <span class="string">"Hello"</span>;  <span class="comment">//与s2的赋值等价</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li><strong>字符串的输入输出</strong>: C风格字符串可以直接输入输出, 无需使用循环</li>
-</ul>
+<p>• <strong>字符串的输入输出</strong>: C风格字符串可以直接输入输出, 无需使用循环</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> s[<span class="number">80</span>];</span><br><span class="line"><span class="built_in">cin</span> &gt;&gt; s;  <span class="comment">//直接输入</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; s &lt;&lt; <span class="built_in">endl</span>;  <span class="comment">//直接输出</span></span><br></pre></td></tr></table></figure>
 <p>几种输入方式的比较:</p>
 <p>(定义<code>char ch; char s[80];</code>)</p>
@@ -413,13 +409,11 @@
 <p><code>cin.get(s, 80, '\n');</code> //第一个参数表示输入字符串到字符数组s中, 第二个参数表示此次输入保存的最大字符数(79个有效字符加一个串结束标志), 第三个参数(默认参数为<code>\n</code>,常常省略)表示遇到该字符结束输入, 不读取该字符, 并添加串结束标志. 注意: 如果前80个字符都没有回车字符, 那么将读取79个字符, 添加串结束标志, 并产生输入错误标志.</p>
 <p><code>if(!cin) cin.clear();</code> //清除输入错误标志</p>
 <p><code>cin.getline(s, 80, '\n');</code> //类似于<code>cin.get(s, 80, '\n')</code>, 只不过会读取回车字符<code>\n</code>然后丢弃.</p>
-<ul>
-<li><p><strong>字符串的处理</strong>:</p>
+<p>• <strong>字符串的处理</strong>:</p>
 <ol type="1">
 <li><p>利用串结束标志控制循环</p></li>
-<li><p>使用库函数</p></li>
-</ol></li>
-</ul>
+<li><p>使用库函数. 常用的字符串</p></li>
+</ol>
 <p><code>strlen(s);</code> //求字符串s的长度, 不含串结束标志. 英文: length</p>
 <p><code>strcpy(s1, s2);</code> //将字符串s2复制到s1中. 英文: copy</p>
 <p><code>strcmp(s1, s2);</code> //按字典序比较s1和s2. 相同时函数值为0, 不相同时比较ASCII码, s1&gt;s2时函数值为1, s1&lt;s2时函数值为-1. (注意, 大写字符的ASCII码小于小写字母的). 英文: compare</p>
@@ -541,10 +535,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-16T22:11:55+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-19T21:11:46+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年8月16日 22:11</p>
+    <p>更新于：2020年8月19日 21:11</p>
   </a>
 </div>
 
@@ -627,13 +621,14 @@
           <div class="prev-next">
             
             
-              <a class='next' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E9%80%89%E6%8B%A9%E7%BB%93%E6%9E%84%E5%92%8C%E5%BE%AA%E7%8E%AF%E7%BB%93%E6%9E%84/'>
-                <p class='title'>C++程序设计基础(3) - 选择结构与循环结构<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+              <a class='next' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/'>
+                <p class='title'>C++程序设计基础(3) - 结构化程序设计<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
                 <p class='content'>介绍两种基本的结构: 选择结构与循环结构
 
-选择结构
-if语句
-12345if(表达式) &#123;...&#125;else if(表达式) &#123;...&#125;...el...</p>
+语句
+语句是C++程序的基本执行单位. 在C++中, 一个语句后面加分号表示语句的结束.
+C++中的语句分为单语句、复合语句和结构性语句.
+...</p>
               </a>
             
           </div>
