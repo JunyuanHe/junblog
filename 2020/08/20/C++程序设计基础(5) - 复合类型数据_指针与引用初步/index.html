@@ -396,11 +396,16 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">float</span> f = <span class="number">5.0f</span>, *pf = &amp;f;</span><br><span class="line"><span class="keyword">int</span> *pi = (<span class="keyword">int</span> *) &amp;f;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; *pf &lt;&lt; <span class="string">"\t"</span> &lt;&lt; *pi &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="comment">//结果: 5	1084227584</span></span><br></pre></td></tr></table></figure>
 <p>这里, <code>pf</code>和<code>pi</code>保存的地址是相同的, 指向同一块二进制数据, 但是它们将这部分二进制数分别按int型解释和float型解释, 所以得到的结果不一样.</p>
 <h3 id="指针的算术运算">指针的算术运算</h3>
-<p>C++的指针可以进行算术运算, 但是指针的算术运算仅限于 ①指针加/减一个整数, 表示以指向类型的存储单元为单位, 向前或向后移动若干个元素的位置. 如double型8个字节为一个单元, 若有定义<code>double a, *p = &amp;a;</code>则<code>p+1</code>表示的是<code>p</code>后面8个字节的位置. ②两个同类型的指针相减, 表示以指向类型的存储单元为单位, 两个地址之间相差的元素个数</p>
+<p>C++的指针可以进行算术运算, 但是指针的算术运算仅限于</p>
+<p>①指针加/减一个整数, 表示以指向类型的存储单元为单位, 向前或向后移动若干个元素的位置. 如double型8个字节为一个单元, 若有定义<code>double a, *p = &amp;a;</code>则<code>p+1</code>表示的是<code>p</code>后面8个字节的位置.</p>
+<p>②两个同类型的指针相减, 表示以指向类型的存储单元为单位, 两个地址之间相差的元素个数</p>
 <h3 id="用指针处理数组">用指针处理数组</h3>
 <p>指针的算术运算常常用来处理数组</p>
-<p>在绝大多数情况下，数组名表示数组的首地址(数组第一个元素的地址)。即若定义<code>int a[]</code>则<code>a</code>等价于<code>&amp;a[0]</code>。</p>
-<p>但是，需要注意的是，这里有两个例外: 第一个是<code>sizeof()</code>，第二个是取地址<code>&amp;</code>。在这两种情况之下，我们不能把数组名等同于数组的首地址。 假设我们已经定义了<code>int a[10]</code>，那么 • <code>sizeof(a)</code>返回的是<strong>整个数组的长度</strong>40，而不是指向数组的指针的长度4。 • <code>&amp;a</code>得到的是一个<strong>指向数组的指针</strong>，而不是一个指向指针常量的指针。这里再要特别注意，是指向数组的指针，而不是指向数组第一个元素的指针。即<code>&amp;a</code>和<code>&amp;a+1</code>相差的是整个数组的长度，而<code>a</code>和<code>a+1</code>相差的只是一个数组元素的长度。</p>
+<p>在<strong>绝大多数情况下，数组名表示数组的首地址</strong>(数组第一个元素的地址)。即若定义<code>int a[]</code>则<code>a</code>等价于<code>&amp;a[0]</code>。</p>
+<p>但是，需要注意的是，这里有<strong>两个例外: 第一个是<code>sizeof()</code>，第二个是取地址<code>&amp;</code></strong>。在这两种情况之下，我们不能把数组名等同于数组的首地址。</p>
+<p>假设我们已经定义了<code>int a[10]</code>，那么</p>
+<p>• <code>sizeof(a)</code>返回的是<strong>整个数组的长度</strong>40，而不是指向数组的指针的长度4。</p>
+<p>• <code>&amp;a</code>得到的是一个<strong>指向数组的指针</strong>，而不是一个指向指针常量的指针。这里再要特别注意，是指向数组的指针，而不是指向数组第一个元素的指针。即<code>&amp;a</code>和<code>&amp;a+1</code>相差的是整个数组的长度，而<code>a</code>和<code>a+1</code>相差的只是一个数组元素的长度。</p>
 <p>扫描数组的n个元素并进行处理有一下几种方式:</p>
 <p>• 下标方式: <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="comment">//处理a[i]，或者处理*(a+i)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>• 指针方式: <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (p = a, <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">	<span class="comment">//处理*p</span></span><br><span class="line">	<span class="comment">//此方法用下标控制循环，用指针处理数据</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -519,10 +524,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-20T20:03:27+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-20T20:06:36+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年8月20日 20:03</p>
+    <p>更新于：2020年8月20日 20:06</p>
   </a>
 </div>
 
