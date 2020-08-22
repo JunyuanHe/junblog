@@ -8,7 +8,7 @@
       <link href="/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
       <url>/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</url>
       
-        <content type="html"><![CDATA[<p>C++作用域</p><a id="more"></a><figure><img src="/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/Cpp程序设计7%20作用域.png" alt><figcaption>Cpp程序设计7 作用域</figcaption></figure>]]></content>
+        <content type="html"><![CDATA[<p>C++作用域</p><a id="more"></a><figure><img src="/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/Cpp程序设计7%20作用域.png" alt><figcaption>C++程序设计7 作用域</figcaption></figure><p><strong>特别注意:</strong></p><ol type="1"><li><p>同一层级的作用域不允许出现同名的标识符。重名的标识符必须在不同层级出现，内层标识符隐藏外层标识符。</p></li><li><p>同一层级可以进行函数重载。不同层级下，<strong>内层函数说明隐藏一切外层函数（不论参数表是否相同）的说明</strong>。</p></li></ol>]]></content>
       
       
       <categories>
