@@ -5,8 +5,6 @@
   <!-- SEO相关 -->
   
     
-      <meta name="robots" content="noindex,follow">
-    
   
   <!-- 渲染优化 -->
   <meta name="renderer" content="webkit">
@@ -18,8 +16,13 @@
 
   <!-- 页面元数据 -->
   
-    <title>标签：抽象代数 - Jun&#39;s Blog</title>
+    <title>C++程序设计基础(6) - 函数 - Jun&#39;s Blog</title>
   
+    <meta name="keywords" content="C++">
+  
+  
+    <meta name="description" content="指针和引用类型的初步介绍, 更深入的内容留到后面再讲.
+C++函数的核心知识">
   
 
   <!-- feed -->
@@ -299,25 +302,12 @@
     <div class='body-wrapper'>
       
 
-
 <div class='l_main'>
   
-    
-      
-  <section class="post-list ">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <article class="post white-box blur reveal ">
+
   
+    <article id="post" class="post white-box reveal blur article-type-post" itemscope itemprop="blogPost">
+      
 
 
   <section class='meta'>
@@ -327,11 +317,11 @@
       <div class="meta" id="header-meta">
         
           
-  <h2 class="title">
-    <a href="/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/">
-      集合元素个数与线性空间的维数
+  <h1 class="title">
+    <a href="/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/">
+      C++程序设计基础(6) - 函数
     </a>
-  </h2>
+  </h1>
 
 
         
@@ -354,9 +344,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/' rel="nofollow">
+    <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>数学/代数</p>
+      <p>计算机/C++</p>
     </a>
   </div>
 
@@ -367,14 +357,9 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年7月12日 15:22</p>
+    <p>发布于：2020年8月22日 19:32</p>
   </a>
 </div>
-
-            
-          
-            
-              
 
             
           
@@ -392,150 +377,115 @@
   </section>
 
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>证明一个集合元素个数不超过线性空间的维数, 可以去证明这个集合的元素是线性无关的. 而证明线性空间的维数不超过集合元素个数n, 可以考虑证明线性空间中任意n+1个元素都线性相关. 这在域论中是常见的手法.</p>
-<p>下面给出几个例子.</p>
-      
-    </div>
-    
-      
-        <div class="button readmore">
-          <a href="/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/">
-            阅读全文 <i class="fas fa-chevron-right"></i>
-          </a>
-        </div>
-      
-    
-  </section>
-</article>
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>指针和引用类型的初步介绍, 更深入的内容留到后面再讲.</p>
+<p>C++函数的核心知识</p>
+<a id="more"></a>
+<h2 id="核心知识自测">核心知识(自测)</h2>
+<h3 id="函数的定义">函数的定义</h3>
+<ol type="1">
+<li>函数定义、函数调用、函数说明的形式</li>
+<li>函数定义的位置（可不可以放在另一个函数的函数体内？不可以）。函数说明什么时候可以省略？（先定义，后使用；如果要在定义之前使用，就必须添加函数说明。）函数说明的位置（可不可以放在另一个函数的函数体内？可以）</li>
+<li>函数返回值的写法？void类型函数返回值的写法？函数返回值何种情况可以省略？（void类型函数，且return语句是函数体的最后一个语句）</li>
+<li><code>rand()</code>函数定义所在的头文件?(<code>&lt;cstdlib&gt;</code>).</li>
+<li><code>clock()</code>函数定义所在的头文件?(<code>&lt;ctime&gt;</code>). <code>clock()</code>函数的作用?(返回程序开始至此句经过的毫秒数).</li>
+</ol>
+<h3 id="函数的参数传递">函数的参数传递</h3>
+<ol type="1">
+<li>函数的三种参数传递？(值传递、地址传递、引用传递)。描述三种参数传递的过程。</li>
+<li>形参为普通变量，在函数体内改变变量值，实参的值会改变吗？（不会）。形参为数组，在函数体内改变数组元素，实参数组的值会改变吗？（会）。试解释原因。（形参数组的本质是形参指针变量）</li>
+<li>若定义了<code>double a[10];</code>则执行<code>sizeof(a)</code>返回的值?(80). 有函数<code>void f(double a[], int n){ cout &lt;&lt; sizeof(a) &lt;&lt; endl; }</code>中执行<code>f(a, 10);</code>的值?(4, 同时可能会有Warning). 为什么?(返回的是<code>double*</code>类型的大小)</li>
+<li>函数参数的传递次序? (从最后一个参数到第一个参数依次传递)</li>
+</ol>
+<h3 id="递归函数函数的重载含默认参数的函数">递归函数、函数的重载、含默认参数的函数</h3>
+<ol type="1">
+<li>递归函数的设计?(递归终止点和递归调用).</li>
+<li>写出求解汉诺塔(河内塔)问题的函数.</li>
+<li>什么叫重载函数？（同一个函数名，使用不同的参数列表）</li>
+<li>C++是否允许同名函数有相同的参数列表但函数类型不同？（不允许）</li>
+<li>将默认参数函数<code>void f(int x, int y = 3){ cout &lt;&lt; x &lt;&lt; "\t" &lt;&lt; y &lt;&lt; endl; }</code>改写成重载函数以实现同样效果.</li>
+<li>如何给出函数的默认参数? (默认参数函数通常在函数说明中给出(函数定义中无需给出), 函数给出的默认参数是靠后面的参数.)</li>
+</ol>
+<h3 id="内联函数">内联函数</h3>
+<ol type="1">
+<li>内联函数与普通函数的最大区别? (直接嵌入代码)</li>
+<li>如何定义内联函数? (在前面加<code>inline</code>关键字)</li>
+<li>内联函数的注意点: 不可出现循环和switch语句, 不能递归, 实际是否嵌入函数由编译器决定.</li>
+</ol>
 
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+  
+
+<section class="widget list references  desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i><span class='name'>参考资料</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="http://product.dangdang.com/25239691.html" href="http://product.dangdang.com/25239691.html"
+          
+          
+          id="http:productdangdangcom25239691html"
+          >
+          <div class='name'>
+            
+            邵荣. C++程序设计(第二版)
           </div>
-        
+          
+        </a></li>
       
-    
-  </section>
-  
-    
-    <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-    
-    
-      <script>
-  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    // 文章章节标题不能为 “MathJax” ，否则会报错。
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
+    </ul>
+  </div>
+</section>
 
-    
+
 
   
 
-
-    
-  
-</div>
-<aside class='l_side'>
-  
   
     
     
 
-<section class="widget blogger blur desktop mobile">
+
+
+  
+
+  
+    
+    
+
+<section class="widget copyright  ">
   <div class='content'>
     
-      
-        <a class='avatar flat-box' href='/aboutme/'>
-          <img no-lazy src='https://cdn.jsdelivr.net/gh/JunyuanHe/cdn-assets@master/img/GeographicObjects2.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Jun</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">Jun's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
+      <blockquote>
         
           
-            <a href="/atom.xml"
-              class="social fas fa-rss flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议。转载请保留原文链接和作者。</p>
+
           
         
           
-            <a href="mailto:hejunyuan02@126.com"
-              class="social fas fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
+            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/>https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/</a></p>
           
         
-          
-            <a href="https://music.163.com/#/user/home?id=63035382"
-              class="social fas fa-headphones-alt flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-            </a>
-          
-        
-      </div>
+      </blockquote>
     
   </div>
 </section>
@@ -543,80 +493,188 @@
   
 
   
-    
-    
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-22T21:06:07+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年8月22日 21:06</p>
+  </a>
+</div>
+
+        
+      
+        
+          
   
-
-  <section class="widget category blur desktop mobile">
-    
-  <header>
-    
-      <a href='/categories/'><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div>
 
 
-    <div class='content'>
-      <ul class="entry navigation">
         
-          <li><a class="flat-box"
-            title="/categories/English/" href="/categories/English/"
-            id="categoriesEnglish"
-            ><div class='name'>English</div><div class='badge'>(1)</div></a></li>
+      
         
-          <li><a class="flat-box"
-            title="/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/" href="/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/"
-            id="categoriesE4BDBFE794A8E8AFB4E6988EE58F8AE6B58BE8AF95"
-            ><div class='name'>使用说明及测试</div><div class='badge'>(2)</div></a></li>
+      
         
-          <li><a class="flat-box"
-            title="/categories/%E6%95%B0%E5%AD%A6/" href="/categories/%E6%95%B0%E5%AD%A6/"
-            id="categoriesE695B0E5ADA6"
-            ><div class='name'>数学</div><div class='badge'>(1)</div></a></li>
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/&title=C++程序设计基础(6) - 函数 - Jun's Blog&summary=指针和引用类型的初步介绍, 更深入的内容留到后面再讲.
+C++函数的核心知识"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/&title=C++程序设计基础(6) - 函数 - Jun's Blog&summary=指针和引用类型的初步介绍, 更深入的内容留到后面再讲.
+C++函数的核心知识"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/&title=C++程序设计基础(6) - 函数 - Jun's Blog&summary=指针和引用类型的初步介绍, 更深入的内容留到后面再讲.
+C++函数的核心知识"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
         
-          <li><a class="flat-box child"
-            title="/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/" href="/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/"
-            id="categoriesE695B0E5ADA6E4BBA3E695B0"
-            ><div class='name'>代数</div><div class='badge'>(1)</div></a></li>
+        <div class='hoverbox'>
+          <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,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">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
         
-          <li><a class="flat-box"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"
-            id="categoriesE8AEA1E7AE97E69CBA"
-            ><div class='name'>计算机</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"
-            id="categoriesE8AEA1E7AE97E69CBAC"
-            ><div class='name'>C++</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/" href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/"
-            id="categoriesE8AEA1E7AE97E69CBALinux"
-            ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
+      
     </div>
   </section>
 
 
+        
+        
+          <div class="prev-next">
+            
+            
+              <a class='next' href='/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/'>
+                <p class='title'>C++程序设计基础(5) - 复合类型数据：指针与引用初步<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>指针和引用类型的初步介绍, 更深入的内容留到后面再讲.
+
+指针
+指针就是地址. 所有的变量都在内存中有一个地址, 通过地址可以使用变量, 我们就把这些地址形象地称为指向变量的指针.
+指针...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
   
 
   
-    
-    
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+        <p cst>读者们可以在此处进行交流</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
   
 
-  <section class="widget tagcloud blur desktop mobile">
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'C++程序设计基础(6) - 函数',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
     
   <header>
     
-      <a href='/tags/'><i class="fas fa-tags fa-fw" aria-hidden="true"></i><span class='name'>热门标签</span></a>
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
     
   </header>
 
 
     <div class='content'>
-      <a href="/tags/C/" style="font-size: 24px; color: #555">C++</a> <a href="/tags/English/" style="font-size: 14px; color: #999">English</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/tags/Lyx/" style="font-size: 14px; color: #999">Lyx</a> <a href="/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/tags/excerpt/" style="font-size: 14px; color: #999">excerpt</a> <a href="/tags/novel/" style="font-size: 14px; color: #999">novel</a> <a href="/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" style="font-size: 14px; color: #999">抽象代数</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#核心知识自测"><span class="toc-number">1.</span> <span class="toc-text">核心知识(自测)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的定义"><span class="toc-number">1.1.</span> <span class="toc-text">函数的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数传递"><span class="toc-number">1.2.</span> <span class="toc-text">函数的参数传递</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#递归函数函数的重载含默认参数的函数"><span class="toc-number">1.3.</span> <span class="toc-text">递归函数、函数的重载、含默认参数的函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#内联函数"><span class="toc-number">1.4.</span> <span class="toc-text">内联函数</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -796,6 +854,60 @@
 
 
 
+
+  
+    
+<script src="/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail,link'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "dogUA2FSKGTo029M1SEwGROT-MdYXbMMI",
+    appKey: "u0NdtQ8nvHoMdJPSYqm1LRxE",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'true',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
 
 
 

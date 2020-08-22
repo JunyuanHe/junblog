@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://junyuanhe.github.io/"/>
-  <updated>2020-08-21T15:10:20.783Z</updated>
+  <updated>2020-08-22T13:06:07.666Z</updated>
   <id>https://junyuanhe.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++程序设计基础(6) - 函数</title>
+    <link href="https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/"/>
+    <id>https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/</id>
+    <published>2020-08-22T11:32:47.000Z</published>
+    <updated>2020-08-22T13:06:07.666Z</updated>
+    
+    <content type="html"><![CDATA[<p>指针和引用类型的初步介绍, 更深入的内容留到后面再讲.</p><p>C++函数的核心知识</p><a id="more"></a><h2 id="核心知识自测">核心知识(自测)</h2><h3 id="函数的定义">函数的定义</h3><ol type="1"><li>函数定义、函数调用、函数说明的形式</li><li>函数定义的位置（可不可以放在另一个函数的函数体内？不可以）。函数说明什么时候可以省略？（先定义，后使用；如果要在定义之前使用，就必须添加函数说明。）函数说明的位置（可不可以放在另一个函数的函数体内？可以）</li><li>函数返回值的写法？void类型函数返回值的写法？函数返回值何种情况可以省略？（void类型函数，且return语句是函数体的最后一个语句）</li><li><code>rand()</code>函数定义所在的头文件?(<code>&lt;cstdlib&gt;</code>).</li><li><code>clock()</code>函数定义所在的头文件?(<code>&lt;ctime&gt;</code>). <code>clock()</code>函数的作用?(返回程序开始至此句经过的毫秒数).</li></ol><h3 id="函数的参数传递">函数的参数传递</h3><ol type="1"><li>函数的三种参数传递？(值传递、地址传递、引用传递)。描述三种参数传递的过程。</li><li>形参为普通变量，在函数体内改变变量值，实参的值会改变吗？（不会）。形参为数组，在函数体内改变数组元素，实参数组的值会改变吗？（会）。试解释原因。（形参数组的本质是形参指针变量）</li><li>若定义了<code>double a[10];</code>则执行<code>sizeof(a)</code>返回的值?(80). 有函数<code>void f(double a[], int n){ cout &lt;&lt; sizeof(a) &lt;&lt; endl; }</code>中执行<code>f(a, 10);</code>的值?(4, 同时可能会有Warning). 为什么?(返回的是<code>double*</code>类型的大小)</li><li>函数参数的传递次序? (从最后一个参数到第一个参数依次传递)</li></ol><h3 id="递归函数函数的重载含默认参数的函数">递归函数、函数的重载、含默认参数的函数</h3><ol type="1"><li>递归函数的设计?(递归终止点和递归调用).</li><li>写出求解汉诺塔(河内塔)问题的函数.</li><li>什么叫重载函数？（同一个函数名，使用不同的参数列表）</li><li>C++是否允许同名函数有相同的参数列表但函数类型不同？（不允许）</li><li>将默认参数函数<code>void f(int x, int y = 3){ cout &lt;&lt; x &lt;&lt; "\t" &lt;&lt; y &lt;&lt; endl; }</code>改写成重载函数以实现同样效果.</li><li>如何给出函数的默认参数? (默认参数函数通常在函数说明中给出(函数定义中无需给出), 函数给出的默认参数是靠后面的参数.)</li></ol><h3 id="内联函数">内联函数</h3><ol type="1"><li>内联函数与普通函数的最大区别? (直接嵌入代码)</li><li>如何定义内联函数? (在前面加<code>inline</code>关键字)</li><li>内联函数的注意点: 不可出现循环和switch语句, 不能递归, 实际是否嵌入函数由编译器决定.</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;指针和引用类型的初步介绍, 更深入的内容留到后面再讲.&lt;/p&gt;
+&lt;p&gt;C++函数的核心知识&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+    
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>C++程序设计基础(5) - 复合类型数据：指针与引用初步</title>
