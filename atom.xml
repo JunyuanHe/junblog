@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://junyuanhe.github.io/"/>
-  <updated>2020-08-22T13:27:42.265Z</updated>
+  <updated>2020-08-22T13:34:14.589Z</updated>
   <id>https://junyuanhe.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++程序设计基础(7) - 作用域</title>
+    <link href="https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
+    <published>2020-08-22T13:34:12.000Z</published>
+    <updated>2020-08-22T13:34:14.589Z</updated>
+    
+    <content type="html"><![CDATA[<p>C++作用域</p><a id="more"></a><figure><img src="/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/Cpp程序设计7%20作用域.png" alt><figcaption>Cpp程序设计7 作用域</figcaption></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;C++作用域&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="计算机" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+    
+    
+      <category term="C++" scheme="https://junyuanhe.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>C++程序设计基础(6) - 函数</title>
