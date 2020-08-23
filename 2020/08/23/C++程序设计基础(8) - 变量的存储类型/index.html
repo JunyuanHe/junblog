@@ -16,12 +16,12 @@
 
   <!-- 页面元数据 -->
   
-    <title>C++程序设计基础(7) - 作用域 - Jun&#39;s Blog</title>
+    <title>C++程序设计基础(8) - 变量的存储类型 - Jun&#39;s Blog</title>
   
     <meta name="keywords" content="C++">
   
   
-    <meta name="description" content="C++作用域">
+    <meta name="description" content="先简要介绍程序的内存映像，然后重点介绍C++变量的存储类型, 包括auto类型、static类型、register类型，以及无名变量和多文件程序中的变量与函数使用.">
   
 
   <!-- feed -->
@@ -317,8 +317,8 @@
         
           
   <h1 class="title">
-    <a href="/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/">
-      C++程序设计基础(7) - 作用域
+    <a href="/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/">
+      C++程序设计基础(8) - 变量的存储类型
     </a>
   </h1>
 
@@ -356,7 +356,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年8月22日 21:34</p>
+    <p>发布于：2020年8月23日 09:20</p>
   </a>
 </div>
 
@@ -380,16 +380,50 @@
         <div class="article-entry" itemprop="articleBody">
           
           
-          <p>C++作用域</p>
+          <p>先简要介绍程序的内存映像，然后重点介绍C++变量的存储类型, 包括auto类型、static类型、register类型，以及无名变量和多文件程序中的变量与函数使用.</p>
 <a id="more"></a>
-<figure>
-<img src="/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/Cpp程序设计7%20作用域.png" alt><figcaption>C++程序设计7 作用域</figcaption>
-</figure>
-<p><strong>特别注意:</strong></p>
+<h2 id="程序的内存映像">程序的内存映像</h2>
+<p>程序运行时，先要将硬盘上的程序代码装载到内存中，然后运行内存中的代码。装载到内存中的程序区域就叫做程序的内存映像。那么，在内存映像中程序是如何存放的呢？</p>
+<p>按存放内容的不同可以分为3个区域：</p>
 <ol type="1">
-<li><p>同一层级的作用域不允许出现同名的标识符。重名的标识符必须在不同层级出现，内层标识符隐藏外层标识符。</p></li>
-<li><p>同一层级可以进行函数重载。不同层级下，<strong>内层函数说明隐藏一切外层函数（不论参数表是否相同）的说明</strong>。</p></li>
+<li>程序区：存放程序指令</li>
+<li>静态存储区：存放永久数据（常量、静态变量、全局变量）</li>
+<li>动态存储区：存放临时数据（动态变量、局部变量）</li>
 </ol>
+<p>其中，如果在局部变量前面加上<code>static</code>前缀，则它变成了静态的局部变量，会存放在静态存储区；如果前缀为<code>auto</code>则为临时数据，存放在动态存储区；如果无前缀则默认为<code>auto</code>前缀。</p>
+<p>如果再细分，可以分为以下区域：</p>
+<ul>
+<li><p>程序区：存放程序指令</p></li>
+<li><p>静态存储区：存放永久数据（常量、静态变量、全局变量）</p>
+<ul>
+<li>常量区</li>
+<li>静态变量区（静态变量、全局变量）</li>
+</ul></li>
+<li><p>动态存储区：存放临时数据（动态变量、局部变量）</p>
+<ul>
+<li>栈区（自动变量）</li>
+<li>堆区（动态变量）</li>
+</ul></li>
+</ul>
+<p>关于栈，还要解释几句。我们把栈形象地比喻为堆盘子。一堆盘子看作一个栈，最下面的盘子称为栈底，地址较大；最上面的盘子称为栈顶，地址较小。放上去一个盘子（存储一个变量）称为入栈或压栈，栈顶上移，地址变小；取出来一个盘子称为出栈，栈顶下移，地址变大。后叠上的盘子只能先取下（后存储的变量只能先取出）。</p>
+<h2 id="变量的存储类型">变量的存储类型</h2>
+<h3 id="auto类型和static类型">auto类型和static类型</h3>
+<p><strong>Attention:</strong></p>
+<p>• 当变量或数组没有给出初值时，静态存储区中的变量默认为0（所占字节全部为0）。也就是说 常量、静态变量、全局变量 未赋初值时默认初值为0。</p>
+<p>当保存临时数据时，初始的数值不确定（残留值或者清为特定字节值）。也就是说，自动变量、动态变量的值是不确定的。</p>
+<p>• 函数参数是自动数据（auto类型）</p>
+<p>• 静态变量的定义和赋初值语句不论在程序的什么位置都会在主函数之前执行，且只会执行一次（运行主函数时会跳过该语句）。静态局部变量可以突破作用域的限制，在整个文件中都可使用。（故可以记录函数调用次数）</p>
+<p>• static修饰的全局变量和函数只能在本文件中访问，不能在其它文件中访问。</p>
+<h3 id="register类型">register类型</h3>
+<p>在变量定义时，前缀<code>register</code>申请使用CPU的寄存器存储变量（可以提高运行效率）</p>
+<h3 id="无名变量">无名变量</h3>
+<p>• 动态变量是无名变量，可以通过指针调用</p>
+<p>• 函数值也是无名变量，在所在调用语句结束后就撤销该变量。</p>
+<h3 id="多文件程序中的变量或函数">多文件程序中的变量或函数</h3>
+<p>• 一个程序可以由多个源文件构成，但是一个程序只能由一个<code>main</code>函数。</p>
+<p>• 全局变量和函数可以跨文件使用（局部变量不可以）</p>
+<p>• 在全局变量或函数之前加<code>static</code>关键字可以限制变量跨文件使用</p>
+<p>• 一个文件定义了全局变量或者函数，其它文件对这些全局变量作extern变量说明后即可使用</p>
 
           
             <div class='article_footer'>
@@ -457,7 +491,7 @@
           
         
           
-            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/>https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</a></p>
+            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/>https://junyuanhe.github.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</a></p>
           
         
       </blockquote>
@@ -482,10 +516,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-22T22:14:46+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-23T09:25:47+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年8月22日 22:14</p>
+    <p>更新于：2020年8月23日 09:25</p>
   </a>
 </div>
 
@@ -509,7 +543,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/&title=C++程序设计基础(7) - 作用域 - Jun's Blog&summary=C++作用域"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/&title=C++程序设计基础(8) - 变量的存储类型 - Jun's Blog&summary=先简要介绍程序的内存映像，然后重点介绍C++变量的存储类型, 包括auto类型、static类型、register类型，以及无名变量和多文件程序中的变量与函数使用."
           
           >
           
@@ -521,7 +555,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/&title=C++程序设计基础(7) - 作用域 - Jun's Blog&summary=C++作用域"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/&title=C++程序设计基础(8) - 变量的存储类型 - Jun's Blog&summary=先简要介绍程序的内存映像，然后重点介绍C++变量的存储类型, 包括auto类型、static类型、register类型，以及无名变量和多文件程序中的变量与函数使用."
           
           >
           
@@ -533,7 +567,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/&title=C++程序设计基础(7) - 作用域 - Jun's Blog&summary=C++作用域"
+          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/&title=C++程序设计基础(8) - 变量的存储类型 - Jun's Blog&summary=先简要介绍程序的内存映像，然后重点介绍C++变量的存储类型, 包括auto类型、static类型、register类型，以及无名变量和多文件程序中的变量与函数使用."
           
           >
           
@@ -547,7 +581,7 @@
         <div class='hoverbox'>
           <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -567,24 +601,18 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++程序设计基础(8) - 变量的存储类型</p>
-                <p class='content'>先简要介绍程序的内存映像，然后重点介绍C++变量的存储类型, 包括auto类型、static类型、register类型，以及无名变量和多文件程序中的变量与函数使用.
-
-程序的内存映像
-程序...</p>
-              </a>
             
-            
-              <a class='next' href='/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/'>
-                <p class='title'>C++程序设计基础(6) - 函数<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>C++函数的核心知识
+              <a class='next' href='/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/'>
+                <p class='title'>C++程序设计基础(7) - 作用域<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>C++作用域
 
-核心知识(自测)
-函数的定义
 
-函数定义、函数调用、函数说明的形式
-函数定义的位置（可不可以放在另一个函数的函数体内？不可以）。函数说明什么时候可以省略？（先...</p>
+C++程序设计7 作用域
+
+特别注意:
+
+同一层级的作用域不允许出现同名的标识符。重名的标识符必须在不同层级出现，内层标识符隐藏外层标识符。
+同一层级可以进行函...</p>
               </a>
             
           </div>
@@ -631,7 +659,7 @@
 
   <script>
     window.subData = {
-      title: 'C++程序设计基础(7) - 作用域',
+      title: 'C++程序设计基础(8) - 变量的存储类型',
       tools: true
     }
   </script>
@@ -645,6 +673,20 @@
     
 
 
+
+  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#程序的内存映像"><span class="toc-number">1.</span> <span class="toc-text">程序的内存映像</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#变量的存储类型"><span class="toc-number">2.</span> <span class="toc-text">变量的存储类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#auto类型和static类型"><span class="toc-number">2.1.</span> <span class="toc-text">auto类型和static类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#register类型"><span class="toc-number">2.2.</span> <span class="toc-text">register类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无名变量"><span class="toc-number">2.3.</span> <span class="toc-text">无名变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多文件程序中的变量或函数"><span class="toc-number">2.4.</span> <span class="toc-text">多文件程序中的变量或函数</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
 
   
