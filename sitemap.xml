@@ -220,6 +220,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://junyuanhe.github.io/tags/%E5%85%B3%E4%BA%8E/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -266,6 +273,13 @@
   
   <url>
     <loc>https://junyuanhe.github.io/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2020-08-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://junyuanhe.github.io/categories/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2020-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
