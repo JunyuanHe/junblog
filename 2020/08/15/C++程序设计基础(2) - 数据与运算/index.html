@@ -851,16 +851,16 @@ C++中的语句分为单语句、复合语句和结构性语句.
 
   
     
-<script src="/js/valine.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js"></script>
 
   
   <script>
   var GUEST_INFO = ['nick','mail','link'];
-  var meta = 'nick,mail,link'.split(',').filter(function(item){
+  var meta = 'nick,mail'.split(',').filter(function(item){
     return GUEST_INFO.indexOf(item) > -1
   });
   var REQUIRED_FIELDS = ['nick','mail','link'];
-  var requiredFields = 'nick'.split(',').filter(function(item){
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
     return REQUIRED_FIELDS.indexOf(item) > -1
   });
   var valine = new Valine();
