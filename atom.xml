@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://junyuanhe.github.io/"/>
-  <updated>2020-08-27T13:37:24.348Z</updated>
+  <updated>2020-08-28T13:20:24.057Z</updated>
   <id>https://junyuanhe.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>讨论：是不是有误？——关于二项分布与负二项分布的关系</title>
+    <link href="https://junyuanhe.github.io/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <id>https://junyuanhe.github.io/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
+    <published>2020-08-28T13:15:23.000Z</published>
+    <updated>2020-08-28T13:20:24.057Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近在阅读<em>Basic Probability Theory with Applications</em>一书, 在二项分布和负二项分布处耽搁了许久. 下图所示内容便是使我疑惑的地方.</p><a id="more"></a><figure><img src="/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/Basic%20Probability%20Theory_Binomial%20and%20negative%20binomial%20distribution.png" alt><figcaption>An Excerpt From Basic Probability Theory with Applications</figcaption></figure><p>注: 以下全部按照书中对于负二项分布的定义, 即随机变量<span class="math inline">\(X\)</span>表示第<span class="math inline">\(r\)</span>次伯努利试验成功时的总试验次数.</p><p>此处的两个公式意在阐明二项分布与负二项分布的联系.</p><p><strong>第一个公式</strong>不论从代数的角度还是从概率的实际意义都是容易说明的. 我们先从代数的角度说明一下.</p><p><strong>• 代数角度:</strong> 由于<span class="math inline">\(X\sim\mathrm{NB}(r,p)\)</span>, 因此 <span class="math display">\[P[X=x]=\binom{x-1}{r-1}p^{r}q^{x-r}\quad,q:=1-p\]</span> 而 <span class="math display">\[P[\mathrm{B}(x-1,p)=r-1]=\binom{x-1}{r-1}p^{r-1}q^{x-r}\]</span> 因此 <span class="math display">\[P[X=x]=P[\mathrm{B}(x-1,p)=r-1]p\]</span></p><p><strong>• 概率的实际意义:</strong> 我们来设置一个情境. 有一个狙击手进行射击, 每一发子弹命中的概率始终为<span class="math inline">\(p\)</span>. 左边的<span class="math inline">\(P[X=x]\)</span>表示要求该狙击手命中<span class="math inline">\(r\)</span>次, 结果他恰射击了<span class="math inline">\(x\)</span>次以后才完成目标的概率. 显然, 最后一次射击他命中了, 否则<span class="math inline">\(x-1\)</span>次的时候他已经完成目标了, 最后一次命中的概率为<span class="math inline">\(p\)</span>; 前面的<span class="math inline">\(x-1\)</span>次他只要任意命中<span class="math inline">\(r-1\)</span>次即可, 命中次数服从二项分布<span class="math inline">\(\mathrm{B}(x-1,p)\)</span>, 故概率为<span class="math inline">\(P[\mathrm{B}(x-1,p)=r-1]\)</span>. 所以左边的概率就等于<span class="math inline">\(P[\mathrm{B}(x-1,p)=r-1]p\)</span>.</p><p>但是, <strong>第二个公式</strong>似乎有些让人摸不着头脑. 我们按照概率的实际意义分析一下. 我们仍然设置这个情境: 狙击手进行射击, 每一发子弹命中的概率始终为<span class="math inline">\(p\)</span>. 左边的<span class="math inline">\(P[\mathrm{NB}(r,p)\leq x]\)</span>表示要求该狙击手命中<span class="math inline">\(r\)</span>次, 结果他在<span class="math inline">\(x\)</span>发子弹之内完成了任务的概率; 这与给狙击手<span class="math inline">\(x\)</span>发子弹射击, 结果他命中次数不少于<span class="math inline">\(r\)</span>次是等价的, 这用数学语言描述为<span class="math inline">\(P[\mathrm{B}(x,p)\geq r]\)</span>. 于是我们得到 <span class="math display">\[P[\mathrm{NB}(r,p)\leq x]=P[\mathrm{B}(x,p)\geq r].\]</span> 可是书中给出的公式却为<span class="math inline">\(P[\mathrm{NB}(r,p)\leq x]=P[\mathrm{B}(r+x,p)\geq r]\)</span>, 这是怎么一回事?</p><p>我们尝试用代数的方法进行解释, 如果我们得到的公式正确, 那么我们应该能够证明 <span class="math display">\[\sum_{k=r}^{x}\binom{k-1}{r-1}p^{r}q^{k-r}=\sum_{k=r}^{x}\binom{x}{k}p^{k}q^{x-k}\]</span></p><p>使用纯代数的方法如何证明, 有待进一步思考.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近在阅读&lt;em&gt;Basic Probability Theory with Applications&lt;/em&gt;一书, 在二项分布和负二项分布处耽搁了许久. 下图所示内容便是使我疑惑的地方.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="数学" scheme="https://junyuanhe.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="概率论" scheme="https://junyuanhe.github.io/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+    
+      <category term="概率论" scheme="https://junyuanhe.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>一份不知是否应该称为&quot;关于&quot;的博客规划</title>
