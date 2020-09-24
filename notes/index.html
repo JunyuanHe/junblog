@@ -328,8 +328,8 @@
           
           <p>我的笔记及习题集</p>
 <ul>
-<li><a href="/2020/08/24/一份不知是否应该称为_关于_的博客规划/">2020.08.24 一份不知是否应该称为"关于"的博客规划</a></li>
-<li><a href="\res\习题-数学分析.pdf">习题-数学分析.pdf</a></li>
+<li><a href="https://cdn.jsdelivr.net/gh/JunyuanHe/JunyuanHe.github.io/notes/res/习题-数学分析.pdf" target="_blank" rel="noopener">习题-数学分析.pdf</a></li>
+<li><a href="https://cdn.jsdelivr.net/gh/JunyuanHe/JunyuanHe.github.io/notes/res/习题-代数学.pdf" target="_blank" rel="noopener">习题-代数学.pdf</a></li>
 </ul>
 
           
@@ -349,35 +349,6 @@
         
       </section>
     </article>
-  
-
-  
-    <!-- 显示推荐文章和评论 -->
-
-
-
-  <article class="post white-box reveal comments blur">
-    <section class="article typo">
-      <p ct><i class='fas fa-comments'></i> 评论</p>
-      
-        <p cst>读者们可以在此处进行交流</p>
-      
-      
-      
-      
-      
-      
-        <section id="comments">
-          <div id="valine_container" class="valine_thread">
-            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
-          </div>
-        </section>
-      
-      
-    </section>
-  </article>
-
-
   
 
 
@@ -564,60 +535,6 @@
 
 
 
-
-  
-    
-<script src="/js/valine.js"></script>
-
-  
-  <script>
-  var GUEST_INFO = ['nick','mail','link'];
-  var meta = 'nick,mail'.split(',').filter(function(item){
-    return GUEST_INFO.indexOf(item) > -1
-  });
-  var REQUIRED_FIELDS = ['nick','mail','link'];
-  var requiredFields = 'nick,mail'.split(',').filter(function(item){
-    return REQUIRED_FIELDS.indexOf(item) > -1
-  });
-  var valine = new Valine();
-  function emoji(path, idx, ext) {
-      return path + "/" + path + "-" + idx + "." + ext;
-  }
-  var emojiMaps = {};
-  for (var i = 1; i <= 54; i++) {
-    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
-  }
-  for (var i = 1; i <= 101; i++) {
-    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
-  }
-  for (var i = 1; i <= 116; i++) {
-    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
-  }
-  for (var i = 1; i <= 125; i++) {
-    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
-  }
-  for (var i = 1; i <= 4; i++) {
-    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
-  }
-  valine.init({
-    el: '#valine_container',
-    meta: meta,
-    
-    appId: "GbPm6UIzHrGduLaANgBIdhkf-gzGzoHsz",
-    appKey: "SFuacIL4IJSnGk9TDX46eb0Y",
-    placeholder: "快来评论吧~",
-    pageSize:'10',
-    avatar:'robohash',
-    lang:'zh-cn',
-    visitor: 'true',
-    highlight: 'true',
-    mathJax: 'false',
-    enableQQ: 'true',
-    requiredFields: requiredFields,
-    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
-    emojiMaps: emojiMaps
-  })
-  </script>
 
 
 
