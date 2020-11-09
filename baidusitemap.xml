@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://junyuanhe.github.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</loc>
+    <lastmod>2020-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://junyuanhe.github.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2020-09-18</lastmod>
   </url>
@@ -53,15 +57,11 @@
     <lastmod>2020-08-16</lastmod>
   </url>
   <url>
-    <loc>https://junyuanhe.github.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</loc>
-    <lastmod>2020-08-16</lastmod>
-  </url>
-  <url>
     <loc>https://junyuanhe.github.io/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/</loc>
     <lastmod>2020-07-22</lastmod>
   </url>
   <url>
-    <loc>https://junyuanhe.github.io/2020/07/04/hello-world/</loc>
+    <loc>https://junyuanhe.github.io/2020/09/17/hello-world/</loc>
     <lastmod>2020-07-05</lastmod>
   </url>
 </urlset> 
