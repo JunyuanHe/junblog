@@ -228,13 +228,6 @@
   </url>
   
   <url>
-    <loc>https://junyuanhe.github.io/tags/%E5%85%B3%E4%BA%8E/</loc>
-    <lastmod>2020-12-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://junyuanhe.github.io/tags/%E7%A1%AC%E7%9B%98/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
@@ -249,14 +242,21 @@
   </url>
   
   <url>
-    <loc>https://junyuanhe.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://junyuanhe.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://junyuanhe.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    <loc>https://junyuanhe.github.io/tags/%E5%85%B3%E4%BA%8E/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://junyuanhe.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -272,13 +272,6 @@
 
   
   <url>
-    <loc>https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
-    <lastmod>2020-12-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://junyuanhe.github.io/categories/%E6%95%B0%E5%AD%A6/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
@@ -286,7 +279,7 @@
   </url>
   
   <url>
-    <loc>https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/</loc>
+    <loc>https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -294,6 +287,13 @@
   
   <url>
     <loc>https://junyuanhe.github.io/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,13 +321,6 @@
   </url>
   
   <url>
-    <loc>https://junyuanhe.github.io/categories/%E5%85%B3%E4%BA%8E/</loc>
-    <lastmod>2020-12-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://junyuanhe.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
@@ -336,6 +329,13 @@
   
   <url>
     <loc>https://junyuanhe.github.io/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    <lastmod>2020-12-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://junyuanhe.github.io/categories/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2020-12-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
