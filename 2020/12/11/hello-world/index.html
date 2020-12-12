@@ -16,12 +16,10 @@
 
   <!-- 页面元数据 -->
   
-    <title>C++程序设计基础(1) - 计算机基础知识 - Jun&#39;s Blog</title>
-  
-    <meta name="keywords" content="C++">
+    <title>Hello World - Jun&#39;s Blog</title>
   
   
-    <meta name="description" content="主要介绍进制的转换和计算机数值表示">
+    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in trouble...">
   
 
   <!-- feed -->
@@ -317,8 +315,8 @@
         
           
   <h1 class="title">
-    <a href="/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">
-      C++程序设计基础(1) - 计算机基础知识
+    <a href="/2020/12/11/hello-world/">
+      Hello World
     </a>
   </h1>
 
@@ -343,9 +341,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/' rel="nofollow">
+    <a href='/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>计算机/C++</p>
+      <p>使用说明及测试</p>
     </a>
   </div>
 
@@ -356,7 +354,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年8月15日 20:36</p>
+    <p>发布于：2020年12月11日 23:28</p>
   </a>
 </div>
 
@@ -380,32 +378,21 @@
         <div class="article-entry" itemprop="articleBody">
           
           
-          <p>主要介绍进制的转换和计算机数值表示</p>
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <a id="more"></a>
-<h2 id="进制的转换">进制的转换</h2>
-<p><strong>1.其它进制转换为十进制</strong></p>
-<p>利用展开式直接计算。例如：将八进制数<span class="math inline">\((137.45)_{8}\)</span>转换为十进制</p>
-<p><span class="math display">\[
-(137.45)_{8}=1\times8^{2}+3\times8^{1}+7\times8^{0}+4\times8^{-1}+5\times8^{-2}
-\]</span></p>
-<p><strong>2.十进制转换为其它进制</strong></p>
-<p>整数用短除法(反复除以进制数), 余数倒排. 小数反复乘以进制数, 余数部分依次排列</p>
-<p><strong>3.二进制与八进制, 二进制与十六进制转换</strong></p>
-<p>它们有直接的对应关系, 每3位二进制对应1位八进制, 每4位二进制对应1位十六进制.</p>
-<h2 id="计算机数值表示">计算机数值表示</h2>
-<p>1个<strong>字节</strong>由8位二进位组成, 是计算机的基本存储单位.</p>
-<h3 id="整数表示">整数表示</h3>
-<p>• <strong>无符号整数</strong>(unsigned类型): 直接用二进制表示, 高位补0.</p>
-<p>• <strong>有符号整数</strong>(signed类型): 使用<strong>补码</strong>表示. 规定: 补码的最高位是符号位, 正数为0, 负数为1; 其余的位数用来表示数值. 正数直接用二进制表示, 负数用与正数二进制数相补的数表示(相加进位).</p>
-<h3 id="实数表示-ieee标准">实数表示 (IEEE标准)</h3>
-<p>实数采用二进制标准化科学计数法表示: 先写成二进制小数再使用科学计数法. 如:</p>
-<p><span class="math display">\[
-+0.001=\underset{\text{符号位}}{+}\underset{\text{尾数部分(小数点以后)}}{1.0000011\ 00010010\ 01101110\ 10010111\ \cdots}\times\underset{\text{指数部分}}{2^{-10}}
-\]</span></p>
-<p>数据分为三个部分存储: 符号位、指数部分、尾数部分.</p>
-<p>• 符号位: 正数用0, 负数用1.</p>
-<p>• 指数部分: 采用<strong>移码</strong>表示法. 对指数部分加上 <span class="math inline">\((0111\cdots111)_{2}\)</span> , 得到的二进制数称为移码. (加上一个大整数是为了将负数转化为正数)</p>
-<p>• 尾数部分: 截断时舍入规则为0舍1入. 注意: 单精度和双精度格式的尾数部分只保存小数点后的小数, 而扩展精度的要保存整数部分的1.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
           
             <div class='article_footer'>
@@ -414,37 +401,6 @@
   
     
     
-
-
-  
-
-<section class="widget list references  desktop mobile">
-  
-  <header>
-    
-      <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i><span class='name'>参考资料</span>
-    
-  </header>
-
-
-  <div class='content'>
-    <ul class="list entry navigation">
-      
-        <li><a class="flat-box" title="http://product.dangdang.com/25239691.html" href="http://product.dangdang.com/25239691.html"
-          
-          
-          id="http:productdangdangcom25239691html"
-          >
-          <div class='name'>
-            
-            邵荣. C++程序设计(第二版)
-          </div>
-          
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
 
 
 
@@ -473,7 +429,7 @@
           
         
           
-            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/>https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</a></p>
+            <p>本文永久链接是：<a href=https://junyuanhe.github.io/2020/12/11/hello-world/>https://junyuanhe.github.io/2020/12/11/hello-world/</a></p>
           
         
       </blockquote>
@@ -498,10 +454,10 @@
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-19T19:33:06+08:00">
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-07-05T14:19:22+08:00">
   <a class='notlink'>
     <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2020年8月19日 19:33</p>
+    <p>更新于：2020年7月5日 14:19</p>
   </a>
 </div>
 
@@ -509,9 +465,6 @@
       
         
           
-  
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div>
-
 
         
       
@@ -523,7 +476,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=C++程序设计基础(1) - 计算机基础知识 - Jun's Blog&summary=主要介绍进制的转换和计算机数值表示"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://junyuanhe.github.io/2020/12/11/hello-world/&title=Hello World - Jun's Blog&summary=Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub."
           
           >
           
@@ -535,7 +488,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=C++程序设计基础(1) - 计算机基础知识 - Jun's Blog&summary=主要介绍进制的转换和计算机数值表示"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://junyuanhe.github.io/2020/12/11/hello-world/&title=Hello World - Jun's Blog&summary=Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub."
           
           >
           
@@ -547,7 +500,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/&title=C++程序设计基础(1) - 计算机基础知识 - Jun's Blog&summary=主要介绍进制的转换和计算机数值表示"
+          href="http://service.weibo.com/share/share.php?url=https://junyuanhe.github.io/2020/12/11/hello-world/&title=Hello World - Jun's Blog&summary=Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub."
           
           >
           
@@ -561,7 +514,7 @@
         <div class='hoverbox'>
           <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARgAAAEYCAAAAACi5bZQAAAC9klEQVR42u3aS3LrUAgFQO9/08kG3ivdA0g2Tt9ZKtaH1uQU8Ppx/nleCMCAAQMGDJg1MK/iOX7Q4fXp86r3ubo/GDBgwIABA2YfTFpo9Xf/faGL+55+mG49YMCAAQMGDJi9MJcB6OL3aSGXLxoGzHY9YMCAAQMGDJg/D1MF6F4HBgwYMGDAgAFThakGsu4BAwYMGDBgwIC5u5GUDt6q9337JBIMGDBgwIAB8xjMdKB699/lesCAAQMGDBgwa2C6p9qoOoXuBsm4HjBgwIABAwbMGpjpAVq6GHQFlDau2gNAMGDAgAEDBsw6mKsHpQHvFKB63y503MEDAwYMGDBgwHwsTHVgNRW87g6Kxx8aDBgwYMCAAbMGphuougB3Bbdq4woMGDBgwIABsw9meuBWLby6QNQFAwMGDBgwYMDsg0mDWxUgBakOAqsNMzBgwIABAwbMPphuw2cKrgveBQEDBgwYMGDA7IMZb/SEC0HdQqaCIRgwYMCAAQNmL8zUok7aiJpeIOpCgQEDBgwYMGD2wKQB6LSxNBX8pgZux6BgwIABAwYMmDUwr4uTvtBTAbEa7ModPDBgwIABAwbMx8JMLeKcnjSoTQ3gwIABAwYMGDDfD1N90FQDaarg+P5gwIABAwYMmHUw1YZQClxtfJ0WmjbajgduYMCAAQMGDJiPhakGqupgLQ161ULjDwIGDBgwYMCAWQ9TLTy9rrqAdPoh4/+DAQMGDBgwYNbDTA24pgqqfpB4AAgGDBgwYMCAWQPTPSnAVCMs/bDHwRUMGDBgwIABswZmKjBVB2Pdgdn0QhMYMGDAgAEDZh9MGsieGohVB3fp4BAMGDBgwIABsx8mvlFxQac6qJtaYIoDHhgwYMCAAQPma2FSgG5h7QWhdKMKDBgwYMCAAfO1MOmLxIOw5mDw7ckXDBgwYMCAAXM7TBrQ0uu60KcNrLcvDoEBAwYMGDBgHoN5qmGUNrDGFoJOB4VgwIABAwYMmDUwDhgwYMCAAQNm2fkFM3rm8LqkdGAAAAAASUVORK5CYII=">
           </div>
         </div>
       
@@ -581,22 +534,10 @@
         
           <div class="prev-next">
             
-              <a class='prev' href='/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++程序设计基础(2) - 数据与运算</p>
-                <p class='content'>主要介绍C++的基本数据类型和运算符, 略去了较为简单的内容
-
-C++标识符
-• C++标识符的含义: C++中使用的名字, 如变量名、类型名、函数名等
-• 合法的C++标识符：由字母、...</p>
-              </a>
             
-            
-              <a class='next' href='/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/'>
-                <p class='title'>Linux Mint安装及LaTeX-Lyx配置踩坑记<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
-                <p class='content'>本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。
-
-来由
-前几天在Deepin系统上试图安装Lyx，但是Lyx在Deepin...</p>
+              <a class='next' href='/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/'>
+                <p class='title'>复制文件时"无法读取源文件或磁盘"的解决方案记录<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文...</p>
               </a>
             
           </div>
@@ -639,64 +580,11 @@ C++标识符
 
 <!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
-  <script>
-  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
-  if (typeof MathJax === 'undefined') {
-    window.MathJax = {
-      loader: {
-        source: {
-          '[tex]/amsCd': '[tex]/amscd',
-          '[tex]/AMScd': '[tex]/amscd'
-        }
-      },
-      tex: {
-        inlineMath: {'[+]': [['$', '$']]},
-        tags: 'ams'
-      },
-      options: {
-        renderActions: {
-          findScript: [10, doc => {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-            });
-          }, '', false],
-          insertedScript: [200, () => {
-            document.querySelectorAll('mjx-container').forEach(node => {
-              let target = node.parentNode;
-              if (target.nodeName.toLowerCase() === 'li') {
-                target.parentNode.classList.add('has-jax');
-              }
-            });
-          }, '', false]
-        }
-      }
-    };
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
-      script.defer = true;
-      document.head.appendChild(script);
-    })();
-  } else {
-    // 文章章节标题不能为 “MathJax” ，否则会报错。
-    MathJax.startup.document.state(0);
-    MathJax.texReset();
-    MathJax.typeset();
-  }
-</script>
-
-
 
 
   <script>
     window.subData = {
-      title: 'C++程序设计基础(1) - 计算机基础知识',
+      title: 'Hello World',
       tools: true
     }
   </script>
@@ -721,7 +609,7 @@ C++标识符
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#进制的转换"><span class="toc-number">1.</span> <span class="toc-text">进制的转换</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#计算机数值表示"><span class="toc-number">2.</span> <span class="toc-text">计算机数值表示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#整数表示"><span class="toc-number">2.1.</span> <span class="toc-text">整数表示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实数表示-ieee标准"><span class="toc-number">2.2.</span> <span class="toc-text">实数表示 (IEEE标准)</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
     </div>
   </section>
 
