@@ -5,9 +5,9 @@
   
   <link href="/junblog/atom.xml" rel="self"/>
   
-  <link href="https://heliumhe.gitee.io/junblog/"/>
-  <updated>2020-07-05T06:19:22.000Z</updated>
-  <id>https://heliumhe.gitee.io/junblog/</id>
+  <link href="https://heliumhe.gitee.io/"/>
+  <updated>2020-09-18T05:16:22.000Z</updated>
+  <id>https://heliumhe.gitee.io/</id>
   
   <author>
     <name>He</name>
@@ -17,34 +17,13 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/12/11/hello-world/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/12/11/hello-world/</id>
-    <published>2020-12-11T15:28:35.170Z</published>
-    <updated>2020-07-05T06:19:22.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="使用说明及测试" scheme="https://heliumhe.gitee.io/junblog/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>复制文件时&quot;无法读取源文件或磁盘&quot;的解决方案记录</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <link href="https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <published>2020-09-16T08:50:37.000Z</published>
     <updated>2020-09-18T05:16:22.000Z</updated>
     
-    <content type="html"><![CDATA[<p>一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。</p><a id="more"></a><p>具体情况见下图</p><figure><img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163624.408%20-%201.jpg" alt="复制时突然降速"><figcaption aria-hidden="true">复制时突然降速</figcaption></figure><figure><img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163916.105.jpg" alt="提示无法读源文件或磁盘"><figcaption aria-hidden="true">提示无法读源文件或磁盘</figcaption></figure><p>据此进行如下猜测：</p><ul><li>文件损坏</li><li>磁盘有错误</li><li>文件系统错误</li></ul><p>下面一一排除。文件可以正常打开，说明文件应该没有损坏。接着在资源管理器中选择该磁盘，右键属性-工具-检查磁盘，结果未发现错误。</p><p>接着使用命令行 <code>chkdsk E: /f</code> 检查磁盘并修复错误，显示无错误</p><p><img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/微信图片_20200916164640-1600246095317.jpg"></p><p>那么怎么办呢？我们更进一步，输入命令<code>chkdsk E: /R</code> . 该命令执行相当缓慢，两个小时后我终于看到了结果。</p><p><img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/image-20200916165152444.png"></p><p>虽然提示出现未指定的错误，但我发现这时文件已经可以复制了。具体是什么原因造成了错误仍尚不清楚。</p><p>借此机会，我了解了以下chkdsk检查磁盘的用法：Chkdsk命令是用来检查磁盘并且显示状态报告的。</p><p>用法如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CHKDSK [volume[[path]filename]]] [/F] [/V] [/R] [/X] [/I] [/C] [/L[:size]]</span><br></pre></td></tr></table></figure><ul><li><code>volume</code> 指定驱动器(后面跟一个冒号)、装入点或卷名。</li><li><code>filename</code> 仅用于 FAT/FAT32: 指定要检查是否有碎片的文件。</li><li><code>/F</code> 修复磁盘上的错误。</li><li><code>/V</code> 在 FAT/FAT32 上: 显示磁盘上每个文件的完整路径和名称。在 NTFS 上: 如果有清除消息，将其显示。</li><li><code>/R</code> 查找不正确的扇区并恢复可读信息(隐含 <code>/F</code>)。</li><li><code>/L:size</code> 仅用于 NTFS: 将日志文件大小改成指定的 KB 数。如果没有指定大小，则显示当前的大小。</li><li><code>/X</code> 如果必要，强制卷先卸下。卷的所有打开的句柄就会无效(隐含 <code>/F</code>)。</li><li><code>/I</code> 仅用于 NTFS: 对索引项进行强度较小的检查。</li><li><code>/C</code> 仅用于 NTFS: 跳过文件夹结构的循环检查。</li><li><code>/I</code> 和 <code>/C</code> 命令行开关跳过卷的某些检查，减少运行 Chkdsk 所需的时间。</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。</p><a id="more"></a><p>具体情况见下图</p><figure><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163624.408%20-%201.jpg" alt="复制时突然降速"><figcaption aria-hidden="true">复制时突然降速</figcaption></figure><figure><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163916.105.jpg" alt="提示无法读源文件或磁盘"><figcaption aria-hidden="true">提示无法读源文件或磁盘</figcaption></figure><p>据此进行如下猜测：</p><ul><li>文件损坏</li><li>磁盘有错误</li><li>文件系统错误</li></ul><p>下面一一排除。文件可以正常打开，说明文件应该没有损坏。接着在资源管理器中选择该磁盘，右键属性-工具-检查磁盘，结果未发现错误。</p><p>接着使用命令行 <code>chkdsk E: /f</code> 检查磁盘并修复错误，显示无错误</p><p><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/微信图片_20200916164640-1600246095317.jpg"></p><p>那么怎么办呢？我们更进一步，输入命令<code>chkdsk E: /R</code> . 该命令执行相当缓慢，两个小时后我终于看到了结果。</p><p><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/image-20200916165152444.png"></p><p>虽然提示出现未指定的错误，但我发现这时文件已经可以复制了。具体是什么原因造成了错误仍尚不清楚。</p><p>借此机会，我了解了以下chkdsk检查磁盘的用法：Chkdsk命令是用来检查磁盘并且显示状态报告的。</p><p>用法如下：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CHKDSK [volume[[path]filename]]] [/F] [/V] [/R] [/X] [/I] [/C] [/L[:size]]</span><br></pre></td></tr></table></figure><ul><li><code>volume</code> 指定驱动器(后面跟一个冒号)、装入点或卷名。</li><li><code>filename</code> 仅用于 FAT/FAT32: 指定要检查是否有碎片的文件。</li><li><code>/F</code> 修复磁盘上的错误。</li><li><code>/V</code> 在 FAT/FAT32 上: 显示磁盘上每个文件的完整路径和名称。在 NTFS 上: 如果有清除消息，将其显示。</li><li><code>/R</code> 查找不正确的扇区并恢复可读信息(隐含 <code>/F</code>)。</li><li><code>/L:size</code> 仅用于 NTFS: 将日志文件大小改成指定的 KB 数。如果没有指定大小，则显示当前的大小。</li><li><code>/X</code> 如果必要，强制卷先卸下。卷的所有打开的句柄就会无效(隐含 <code>/F</code>)。</li><li><code>/I</code> 仅用于 NTFS: 对索引项进行强度较小的检查。</li><li><code>/C</code> 仅用于 NTFS: 跳过文件夹结构的循环检查。</li><li><code>/I</code> 和 <code>/C</code> 命令行开关跳过卷的某些检查，减少运行 Chkdsk 所需的时间。</li></ul>]]></content>
     
     <summary type="html">
     
@@ -53,25 +32,25 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="疑难杂症" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+      <category term="疑难杂症" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
     
-      <category term="硬盘" scheme="https://heliumhe.gitee.io/junblog/tags/%E7%A1%AC%E7%9B%98/"/>
+      <category term="硬盘" scheme="https://heliumhe.gitee.io/tags/%E7%A1%AC%E7%9B%98/"/>
     
-      <category term="疑难杂症" scheme="https://heliumhe.gitee.io/junblog/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+      <category term="疑难杂症" scheme="https://heliumhe.gitee.io/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
     
   </entry>
   
   <entry>
     <title>讨论：是不是有误？——关于二项分布与负二项分布的关系</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <id>https://heliumhe.gitee.io/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
     <published>2020-08-28T13:15:23.000Z</published>
     <updated>2020-08-28T14:28:14.000Z</updated>
     
-    <content type="html"><![CDATA[<p>最近在阅读<em>Basic Probability Theory with Applications</em>一书, 在二项分布和负二项分布处耽搁了许久. 下图所示内容便是使我疑惑的地方.</p><a id="more"></a><figure><img src="/junblog/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/Basic%20Probability%20Theory_Binomial%20and%20negative%20binomial%20distribution.png" alt="An Excerpt From Basic Probability Theory with Applications"><figcaption aria-hidden="true">An Excerpt From Basic Probability Theory with Applications</figcaption></figure><p>注: 以下全部按照书中对于负二项分布的定义, 即随机变量<span class="math inline">\(X\)</span>表示第<span class="math inline">\(r\)</span>次伯努利试验成功时的总试验次数.</p><p>此处的两个公式意在阐明二项分布与负二项分布的联系.</p><p><strong>第一个公式</strong>不论从代数的角度还是从概率的实际意义都是容易说明的. 我们先从代数的角度说明一下.</p><p><strong>• 代数角度:</strong> 由于<span class="math inline">\(X\sim\mathrm{NB}(r,p)\)</span>, 因此 <span class="math display">\[P[X=x]=\binom{x-1}{r-1}p^{r}q^{x-r}\quad,q:=1-p\]</span> 而 <span class="math display">\[P[\mathrm{B}(x-1,p)=r-1]=\binom{x-1}{r-1}p^{r-1}q^{x-r}\]</span> 因此 <span class="math display">\[P[X=x]=P[\mathrm{B}(x-1,p)=r-1]p\]</span></p><p><strong>• 概率的实际意义:</strong> 我们来设置一个情境. 有一个狙击手进行射击, 每一发子弹命中的概率始终为<span class="math inline">\(p\)</span>. 左边的<span class="math inline">\(P[X=x]\)</span>表示要求该狙击手命中<span class="math inline">\(r\)</span>次, 结果他恰射击了<span class="math inline">\(x\)</span>次以后才完成目标的概率. 显然, 最后一次射击他命中了, 否则<span class="math inline">\(x-1\)</span>次的时候他已经完成目标了, 最后一次命中的概率为<span class="math inline">\(p\)</span>; 前面的<span class="math inline">\(x-1\)</span>次他只要任意命中<span class="math inline">\(r-1\)</span>次即可, 命中次数服从二项分布<span class="math inline">\(\mathrm{B}(x-1,p)\)</span>, 故概率为<span class="math inline">\(P[\mathrm{B}(x-1,p)=r-1]\)</span>. 所以左边的概率就等于<span class="math inline">\(P[\mathrm{B}(x-1,p)=r-1]p\)</span>.</p><p>但是, <strong>第二个公式</strong>似乎有些让人摸不着头脑. 我们按照<strong>概率的实际意义</strong>分析一下. 我们仍然设置这个情境: 狙击手进行射击, 每一发子弹命中的概率始终为<span class="math inline">\(p\)</span>. 左边的<span class="math inline">\(P[\mathrm{NB}(r,p)\leq x]\)</span>表示要求该狙击手命中<span class="math inline">\(r\)</span>次, 结果他在<span class="math inline">\(x\)</span>发子弹之内完成了任务的概率; 这与给狙击手<span class="math inline">\(x\)</span>发子弹射击, 结果他命中次数不少于<span class="math inline">\(r\)</span>次是等价的, 这用数学语言描述为<span class="math inline">\(P[\mathrm{B}(x,p)\geq r]\)</span>. 于是我们得到 <span class="math display">\[P[\mathrm{NB}(r,p)\leq x]=P[\mathrm{B}(x,p)\geq r].\]</span> 可是书中给出的公式却为<span class="math inline">\(P[\mathrm{NB}(r,p)\leq x]=P[\mathrm{B}(r+x,p)\geq r]\)</span>, 这是怎么一回事?</p><p>我们尝试用代数的方法进行解释, 如果我们得到的公式正确, 那么我们应该能够证明 <span class="math display">\[\sum_{k=r}^{x}\binom{k-1}{r-1}p^{r}q^{k-r}=\sum_{k=r}^{x}\binom{x}{k}p^{k}q^{x-k}\]</span></p><p>使用<strong>纯代数的方法</strong>可以这样证明(由别人给出的证法):</p><p>先证<span class="math inline">\(r=1\)</span>的情形, <span class="math display">\[\text{左边}=p\sum_{k=r}^{x}q^{k-1}=p\frac{1-q^{x}}{1-q}=1-q^{x}\]</span> <span class="math display">\[\text{右边}=\sum_{k=1}^{x}\binom{x}{k}p^{k}q^{x-k}=\left[\sum_{k=0}^{x}\binom{x}{k}p^{k}q^{x-k}\right]-q^{x}=(p+q)^{x}-q^{x}=1-q^{x}\]</span></p><p>对于任意<span class="math inline">\(r\in\mathbb{N}^{*}\)</span>的情形, 我们有 <span class="math display">\[\sum_{k=1}^{x}\binom{k-1}{r-1}p^{r}q^{k-r}=\sum_{k=1}^{x}\binom{x}{k}p^{k}q^{x-k}\]</span> <span class="math display">\[\sum_{k=1}^{r}\binom{k-1}{r-1}p^{r}q^{k-r}=\sum_{k=1}^{r}\binom{x}{k}p^{k}q^{x-k}\]</span> 两式相减即得结果.</p>]]></content>
+    <content type="html"><![CDATA[<p>最近在阅读<em>Basic Probability Theory with Applications</em>一书, 在二项分布和负二项分布处耽搁了许久. 下图所示内容便是使我疑惑的地方.</p><a id="more"></a><figure><img src="/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/Basic%20Probability%20Theory_Binomial%20and%20negative%20binomial%20distribution.png" alt="An Excerpt From Basic Probability Theory with Applications"><figcaption aria-hidden="true">An Excerpt From Basic Probability Theory with Applications</figcaption></figure><p>注: 以下全部按照书中对于负二项分布的定义, 即随机变量<span class="math inline">\(X\)</span>表示第<span class="math inline">\(r\)</span>次伯努利试验成功时的总试验次数.</p><p>此处的两个公式意在阐明二项分布与负二项分布的联系.</p><p><strong>第一个公式</strong>不论从代数的角度还是从概率的实际意义都是容易说明的. 我们先从代数的角度说明一下.</p><p><strong>• 代数角度:</strong> 由于<span class="math inline">\(X\sim\mathrm{NB}(r,p)\)</span>, 因此 <span class="math display">\[P[X=x]=\binom{x-1}{r-1}p^{r}q^{x-r}\quad,q:=1-p\]</span> 而 <span class="math display">\[P[\mathrm{B}(x-1,p)=r-1]=\binom{x-1}{r-1}p^{r-1}q^{x-r}\]</span> 因此 <span class="math display">\[P[X=x]=P[\mathrm{B}(x-1,p)=r-1]p\]</span></p><p><strong>• 概率的实际意义:</strong> 我们来设置一个情境. 有一个狙击手进行射击, 每一发子弹命中的概率始终为<span class="math inline">\(p\)</span>. 左边的<span class="math inline">\(P[X=x]\)</span>表示要求该狙击手命中<span class="math inline">\(r\)</span>次, 结果他恰射击了<span class="math inline">\(x\)</span>次以后才完成目标的概率. 显然, 最后一次射击他命中了, 否则<span class="math inline">\(x-1\)</span>次的时候他已经完成目标了, 最后一次命中的概率为<span class="math inline">\(p\)</span>; 前面的<span class="math inline">\(x-1\)</span>次他只要任意命中<span class="math inline">\(r-1\)</span>次即可, 命中次数服从二项分布<span class="math inline">\(\mathrm{B}(x-1,p)\)</span>, 故概率为<span class="math inline">\(P[\mathrm{B}(x-1,p)=r-1]\)</span>. 所以左边的概率就等于<span class="math inline">\(P[\mathrm{B}(x-1,p)=r-1]p\)</span>.</p><p>但是, <strong>第二个公式</strong>似乎有些让人摸不着头脑. 我们按照<strong>概率的实际意义</strong>分析一下. 我们仍然设置这个情境: 狙击手进行射击, 每一发子弹命中的概率始终为<span class="math inline">\(p\)</span>. 左边的<span class="math inline">\(P[\mathrm{NB}(r,p)\leq x]\)</span>表示要求该狙击手命中<span class="math inline">\(r\)</span>次, 结果他在<span class="math inline">\(x\)</span>发子弹之内完成了任务的概率; 这与给狙击手<span class="math inline">\(x\)</span>发子弹射击, 结果他命中次数不少于<span class="math inline">\(r\)</span>次是等价的, 这用数学语言描述为<span class="math inline">\(P[\mathrm{B}(x,p)\geq r]\)</span>. 于是我们得到 <span class="math display">\[P[\mathrm{NB}(r,p)\leq x]=P[\mathrm{B}(x,p)\geq r].\]</span> 可是书中给出的公式却为<span class="math inline">\(P[\mathrm{NB}(r,p)\leq x]=P[\mathrm{B}(r+x,p)\geq r]\)</span>, 这是怎么一回事?</p><p>我们尝试用代数的方法进行解释, 如果我们得到的公式正确, 那么我们应该能够证明 <span class="math display">\[\sum_{k=r}^{x}\binom{k-1}{r-1}p^{r}q^{k-r}=\sum_{k=r}^{x}\binom{x}{k}p^{k}q^{x-k}\]</span></p><p>使用<strong>纯代数的方法</strong>可以这样证明(由别人给出的证法):</p><p>先证<span class="math inline">\(r=1\)</span>的情形, <span class="math display">\[\text{左边}=p\sum_{k=r}^{x}q^{k-1}=p\frac{1-q^{x}}{1-q}=1-q^{x}\]</span> <span class="math display">\[\text{右边}=\sum_{k=1}^{x}\binom{x}{k}p^{k}q^{x-k}=\left[\sum_{k=0}^{x}\binom{x}{k}p^{k}q^{x-k}\right]-q^{x}=(p+q)^{x}-q^{x}=1-q^{x}\]</span></p><p>对于任意<span class="math inline">\(r\in\mathbb{N}^{*}\)</span>的情形, 我们有 <span class="math display">\[\sum_{k=1}^{x}\binom{k-1}{r-1}p^{r}q^{k-r}=\sum_{k=1}^{x}\binom{x}{k}p^{k}q^{x-k}\]</span> <span class="math display">\[\sum_{k=1}^{r}\binom{k-1}{r-1}p^{r}q^{k-r}=\sum_{k=1}^{r}\binom{x}{k}p^{k}q^{x-k}\]</span> 两式相减即得结果.</p>]]></content>
     
     <summary type="html">
     
@@ -80,19 +59,19 @@
     </summary>
     
     
-      <category term="数学" scheme="https://heliumhe.gitee.io/junblog/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://heliumhe.gitee.io/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="概率论" scheme="https://heliumhe.gitee.io/junblog/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+      <category term="概率论" scheme="https://heliumhe.gitee.io/categories/%E6%95%B0%E5%AD%A6/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
     
-      <category term="概率论" scheme="https://heliumhe.gitee.io/junblog/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+      <category term="概率论" scheme="https://heliumhe.gitee.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>一份不知是否应该称为&quot;关于&quot;的博客规划</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/"/>
+    <id>https://heliumhe.gitee.io/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/</id>
     <published>2020-08-24T13:15:12.000Z</published>
     <updated>2020-08-27T13:37:26.000Z</updated>
     
@@ -106,17 +85,17 @@
     </summary>
     
     
-      <category term="关于" scheme="https://heliumhe.gitee.io/junblog/categories/%E5%85%B3%E4%BA%8E/"/>
+      <category term="关于" scheme="https://heliumhe.gitee.io/categories/%E5%85%B3%E4%BA%8E/"/>
     
     
-      <category term="关于" scheme="https://heliumhe.gitee.io/junblog/tags/%E5%85%B3%E4%BA%8E/"/>
+      <category term="关于" scheme="https://heliumhe.gitee.io/tags/%E5%85%B3%E4%BA%8E/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(8) - 变量的存储类型</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://heliumhe.gitee.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</id>
     <published>2020-08-23T01:20:12.000Z</published>
     <updated>2020-08-23T01:25:48.000Z</updated>
     
@@ -129,23 +108,23 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(7) - 作用域</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
     <published>2020-08-22T13:34:12.000Z</published>
     <updated>2020-08-22T14:14:48.000Z</updated>
     
-    <content type="html"><![CDATA[<p>C++作用域</p><a id="more"></a><figure><img src="/junblog/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/Cpp程序设计7%20作用域.png" alt="C++程序设计7 作用域"><figcaption aria-hidden="true">C++程序设计7 作用域</figcaption></figure><p><strong>特别注意:</strong></p><ol type="1"><li><p>同一层级的作用域不允许出现同名的标识符。重名的标识符必须在不同层级出现，内层标识符隐藏外层标识符。</p></li><li><p>同一层级可以进行函数重载。不同层级下，<strong>内层函数说明隐藏一切外层函数（不论参数表是否相同）的说明</strong>。</p></li></ol>]]></content>
+    <content type="html"><![CDATA[<p>C++作用域</p><a id="more"></a><figure><img src="/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/Cpp程序设计7%20作用域.png" alt="C++程序设计7 作用域"><figcaption aria-hidden="true">C++程序设计7 作用域</figcaption></figure><p><strong>特别注意:</strong></p><ol type="1"><li><p>同一层级的作用域不允许出现同名的标识符。重名的标识符必须在不同层级出现，内层标识符隐藏外层标识符。</p></li><li><p>同一层级可以进行函数重载。不同层级下，<strong>内层函数说明隐藏一切外层函数（不论参数表是否相同）的说明</strong>。</p></li></ol>]]></content>
     
     <summary type="html">
     
@@ -154,19 +133,19 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(6) - 函数</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/"/>
+    <id>https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/</id>
     <published>2020-08-22T11:32:47.000Z</published>
     <updated>2020-08-22T13:27:44.000Z</updated>
     
@@ -179,19 +158,19 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(5) - 复合类型数据：指针与引用初步</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/"/>
+    <id>https://heliumhe.gitee.io/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/</id>
     <published>2020-08-20T12:01:04.000Z</published>
     <updated>2020-08-21T15:10:22.000Z</updated>
     
@@ -204,19 +183,19 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(4) - 复合类型数据：数组</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/"/>
+    <id>https://heliumhe.gitee.io/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/</id>
     <published>2020-08-16T14:02:16.000Z</published>
     <updated>2020-08-22T11:36:36.000Z</updated>
     
@@ -229,19 +208,19 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(3) - 结构化程序设计</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
     <published>2020-08-15T13:02:56.000Z</published>
     <updated>2020-08-22T11:35:48.000Z</updated>
     
@@ -254,19 +233,19 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(2) - 数据与运算</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/"/>
+    <id>https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/</id>
     <published>2020-08-15T13:00:34.000Z</published>
     <updated>2020-08-19T11:42:48.000Z</updated>
     
@@ -279,19 +258,19 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>C++程序设计基础(1) - 计算机基础知识</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2020-08-15T12:36:59.000Z</published>
     <updated>2020-08-19T11:33:06.000Z</updated>
     
@@ -304,19 +283,19 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/"/>
     
     
-      <category term="C++" scheme="https://heliumhe.gitee.io/junblog/tags/C/"/>
+      <category term="C++" scheme="https://heliumhe.gitee.io/tags/C/"/>
     
   </entry>
   
   <entry>
     <title>Linux Mint安装及LaTeX-Lyx配置踩坑记</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
+    <id>https://heliumhe.gitee.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/</id>
     <published>2020-07-26T08:43:01.000Z</published>
     <updated>2020-08-16T12:17:36.000Z</updated>
     
@@ -329,23 +308,23 @@
     </summary>
     
     
-      <category term="计算机" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+      <category term="计算机" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
     
-      <category term="Linux" scheme="https://heliumhe.gitee.io/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/"/>
+      <category term="Linux" scheme="https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/"/>
     
     
-      <category term="Linux" scheme="https://heliumhe.gitee.io/junblog/tags/Linux/"/>
+      <category term="Linux" scheme="https://heliumhe.gitee.io/tags/Linux/"/>
     
-      <category term="LaTeX" scheme="https://heliumhe.gitee.io/junblog/tags/LaTeX/"/>
+      <category term="LaTeX" scheme="https://heliumhe.gitee.io/tags/LaTeX/"/>
     
-      <category term="Lyx" scheme="https://heliumhe.gitee.io/junblog/tags/Lyx/"/>
+      <category term="Lyx" scheme="https://heliumhe.gitee.io/tags/Lyx/"/>
     
   </entry>
   
   <entry>
     <title>集合元素个数与线性空间的维数</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/"/>
+    <id>https://heliumhe.gitee.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/</id>
     <published>2020-07-12T07:22:52.000Z</published>
     <updated>2020-08-16T12:17:12.000Z</updated>
     
@@ -359,19 +338,19 @@
     </summary>
     
     
-      <category term="数学" scheme="https://heliumhe.gitee.io/junblog/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://heliumhe.gitee.io/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="代数" scheme="https://heliumhe.gitee.io/junblog/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/"/>
+      <category term="代数" scheme="https://heliumhe.gitee.io/categories/%E6%95%B0%E5%AD%A6/%E4%BB%A3%E6%95%B0/"/>
     
     
-      <category term="抽象代数" scheme="https://heliumhe.gitee.io/junblog/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/"/>
+      <category term="抽象代数" scheme="https://heliumhe.gitee.io/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
   <entry>
     <title>Excerpts of Where the Crawdads Sing</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/"/>
+    <id>https://heliumhe.gitee.io/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/</id>
     <published>2020-07-08T14:00:00.000Z</published>
     <updated>2020-07-22T01:06:14.000Z</updated>
     
@@ -384,27 +363,27 @@
     </summary>
     
     
-      <category term="English" scheme="https://heliumhe.gitee.io/junblog/categories/English/"/>
+      <category term="English" scheme="https://heliumhe.gitee.io/categories/English/"/>
     
     
-      <category term="English" scheme="https://heliumhe.gitee.io/junblog/tags/English/"/>
+      <category term="English" scheme="https://heliumhe.gitee.io/tags/English/"/>
     
-      <category term="book" scheme="https://heliumhe.gitee.io/junblog/tags/book/"/>
+      <category term="book" scheme="https://heliumhe.gitee.io/tags/book/"/>
     
-      <category term="novel" scheme="https://heliumhe.gitee.io/junblog/tags/novel/"/>
+      <category term="novel" scheme="https://heliumhe.gitee.io/tags/novel/"/>
     
-      <category term="excerpt" scheme="https://heliumhe.gitee.io/junblog/tags/excerpt/"/>
+      <category term="excerpt" scheme="https://heliumhe.gitee.io/tags/excerpt/"/>
     
   </entry>
   
   <entry>
     <title>测试文档</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/"/>
+    <id>https://heliumhe.gitee.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</id>
     <published>2020-07-04T03:46:50.000Z</published>
     <updated>2020-11-09T05:43:08.000Z</updated>
     
-    <content type="html"><![CDATA[<p>此文档用于测试网站兼容性，路人请忽略此文档。</p><a id="more"></a><h2 id="数学测试">数学测试</h2><p>这是一个测试文档，我们将在这里进行网站内容发布的一些测试。</p><p>首先是数学公式测试</p><p>行内公式 <span class="math inline">\(\int_0^1 \sin x dx = -\cos x|_0^1\)</span> 测试。</p><p>行间公式测试 <span class="math display">\[e^{i\pi}=-1\]</span></p><p><span class="math display">\[\left(\dfrac{n+1}{e}\right)^{n}&lt;n!&lt;e\left(\dfrac{n+1}{e}\right)^{n+1}\]</span></p><p><span class="math display">\[\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{n}&lt;\ln(n+1)&lt;1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\]</span></p><p>行间公式测试完毕。</p><h2 id="代码测试">代码测试</h2><p>下面是一段C++代码</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j, n = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">2</span>; j &lt; <span class="built_in">sqrt</span>(i); j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%j == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j &gt; <span class="built_in">sqrt</span>(i)) <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="string">"\t"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="图片测试">图片测试</h2><p>下面插入一张图片</p><figure><img src="/junblog/junblog/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/SquirrelHeather_ZH-CN1683129884_1920x1080.jpg" alt="Squirrel"><figcaption aria-hidden="true">Squirrel</figcaption></figure>]]></content>
+    <content type="html"><![CDATA[<p>此文档用于测试网站兼容性，路人请忽略此文档。</p><a id="more"></a><h2 id="数学测试">数学测试</h2><p>这是一个测试文档，我们将在这里进行网站内容发布的一些测试。</p><p>首先是数学公式测试</p><p>行内公式 <span class="math inline">\(\int_0^1 \sin x dx = -\cos x|_0^1\)</span> 测试。</p><p>行间公式测试 <span class="math display">\[e^{i\pi}=-1\]</span></p><p><span class="math display">\[\left(\dfrac{n+1}{e}\right)^{n}&lt;n!&lt;e\left(\dfrac{n+1}{e}\right)^{n+1}\]</span></p><p><span class="math display">\[\dfrac{1}{2}+\dfrac{1}{3}+\cdots+\dfrac{1}{n}&lt;\ln(n+1)&lt;1+\dfrac{1}{2}+\cdots+\dfrac{1}{n}\]</span></p><p>行间公式测试完毕。</p><h2 id="代码测试">代码测试</h2><p>下面是一段C++代码</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta"># <span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j, n = <span class="number">100</span>;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">2</span>; j &lt; <span class="built_in">sqrt</span>(i); j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i%j == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j &gt; <span class="built_in">sqrt</span>(i)) <span class="built_in">cout</span> &lt;&lt; i &lt;&lt; <span class="string">"\t"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="图片测试">图片测试</h2><p>下面插入一张图片</p><figure><img src="/junblog/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/SquirrelHeather_ZH-CN1683129884_1920x1080.jpg" alt="Squirrel"><figcaption aria-hidden="true">Squirrel</figcaption></figure>]]></content>
     
     <summary type="html">
     
@@ -413,10 +392,31 @@
     </summary>
     
     
-      <category term="使用说明及测试" scheme="https://heliumhe.gitee.io/junblog/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/"/>
+      <category term="使用说明及测试" scheme="https://heliumhe.gitee.io/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/"/>
     
     
-      <category term="测试" scheme="https://heliumhe.gitee.io/junblog/tags/%E6%B5%8B%E8%AF%95/"/>
+      <category term="测试" scheme="https://heliumhe.gitee.io/tags/%E6%B5%8B%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://heliumhe.gitee.io/2020/07/04/hello-world/"/>
+    <id>https://heliumhe.gitee.io/2020/07/04/hello-world/</id>
+    <published>2020-07-03T23:29:50.000Z</published>
+    <updated>2020-12-23T11:15:01.210Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="使用说明及测试" scheme="https://heliumhe.gitee.io/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/"/>
+    
     
   </entry>
   

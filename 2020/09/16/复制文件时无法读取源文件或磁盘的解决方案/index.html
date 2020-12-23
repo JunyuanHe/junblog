@@ -416,10 +416,10 @@
 <a id="more"></a>
 <p>具体情况见下图</p>
 <figure>
-<img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163624.408%20-%201.jpg" alt="复制时突然降速"><figcaption aria-hidden="true">复制时突然降速</figcaption>
+<img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163624.408%20-%201.jpg" alt="复制时突然降速"><figcaption aria-hidden="true">复制时突然降速</figcaption>
 </figure>
 <figure>
-<img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163916.105.jpg" alt="提示无法读源文件或磁盘"><figcaption aria-hidden="true">提示无法读源文件或磁盘</figcaption>
+<img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163916.105.jpg" alt="提示无法读源文件或磁盘"><figcaption aria-hidden="true">提示无法读源文件或磁盘</figcaption>
 </figure>
 <p>据此进行如下猜测：</p>
 <ul>
@@ -429,9 +429,9 @@
 </ul>
 <p>下面一一排除。文件可以正常打开，说明文件应该没有损坏。接着在资源管理器中选择该磁盘，右键属性-工具-检查磁盘，结果未发现错误。</p>
 <p>接着使用命令行 <code>chkdsk E: /f</code> 检查磁盘并修复错误，显示无错误</p>
-<p><img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/微信图片_20200916164640-1600246095317.jpg"></p>
+<p><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/微信图片_20200916164640-1600246095317.jpg"></p>
 <p>那么怎么办呢？我们更进一步，输入命令<code>chkdsk E: /R</code> . 该命令执行相当缓慢，两个小时后我终于看到了结果。</p>
-<p><img src="/junblog/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/image-20200916165152444.png"></p>
+<p><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/image-20200916165152444.png"></p>
 <p>虽然提示出现未指定的错误，但我发现这时文件已经可以复制了。具体是什么原因造成了错误仍尚不清楚。</p>
 <p>借此机会，我了解了以下chkdsk检查磁盘的用法：Chkdsk命令是用来检查磁盘并且显示状态报告的。</p>
 <p>用法如下：</p>
@@ -515,7 +515,7 @@
           
         
           
-            <p>本文永久链接是：<a href=https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/>https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</a></p>
+            <p>本文永久链接是：<a href=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/>https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</a></p>
           
         
       </blockquote>
@@ -565,7 +565,7 @@
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://connect.qq.com/widget/shareqq/index.html?url=https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
           
           >
           
@@ -577,7 +577,7 @@
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
           
-          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
           
           >
           
@@ -589,7 +589,7 @@
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
           
-          href="http://service.weibo.com/share/share.php?url=https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
+          href="http://service.weibo.com/share/share.php?url=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
           
           >
           
@@ -603,7 +603,7 @@
         <div class='hoverbox'>
           <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
           <div class='target'>
-            <img src="data:image/png;base64,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">
+            <img src="data:image/png;base64,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">
           </div>
         </div>
       
@@ -622,11 +622,6 @@
         
         
           <div class="prev-next">
-            
-              <a class='prev' href='/junblog/2020/12/11/hello-world/'>
-                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Hello World</p>
-                <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
-              </a>
             
             
               <a class='next' href='/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/'>
