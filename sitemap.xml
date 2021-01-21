@@ -242,20 +242,6 @@
   </url>
   
   <url>
-    <loc>https://heliumhe.gitee.io/tags/Web/</loc>
-    <lastmod>2021-01-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://heliumhe.gitee.io/tags/Hexo/</loc>
-    <lastmod>2021-01-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://heliumhe.gitee.io/tags/%E5%85%B3%E4%BA%8E/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
@@ -277,14 +263,21 @@
   </url>
   
   <url>
-    <loc>https://heliumhe.gitee.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <loc>https://heliumhe.gitee.io/tags/Web/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://heliumhe.gitee.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
+    <loc>https://heliumhe.gitee.io/tags/Hexo/</loc>
+    <lastmod>2021-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://heliumhe.gitee.io/tags/%E6%B5%8B%E8%AF%95/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -297,14 +290,14 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <loc>https://heliumhe.gitee.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
+  
+
   
   <url>
     <loc>https://heliumhe.gitee.io/categories/%E6%95%B0%E5%AD%A6/</loc>
@@ -314,7 +307,7 @@
   </url>
   
   <url>
-    <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/</loc>
+    <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -328,6 +321,13 @@
   </url>
   
   <url>
+    <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/</loc>
+    <lastmod>2021-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
@@ -335,21 +335,14 @@
   </url>
   
   <url>
-    <loc>https://heliumhe.gitee.io/categories/English/</loc>
-    <lastmod>2021-01-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2021-01-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://heliumhe.gitee.io/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2021-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://heliumhe.gitee.io/categories/English/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -364,6 +357,13 @@
   
   <url>
     <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</loc>
+    <lastmod>2021-01-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://heliumhe.gitee.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2021-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
