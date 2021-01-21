@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.6.6'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>复制文件时&#34;无法读取源文件或磁盘&#34;的解决方案记录 - Jun&#39;s Blog</title>
+  
+    <meta name="keywords" content="硬盘,疑难杂症">
+  
+  
+    <meta name="description" content="一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/junblog/atom.xml" title="Jun's Blog">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/junblog/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/junblog/'>
+          
+          
+          
+            Jun's Blog
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/
+                  
+                  
+                  
+                    id="junblog"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/categories/
+                  
+                  
+                  
+                    id="junblogcategories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/tags/
+                  
+                  
+                  
+                    id="junblogtags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/archives/
+                  
+                  
+                  
+                    id="junblogarchives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/friends/
+                  
+                  
+                  
+                    id="junblogfriends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/aboutme/
+                  
+                  
+                  
+                    id="junblogaboutme"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/
+                  
+                  
+                  
+                    id="junblog"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/categories/
+                  
+                  
+                  
+                    id="junblogcategories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/tags/
+                  
+                  
+                  
+                    id="junblogtags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/archives/
+                  
+                  
+                  
+                    id="junblogarchives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/friends/
+                  
+                  
+                  
+                    id="junblogfriends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/aboutme/
+                  
+                  
+                  
+                    id="junblogaboutme"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal blur article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">
+      复制文件时"无法读取源文件或磁盘"的解决方案记录
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/JunyuanHe/cdn-assets@master/img/GeographicObjects2.jpg">
+    <p>Jun</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>计算机/疑难杂症</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年9月16日 16:50</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。</p>
+<a id="more"></a>
+<p>具体情况见下图</p>
+<figure>
+<img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163624.408%20-%201.jpg" alt="复制时突然降速"><figcaption aria-hidden="true">复制时突然降速</figcaption>
+</figure>
+<figure>
+<img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/bandicam%202020-09-16%2013-05-55-274.mp4_20200916_163916.105.jpg" alt="提示无法读源文件或磁盘"><figcaption aria-hidden="true">提示无法读源文件或磁盘</figcaption>
+</figure>
+<p>据此进行如下猜测：</p>
+<ul>
+<li>文件损坏</li>
+<li>磁盘有错误</li>
+<li>文件系统错误</li>
+</ul>
+<p>下面一一排除。文件可以正常打开，说明文件应该没有损坏。接着在资源管理器中选择该磁盘，右键属性-工具-检查磁盘，结果未发现错误。</p>
+<p>接着使用命令行 <code>chkdsk E: /f</code> 检查磁盘并修复错误，显示无错误</p>
+<p><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/微信图片_20200916164640-1600246095317.jpg"></p>
+<p>那么怎么办呢？我们更进一步，输入命令<code>chkdsk E: /R</code> . 该命令执行相当缓慢，两个小时后我终于看到了结果。</p>
+<p><img src="/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/image-20200916165152444.png"></p>
+<p>虽然提示出现未指定的错误，但我发现这时文件已经可以复制了。具体是什么原因造成了错误仍尚不清楚。</p>
+<p>借此机会，我了解了以下chkdsk检查磁盘的用法：Chkdsk命令是用来检查磁盘并且显示状态报告的。</p>
+<p>用法如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CHKDSK [volume[[path]filename]]] [/F] [/V] [/R] [/X] [/I] [/C] [/L[:size]]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>volume</code> 指定驱动器(后面跟一个冒号)、装入点或卷名。</li>
+<li><code>filename</code> 仅用于 FAT/FAT32: 指定要检查是否有碎片的文件。</li>
+<li><code>/F</code> 修复磁盘上的错误。</li>
+<li><code>/V</code> 在 FAT/FAT32 上: 显示磁盘上每个文件的完整路径和名称。在 NTFS 上: 如果有清除消息，将其显示。</li>
+<li><code>/R</code> 查找不正确的扇区并恢复可读信息(隐含 <code>/F</code>)。</li>
+<li><code>/L:size</code> 仅用于 NTFS: 将日志文件大小改成指定的 KB 数。如果没有指定大小，则显示当前的大小。</li>
+<li><code>/X</code> 如果必要，强制卷先卸下。卷的所有打开的句柄就会无效(隐含 <code>/F</code>)。</li>
+<li><code>/I</code> 仅用于 NTFS: 对索引项进行强度较小的检查。</li>
+<li><code>/C</code> 仅用于 NTFS: 跳过文件夹结构的循环检查。</li>
+<li><code>/I</code> 和 <code>/C</code> 命令行开关跳过卷的某些检查，减少运行 Chkdsk 所需的时间。</li>
+</ul>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+  
+
+<section class="widget list references  desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i><span class='name'>参考资料</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="https://zhuanlan.zhihu.com/p/130476209" href="https://zhuanlan.zhihu.com/p/130476209"
+          
+          
+          id="https:zhuanlanzhihucomp130476209"
+          >
+          <div class='name'>
+            
+            chkdsk磁盘修复工具操作说明
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+    <section class="widget copyright  desktop mobile">
+        <div class='content'>
+            
+                <blockquote>
+                    
+                        
+                                    <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议。转载请保留原文链接和作者。</p>
+
+                                        
+                                            
+                        
+                                <p>
+                                    本文永久链接是：<a href=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/>https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</a></p>
+                                
+                                            
+                </blockquote>
+                
+        </div>
+    </section>
+  
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-09-18T13:16:22+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年9月18日 13:16</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/junblog/tags/%E7%A1%AC%E7%9B%98/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>硬盘</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/junblog/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>疑难杂症</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/&title=复制文件时"无法读取源文件或磁盘"的解决方案记录 - Jun's Blog&summary=一段时间以前电脑上某些特定的文件开始出现无法复制、剪切的情况。一旦进行复制、剪切的操作，速度在某点处降到几乎为0，复制操作卡死，无法暂停或取消，2-3 min 后，系统弹出提示框，“无法读取源文件或磁盘”。"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,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">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/junblog/2021/01/20/hexo%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%20-%20BY%20HJY/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>Hexo网站搭建教程 - BY HJY</p>
+                <p class='content'>写在前面
+我们这里采用的是hexo工具来生成博客网站的方案, 我们简单介绍一下它的基本构架.
+整个方案分为三大部分: 其一是博客本身, 其二是部署到服务器, 其三是多人协作.
+
+a) 博...</p>
+              </a>
+            
+            
+              <a class='next' href='/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/'>
+                <p class='title'>讨论：是不是有误？——关于二项分布与负二项分布的关系<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>最近在阅读Basic Probability Theory with Applications一书, 在二项分布和负二项分布处耽搁了许久. 下图所示内容便是使我疑惑的地方.
+
+
+An Ex...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+        <p cst>读者们可以在此处进行交流</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: '复制文件时"无法读取源文件或磁盘"的解决方案记录',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/junblog/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:hejunyuan02@126.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://junyuanhe.github.io/" target="_blank" rel="noopener">Copyright © 2019-2020 Jun</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/junblog/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '8px',
+        duration: '800',
+        interval: '100',
+        scale: '1'
+      });
+    });
+  </script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+<script src="/junblog/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "GbPm6UIzHrGduLaANgBIdhkf-gzGzoHsz",
+    appKey: "SFuacIL4IJSnGk9TDX46eb0Y",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'false',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
+
+
+
+
+
+  
+<script src="/junblog/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.6.5/js/search.js"></script>
+
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 标准 markdown 描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

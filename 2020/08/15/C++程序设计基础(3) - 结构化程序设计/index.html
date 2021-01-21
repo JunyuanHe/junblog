@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html>
+<head hexo-theme='https://volantis.js.org/#2.6.6'>
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+    
+  
+  <!-- 渲染优化 -->
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- 页面元数据 -->
+  
+    <title>C++程序设计基础(3) - 结构化程序设计 - Jun&#39;s Blog</title>
+  
+    <meta name="keywords" content="C++">
+  
+  
+    <meta name="description" content="介绍两种基本的结构: 选择结构与循环结构">
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/junblog/atom.xml" title="Jun's Blog">
+  
+
+  <!-- import meta -->
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13/css/all.min.css">
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+
+  
+
+  
+  <link rel="shortcut icon" type='image/x-icon' href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
+
+  
+
+  
+
+  <!-- import link -->
+  
+
+  
+  
+    
+<link rel="stylesheet" href="/junblog/css/style.css">
+
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+<body>
+  
+  <div id="loading-bar-wrapper">
+  <div id="loading-bar"></div>
+</div>
+<header class="l_header shadow blur">
+  <div class='container'>
+  <div class='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h'>
+        <li><a class="s-comment fas fa-comments fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+          <li><a class="s-toc fas fa-list fa-fw" target="_self" href='javascript:void(0)'></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/junblog/'>
+          
+          
+          
+            Jun's Blog
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/
+                  
+                  
+                  
+                    id="junblog"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/categories/
+                  
+                  
+                  
+                    id="junblogcategories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/tags/
+                  
+                  
+                  
+                    id="junblogtags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/archives/
+                  
+                  
+                  
+                    id="junblogarchives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/friends/
+                  
+                  
+                  
+                    id="junblogfriends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="flat-box" href=/junblog/aboutme/
+                  
+                  
+                  
+                    id="junblogaboutme"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fas fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+
+			<ul class='switcher nav-list-h'>
+				
+					<li><a class="s-search fas fa-search fa-fw" target="_self" href='javascript:void(0)'></a></li>
+				
+				<li>
+          <a class="s-menu fas fa-bars fa-fw" target="_self" href='javascript:void(0)'></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/
+                  
+                  
+                  
+                    id="junblog"
+                  >
+                  <i class='fas fa-rss fa-fw'></i>首页
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/categories/
+                  
+                  
+                  
+                    id="junblogcategories"
+                  >
+                  <i class='fas fa-folder-open fa-fw'></i>分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/tags/
+                  
+                  
+                  
+                    id="junblogtags"
+                  >
+                  <i class='fas fa-tags fa-fw'></i>标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/archives/
+                  
+                  
+                  
+                    id="junblogarchives"
+                  >
+                  <i class='fas fa-archive fa-fw'></i>归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/friends/
+                  
+                  
+                  
+                    id="junblogfriends"
+                  >
+                  <i class='fas fa-link fa-fw'></i>友链
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="flat-box" href=/junblog/aboutme/
+                  
+                  
+                  
+                    id="junblogaboutme"
+                  >
+                  <i class='fas fa-info-circle fa-fw'></i>关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+		</div>
+	</div>
+  </div>
+</header>
+
+<script>setLoadingBarProgress(40);</script>
+
+
+
+  <div class="l_body nocover">
+    <div class='body-wrapper'>
+      
+
+<div class='l_main'>
+  
+
+  
+    <article id="post" class="post white-box reveal blur article-type-post" itemscope itemprop="blogPost">
+      
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h1 class="title">
+    <a href="/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
+      C++程序设计基础(3) - 结构化程序设计
+    </a>
+  </h1>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/JunyuanHe/cdn-assets@master/img/GeographicObjects2.jpg">
+    <p>Jun</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/C/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>计算机/C++</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2020年8月15日 21:02</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+      <section class="article typo">
+        <div class="article-entry" itemprop="articleBody">
+          
+          
+          <p>介绍两种基本的结构: 选择结构与循环结构</p>
+<a id="more"></a>
+<h2 id="语句">语句</h2>
+<p>语句是C++程序的基本执行单位. 在C++中, 一个语句后面加分号表示语句的结束.</p>
+<p>C++中的语句分为单语句、复合语句和结构性语句.</p>
+<p>• 单语句: 单一用分号结束的语句. (可以为空语句, 即只有一个分号)</p>
+<p>• 复合语句: 由多个语句组成, 用花括号括起来. 复合语句后面不用加分号.</p>
+<p>• 结构性语句: 特定的语句结构, 如for语句、while语句、do...while语句、if语句、switch语句等.</p>
+<p>语句可以嵌套, 因此有层级之分, 这在后面提及语句作用域的时候会特别说明.</p>
+<h2 id="选择结构">选择结构</h2>
+<h3 id="if语句">if语句</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line">...</span><br><span class="line"><span class="keyword">else</span> <span class="keyword">if</span>(表达式) &#123;...&#125;</span><br><span class="line"><span class="keyword">else</span> &#123;...&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="条件表达式">条件表达式</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">表达式<span class="number">1</span> ? 表达式<span class="number">2</span> : 表达式<span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>表达式1为true时计算表达式2的值作为结果, 为false时计算表达式3的值作为结果.</p>
+<h3 id="switch语句">switch语句</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(整数表达式)   <span class="comment">//包括int及其派生类型、字符类型、逻辑类型</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> 常量表达式<span class="number">1</span>: 语句序列<span class="number">1</span></span><br><span class="line"><span class="keyword">case</span> 常量表达式<span class="number">2</span>: 语句序列<span class="number">2</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">case</span> 常量表达式n: 语句序列n</span><br><span class="line"><span class="keyword">default</span>: 语句序列n+<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>例子:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(grade)</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'A'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">90</span>~<span class="number">100</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'B'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">80</span>~<span class="number">89</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'C'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">70</span>~<span class="number">79</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'D'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">60</span>~<span class="number">69</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">case</span> <span class="string">'E'</span>:</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; “<span class="number">0</span>~<span class="number">59</span>” &lt;&lt; <span class="built_in">endl</span>; <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="循环结构">循环结构</h2>
+<h3 id="while语句和do...while语句">while语句和do...while语句</h3>
+<p>• while语句:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(表达式)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>• do...while语句:</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;...&#125;<span class="keyword">while</span>(表达式);</span><br></pre></td></tr></table></figure>
+<p>两者的区别是while语句先进行判断再决定是否执行语句, 而do...while先执行一次内嵌语句再进行判断.</p>
+<h3 id="for语句">for语句</h3>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(表达式<span class="number">1</span>; 表达式<span class="number">2</span>; 表达式<span class="number">3</span>)&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>其中 表达式1为初始操作; 表达式2为循环条件; 表达式3在内嵌语句后执行</p>
+<blockquote>
+<p><strong>算法. 求最大公约数(辗转相除法)</strong> 求a, b两个整数的最大公约数 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b; b!=<span class="number">0</span>; r=a%b, a=b, b=r);</span><br></pre></td></tr></table></figure> 则得到的a为最大公约数.</p>
+</blockquote>
+<h3 id="break和continue语句">break和continue语句</h3>
+<p>break跳出循环, 但只跳出一层循环. continue终止本次循环, 进入下一次循环.</p>
+<blockquote>
+<p><strong>算法. 判断是否为素数</strong> 设输入的数据为n, 判断其是否为素数 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (sqrtn = <span class="built_in">sqrt</span>((<span class="keyword">double</span>)n), i = <span class="number">2</span>; i &lt;= sqrtn; i++);</span><br><span class="line">	<span class="keyword">if</span> (n % i == <span class="number">0</span>) <span class="keyword">break</span>;</span><br><span class="line"><span class="keyword">if</span> (n &gt;= <span class="number">2</span> &amp;&amp; i &gt; sqrtn) <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; “ is prime” &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; n &lt;&lt; “ is <span class="keyword">not</span> prime” &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+
+          
+            <div class='article_footer'>
+              
+                
+  
+    
+    
+
+
+  
+
+<section class="widget list references  desktop mobile">
+  
+  <header>
+    
+      <i class="fas fa-quote-left fa-fw" aria-hidden="true"></i><span class='name'>参考资料</span>
+    
+  </header>
+
+
+  <div class='content'>
+    <ul class="list entry navigation">
+      
+        <li><a class="flat-box" title="http://product.dangdang.com/25239691.html" href="http://product.dangdang.com/25239691.html"
+          
+          
+          id="http:productdangdangcom25239691html"
+          >
+          <div class='name'>
+            
+            邵荣. C++程序设计(第二版)
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+
+
+  
+
+  
+    
+    
+
+
+
+  
+
+  
+    
+    
+
+    <section class="widget copyright  desktop mobile">
+        <div class='content'>
+            
+                <blockquote>
+                    
+                        
+                                    <p>博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议。转载请保留原文链接和作者。</p>
+
+                                        
+                                            
+                        
+                                <p>
+                                    本文永久链接是：<a href=https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/>https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</a></p>
+                                
+                                            
+                </blockquote>
+                
+        </div>
+    </section>
+  
+
+  
+
+
+              
+            </div>
+          
+        </div>
+        
+          
+
+
+  <section class='meta' id="footer-meta">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateUpdated" datetime="2020-08-22T19:35:48+08:00">
+  <a class='notlink'>
+    <i class="fas fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2020年8月22日 19:35</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/junblog/tags/C/" rel="nofollow"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i><p>C++</p></a></div>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://connect.qq.com/widget/shareqq/index.html?url=https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/&title=C++程序设计基础(3) - 结构化程序设计 - Jun's Blog&summary=介绍两种基本的结构: 选择结构与循环结构"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer"
+          
+          href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/&title=C++程序设计基础(3) - 结构化程序设计 - Jun's Blog&summary=介绍两种基本的结构: 选择结构与循环结构"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer"
+          
+          href="http://service.weibo.com/share/share.php?url=https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/&title=C++程序设计基础(3) - 结构化程序设计 - Jun's Blog&summary=介绍两种基本的结构: 选择结构与循环结构"
+          
+          >
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+        
+        <div class='hoverbox'>
+          <a><img src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/128/wechat.png"></a>
+          <div class='target'>
+            <img src="data:image/png;base64,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">
+          </div>
+        </div>
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+  </section>
+
+
+        
+        
+          <div class="prev-next">
+            
+              <a class='prev' href='/junblog/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/'>
+                <p class='title'><i class="fas fa-chevron-left" aria-hidden="true"></i>C++程序设计基础(4) - 复合类型数据：数组</p>
+                <p class='content'>介绍数组和C风格字符串的处理, 以及一些十分常用的数组算法.
+
+一维数组
+• 数组的定义:
+1int a[10]; double b[20]; char c[80];
+数组的大小必须是...</p>
+              </a>
+            
+            
+              <a class='next' href='/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/'>
+                <p class='title'>C++程序设计基础(2) - 数据与运算<i class="fas fa-chevron-right" aria-hidden="true"></i></p>
+                <p class='content'>主要介绍C++的基本数据类型和运算符, 略去了较为简单的内容
+
+C++标识符
+• C++标识符的含义: C++中使用的名字, 如变量名、类型名、函数名等
+• 合法的C++标识符：由字母、...</p>
+              </a>
+            
+          </div>
+        
+      </section>
+    </article>
+  
+
+  
+    <!-- 显示推荐文章和评论 -->
+
+
+
+  <article class="post white-box reveal comments blur">
+    <section class="article typo">
+      <p ct><i class='fas fa-comments'></i> 评论</p>
+      
+        <p cst>读者们可以在此处进行交流</p>
+      
+      
+      
+      
+      
+      
+        <section id="comments">
+          <div id="valine_container" class="valine_thread">
+            <i class="fas fa-cog fa-spin fa-fw fa-2x"></i>
+          </div>
+        </section>
+      
+      
+    </section>
+  </article>
+
+
+  
+
+
+
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+
+  <script>
+    window.subData = {
+      title: 'C++程序设计基础(3) - 结构化程序设计',
+      tools: true
+    }
+  </script>
+
+
+</div>
+<aside class='l_side'>
+  
+  
+    
+    
+
+
+
+  <section class="widget toc-wrapper blur desktop mobile" id="toc-div" >
+    
+  <header>
+    
+      <i class="fas fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#语句"><span class="toc-number">1.</span> <span class="toc-text">语句</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#选择结构"><span class="toc-number">2.</span> <span class="toc-text">选择结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#if语句"><span class="toc-number">2.1.</span> <span class="toc-text">if语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件表达式"><span class="toc-number">2.2.</span> <span class="toc-text">条件表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#switch语句"><span class="toc-number">2.3.</span> <span class="toc-text">switch语句</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#循环结构"><span class="toc-number">3.</span> <span class="toc-text">循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#while语句和do...while语句"><span class="toc-number">3.1.</span> <span class="toc-text">while语句和do...while语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#for语句"><span class="toc-number">3.2.</span> <span class="toc-text">for语句</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#break和continue语句"><span class="toc-number">3.3.</span> <span class="toc-text">break和continue语句</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+
+  
+
+
+</aside>
+
+
+  
+  <footer class="clearfix">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper">
+          
+            
+              <a href="/junblog/atom.xml"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="mailto:hejunyuan02@126.com"
+                class="social fas fa-envelope flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+            
+              <a href="https://music.163.com/#/user/home?id=63035382"
+                class="social fas fa-headphones-alt flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer">
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        本站使用
+        <a href="https://volantis.js.org/" target="_blank" class="codename">Volantis</a>
+        作为主题，总访问量为
+          <span id="busuanzi_value_site_pv"><i class="fas fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
+          次
+        
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="https://junyuanhe.github.io/" target="_blank" rel="noopener">Copyright © 2019-2020 Jun</a></p>
+
+        </div>
+      
+    
+  </footer>
+
+<script>setLoadingBarProgress(80);</script>
+
+
+      <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4/dist/jquery.min.js"></script>
+
+
+  <script>
+    
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/junblog/" || "/";
+    if (!ROOT.endsWith('/')) ROOT += '/';
+  </script>
+
+
+
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2/js/instant_page.js" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.6/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      ScrollReveal().reveal('.l_main .reveal', {
+        distance: '8px',
+        duration: '800',
+        interval: '100',
+        scale: '1'
+      });
+    });
+  </script>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script defer src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+
+  
+  
+  
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script>
+
+    <script type="text/javascript">
+      $(function(){
+        var imgs=["https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/BBC19066-E176-47C2-9D22-48C81EE5DF6B.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/B18FCBB3-67FD-48CC-B4F3-457BA145F17A.jpeg", "https://cdn.jsdelivr.net/gh/xaoxuu/cdn-wallpaper/abstract/67239FBB-E15D-4F4F-8EE8-0F1C9F3C4E7C.jpeg"];
+        if ('true' == 'true') {
+          function shuffle(arr){
+            /*From countercurrent-time*/
+            var n = arr.length;
+            while(n--) {
+              var index = Math.floor(Math.random() * n);
+              var temp = arr[index];
+              arr[index] = arr[n];
+              arr[n] = temp;
+            }
+          }
+          shuffle(imgs);
+        }
+        if ('.cover') {
+          $('.cover').backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        } else {
+          $.backstretch(
+            imgs,
+          {
+            duration: "20000",
+            fade: "1500"
+          });
+        }
+      });
+    </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+<script src="/junblog/js/valine.js"></script>
+
+  
+  <script>
+  var GUEST_INFO = ['nick','mail','link'];
+  var meta = 'nick,mail'.split(',').filter(function(item){
+    return GUEST_INFO.indexOf(item) > -1
+  });
+  var REQUIRED_FIELDS = ['nick','mail','link'];
+  var requiredFields = 'nick,mail'.split(',').filter(function(item){
+    return REQUIRED_FIELDS.indexOf(item) > -1
+  });
+  var valine = new Valine();
+  function emoji(path, idx, ext) {
+      return path + "/" + path + "-" + idx + "." + ext;
+  }
+  var emojiMaps = {};
+  for (var i = 1; i <= 54; i++) {
+    emojiMaps['tieba-' + i] = emoji('tieba', i, 'png');
+  }
+  for (var i = 1; i <= 101; i++) {
+    emojiMaps['qq-' + i] = emoji('qq', i, 'gif');
+  }
+  for (var i = 1; i <= 116; i++) {
+    emojiMaps['aru-' + i] = emoji('aru', i, 'gif');
+  }
+  for (var i = 1; i <= 125; i++) {
+    emojiMaps['twemoji-' + i] = emoji('twemoji', i, 'png');
+  }
+  for (var i = 1; i <= 4; i++) {
+    emojiMaps['weibo-' + i] = emoji('weibo', i, 'png');
+  }
+  valine.init({
+    el: '#valine_container',
+    meta: meta,
+    
+    appId: "GbPm6UIzHrGduLaANgBIdhkf-gzGzoHsz",
+    appKey: "SFuacIL4IJSnGk9TDX46eb0Y",
+    placeholder: "快来评论吧~",
+    pageSize:'10',
+    avatar:'robohash',
+    lang:'zh-cn',
+    visitor: 'true',
+    highlight: 'true',
+    mathJax: 'false',
+    enableQQ: 'true',
+    requiredFields: requiredFields,
+    emojiCDN: 'https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/emoji/valine/',
+    emojiMaps: emojiMaps
+  })
+  </script>
+
+
+
+
+
+  
+<script src="/junblog/js/app.js"></script>
+
+
+
+  
+<script src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.6.5/js/search.js"></script>
+
+
+
+
+
+
+
+<!-- 复制 -->
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="fas fa-copy"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-check-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-check-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('fa-copy');
+        $icon.addClass('fa-times-circle');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('fa-times-circle');
+          $icon.addClass('fa-copy');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+
+
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  function pjax_fancybox() {
+    $(".article-entry").find("img").not('.inline').not('a img').each(function () { //渲染 fancybox
+      var element = document.createElement("a"); // a 标签
+      $(element).attr("pjax-fancybox", "");  // 过滤 pjax
+      $(element).attr("href", $(this).attr("src"));
+      if ($(this).attr("data-original")) {
+        $(element).attr("href", $(this).attr("data-original"));
+      }
+      $(element).attr("data-fancybox", "images");
+      var caption = "";   // 描述信息
+      if ($(this).attr('alt')) {  // 标准 markdown 描述信息
+        $(element).attr('data-caption', $(this).attr('alt'));
+        caption = $(this).attr('alt');
+      }
+      var div = document.createElement("div");
+      $(div).addClass("fancybox");
+      $(this).wrap(div); // 最外层套 div ，其实主要作用还是 class 样式
+      var span = document.createElement("span");
+      $(span).addClass("image-caption");
+      $(span).text(caption); // 加描述
+      $(this).after(span);  // 再套一层描述
+      $(this).wrap(element);  // 最后套 a 标签
+    })
+    $(".article-entry").find("img").fancybox({
+      selector: '[data-fancybox="images"]',
+      hash: false,
+      loop: false,
+      closeClick: true,
+      helpers: {
+        overlay: {closeClick: true}
+      },
+      buttons: [
+        "zoom",
+        "close"
+      ]
+    });
+  };
+  $(function () {
+    pjax_fancybox();
+  });
+</script>
+
+
+
+
+
+  <script>setLoadingBarProgress(100);</script>
+</body>
+</html>

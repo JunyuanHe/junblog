@@ -3,7 +3,7 @@
   <title>Jun&#39;s Blog</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/junblog/atom.xml" rel="self"/>
   
   <link href="https://heliumhe.gitee.io/"/>
   <updated>2021-01-20T08:45:08.197Z</updated>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hexo网站搭建教程 - BY HJY</title>
-    <link href="https://heliumhe.gitee.io/junblog/2021/01/20/hexo%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%20-%20BY%20HJY/"/>
-    <id>https://heliumhe.gitee.io/junblog/2021/01/20/hexo%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%20-%20BY%20HJY/</id>
+    <link href="https://heliumhe.gitee.io/2021/01/20/hexo%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%20-%20BY%20HJY/"/>
+    <id>https://heliumhe.gitee.io/2021/01/20/hexo%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B%20-%20BY%20HJY/</id>
     <published>2021-01-20T08:44:37.000Z</published>
     <updated>2021-01-20T08:45:08.197Z</updated>
     
@@ -47,8 +47,8 @@
   
   <entry>
     <title>复制文件时&quot;无法读取源文件或磁盘&quot;的解决方案记录</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+    <link href="https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+    <id>https://heliumhe.gitee.io/2020/09/16/%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6%E6%97%B6%E6%97%A0%E6%B3%95%E8%AF%BB%E5%8F%96%E6%BA%90%E6%96%87%E4%BB%B6%E6%88%96%E7%A3%81%E7%9B%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <published>2020-09-16T08:50:37.000Z</published>
     <updated>2020-09-18T05:16:22.000Z</updated>
     
@@ -74,8 +74,8 @@
   
   <entry>
     <title>讨论：是不是有误？——关于二项分布与负二项分布的关系</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <id>https://heliumhe.gitee.io/2020/08/28/%E8%AE%A8%E8%AE%BA%EF%BC%9A%E6%98%AF%E4%B8%8D%E6%98%AF%E6%9C%89%E8%AF%AF%EF%BC%9F%E2%80%94%E2%80%94%E5%85%B3%E4%BA%8E%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E4%B8%8E%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
     <published>2020-08-28T13:15:23.000Z</published>
     <updated>2020-08-28T14:28:14.000Z</updated>
     
@@ -99,8 +99,8 @@
   
   <entry>
     <title>一份不知是否应该称为&quot;关于&quot;的博客规划</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/"/>
+    <id>https://heliumhe.gitee.io/2020/08/24/%E4%B8%80%E4%BB%BD%E4%B8%8D%E7%9F%A5%E6%98%AF%E5%90%A6%E5%BA%94%E8%AF%A5%E7%A7%B0%E4%B8%BA_%E5%85%B3%E4%BA%8E_%E7%9A%84%E5%8D%9A%E5%AE%A2%E8%A7%84%E5%88%92/</id>
     <published>2020-08-24T13:15:12.000Z</published>
     <updated>2020-08-27T13:37:26.000Z</updated>
     
@@ -123,8 +123,8 @@
   
   <entry>
     <title>C++程序设计基础(8) - 变量的存储类型</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/"/>
+    <id>https://heliumhe.gitee.io/2020/08/23/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(8)%20-%20%E5%8F%98%E9%87%8F%E7%9A%84%E5%AD%98%E5%82%A8%E7%B1%BB%E5%9E%8B/</id>
     <published>2020-08-23T01:20:12.000Z</published>
     <updated>2020-08-23T01:25:48.000Z</updated>
     
@@ -148,8 +148,8 @@
   
   <entry>
     <title>C++程序设计基础(7) - 作用域</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/"/>
+    <id>https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(7)%20-%20%E4%BD%9C%E7%94%A8%E5%9F%9F/</id>
     <published>2020-08-22T13:34:12.000Z</published>
     <updated>2020-08-22T14:14:48.000Z</updated>
     
@@ -173,8 +173,8 @@
   
   <entry>
     <title>C++程序设计基础(6) - 函数</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/"/>
+    <id>https://heliumhe.gitee.io/2020/08/22/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(6)%20-%20%E5%87%BD%E6%95%B0/</id>
     <published>2020-08-22T11:32:47.000Z</published>
     <updated>2020-08-22T13:27:44.000Z</updated>
     
@@ -198,8 +198,8 @@
   
   <entry>
     <title>C++程序设计基础(5) - 复合类型数据：指针与引用初步</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/"/>
+    <id>https://heliumhe.gitee.io/2020/08/20/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(5)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%88%9D%E6%AD%A5/</id>
     <published>2020-08-20T12:01:04.000Z</published>
     <updated>2020-08-21T15:10:22.000Z</updated>
     
@@ -223,8 +223,8 @@
   
   <entry>
     <title>C++程序设计基础(4) - 复合类型数据：数组</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/"/>
+    <id>https://heliumhe.gitee.io/2020/08/16/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(4)%20-%20%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B%E6%95%B0%E6%8D%AE_%E6%95%B0%E7%BB%84/</id>
     <published>2020-08-16T14:02:16.000Z</published>
     <updated>2020-08-22T11:36:36.000Z</updated>
     
@@ -248,8 +248,8 @@
   
   <entry>
     <title>C++程序设计基础(3) - 结构化程序设计</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/"/>
+    <id>https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(3)%20-%20%E7%BB%93%E6%9E%84%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</id>
     <published>2020-08-15T13:02:56.000Z</published>
     <updated>2020-08-22T11:35:48.000Z</updated>
     
@@ -273,8 +273,8 @@
   
   <entry>
     <title>C++程序设计基础(2) - 数据与运算</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/"/>
+    <id>https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(2)%20-%20%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%BF%90%E7%AE%97/</id>
     <published>2020-08-15T13:00:34.000Z</published>
     <updated>2020-08-19T11:42:48.000Z</updated>
     
@@ -298,8 +298,8 @@
   
   <entry>
     <title>C++程序设计基础(1) - 计算机基础知识</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <link href="https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://heliumhe.gitee.io/2020/08/15/C++%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%9F%BA%E7%A1%80(1)%20-%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
     <published>2020-08-15T12:36:59.000Z</published>
     <updated>2020-08-19T11:33:06.000Z</updated>
     
@@ -323,8 +323,8 @@
   
   <entry>
     <title>Linux Mint安装及LaTeX-Lyx配置踩坑记</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/"/>
+    <id>https://heliumhe.gitee.io/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/</id>
     <published>2020-07-26T08:43:01.000Z</published>
     <updated>2020-08-16T12:17:36.000Z</updated>
     
@@ -352,8 +352,8 @@
   
   <entry>
     <title>集合元素个数与线性空间的维数</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/"/>
+    <id>https://heliumhe.gitee.io/2020/07/12/%E9%9B%86%E5%90%88%E5%85%83%E7%B4%A0%E4%B8%AA%E6%95%B0%E4%B8%8E%E7%BA%BF%E6%80%A7%E7%A9%BA%E9%97%B4%E7%9A%84%E7%BB%B4%E6%95%B0/</id>
     <published>2020-07-12T07:22:52.000Z</published>
     <updated>2020-08-16T12:17:12.000Z</updated>
     
@@ -378,8 +378,8 @@
   
   <entry>
     <title>Excerpts of Where the Crawdads Sing</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/"/>
+    <id>https://heliumhe.gitee.io/2020/07/08/Excerpts-of-Where-the-Crowdads-Sing/</id>
     <published>2020-07-08T14:00:00.000Z</published>
     <updated>2020-07-22T01:06:14.000Z</updated>
     
@@ -407,8 +407,8 @@
   
   <entry>
     <title>测试文档</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/"/>
+    <id>https://heliumhe.gitee.io/2020/07/04/%E6%B5%8B%E8%AF%95%E6%96%87%E6%A1%A3/</id>
     <published>2020-07-04T03:46:50.000Z</published>
     <updated>2020-11-09T05:43:08.000Z</updated>
     
@@ -430,8 +430,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://heliumhe.gitee.io/junblog/2020/07/04/hello-world/"/>
-    <id>https://heliumhe.gitee.io/junblog/2020/07/04/hello-world/</id>
+    <link href="https://heliumhe.gitee.io/2020/07/04/hello-world/"/>
+    <id>https://heliumhe.gitee.io/2020/07/04/hello-world/</id>
     <published>2020-07-03T23:29:50.000Z</published>
     <updated>2020-12-23T11:15:01.210Z</updated>
     
