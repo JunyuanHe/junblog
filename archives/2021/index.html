@@ -429,9 +429,117 @@
         
           
         
+          
+        
       
     
     
+      
+        
+          <div class='post-wrapper'>
+            <article class="post white-box blur reveal ">
+  
+
+
+  <section class='meta'>
+    
+      
+      
+      <div class="meta" id="header-meta">
+        
+          
+  <h2 class="title">
+    <a href="/junblog/2021/02/19/R%20Basics/">
+      R Basics
+    </a>
+  </h2>
+
+
+        
+        <div class='new-meta-box'>
+          
+            
+          
+            
+              
+<div class='new-meta-item author'>
+  <a href="" rel="nofollow">
+    <img src="https://cdn.jsdelivr.net/gh/JunyuanHe/cdn-assets@master/img/GeographicObjects2.jpg">
+    <p>Jun</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+  
+  <div class='new-meta-item category'>
+    <a href='/junblog/categories/R/' rel="nofollow">
+      <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
+      <p>R</p>
+    </a>
+  </div>
+
+
+            
+          
+            
+              <div class="new-meta-item date">
+  <a class='notlink'>
+    <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2021年2月19日 15:15</p>
+  </a>
+</div>
+
+            
+          
+            
+              
+
+            
+          
+            
+              
+
+            
+          
+        </div>
+        
+          <hr>
+        
+      </div>
+    
+  </section>
+
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="vectors">Vectors</h2>
+<p>To create a vector, use the <code>c</code> command, which stands for <em>concatenate or combine</em>.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; v &lt;- c(<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>)</span><br></pre></td></tr></table></figure>
+<p>To create a scalar, type</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; n &lt;- <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<p>and R views n as a vector of length 1.</p>
+<p>We can know many properties of a vector immediately. For instance, <code>sum(V)</code> adds up all the components of a vector and <code>max(v)</code> gives the largests element of v, <code>length(v)</code> returns the length of the vector v.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; sum(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">23</span></span><br><span class="line">&gt; max(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">9</span></span><br><span class="line">&gt; min(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">1</span></span><br><span class="line">&gt; length(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">6</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+      
+        <div class="button readmore">
+          <a href="/junblog/2021/02/19/R%20Basics/">
+            阅读全文 <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+      
+    
+  </section>
+</article>
+
+          </div>
+        
       
         
           <div class='post-wrapper'>
@@ -786,6 +894,59 @@
     <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
     
     
+      <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
@@ -881,6 +1042,11 @@
             ><div class='name'>English</div><div class='badge'>(1)</div></a></li>
         
           <li><a class="flat-box"
+            title="/junblog/categories/R/" href="/junblog/categories/R/"
+            id="junblogcategoriesR"
+            ><div class='name'>R</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box"
             title="/junblog/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/" href="/junblog/categories/%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E5%8F%8A%E6%B5%8B%E8%AF%95/"
             id="junblogcategoriesE4BDBFE794A8E8AFB4E6988EE58F8AE6B58BE8AF95"
             ><div class='name'>使用说明及测试</div><div class='badge'>(2)</div></a></li>
@@ -957,7 +1123,7 @@
 
 
     <div class='content'>
-      <a href="/junblog/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/junblog/tags/C/" style="font-size: 24px; color: #555">C++</a> <a href="/junblog/tags/English/" style="font-size: 14px; color: #999">English</a> <a href="/junblog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/junblog/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/junblog/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/junblog/tags/Lyx/" style="font-size: 14px; color: #999">Lyx</a> <a href="/junblog/tags/Machine-Learning/" style="font-size: 14px; color: #999">Machine Learning</a> <a href="/junblog/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/junblog/tags/SQL/" style="font-size: 14px; color: #999">SQL</a> <a href="/junblog/tags/T-SQL/" style="font-size: 14px; color: #999">T-SQL</a> <a href="/junblog/tags/Web/" style="font-size: 14px; color: #999">Web</a> <a href="/junblog/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/junblog/tags/excerpt/" style="font-size: 14px; color: #999">excerpt</a> <a href="/junblog/tags/novel/" style="font-size: 14px; color: #999">novel</a> <a href="/junblog/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 14px; color: #999">关于</a> <a href="/junblog/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" style="font-size: 14px; color: #999">抽象代数</a> <a href="/junblog/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/junblog/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 14px; color: #999">概率论</a> <a href="/junblog/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/junblog/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/" style="font-size: 14px; color: #999">疑难杂症</a> <a href="/junblog/tags/%E7%A1%AC%E7%9B%98/" style="font-size: 14px; color: #999">硬盘</a>
+      <a href="/junblog/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/junblog/tags/C/" style="font-size: 24px; color: #555">C++</a> <a href="/junblog/tags/English/" style="font-size: 14px; color: #999">English</a> <a href="/junblog/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/junblog/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/junblog/tags/Linux/" style="font-size: 14px; color: #999">Linux</a> <a href="/junblog/tags/Lyx/" style="font-size: 14px; color: #999">Lyx</a> <a href="/junblog/tags/Machine-Learning/" style="font-size: 14px; color: #999">Machine Learning</a> <a href="/junblog/tags/Probability/" style="font-size: 14px; color: #999">Probability</a> <a href="/junblog/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/junblog/tags/R/" style="font-size: 14px; color: #999">R</a> <a href="/junblog/tags/SQL/" style="font-size: 14px; color: #999">SQL</a> <a href="/junblog/tags/T-SQL/" style="font-size: 14px; color: #999">T-SQL</a> <a href="/junblog/tags/Web/" style="font-size: 14px; color: #999">Web</a> <a href="/junblog/tags/book/" style="font-size: 14px; color: #999">book</a> <a href="/junblog/tags/excerpt/" style="font-size: 14px; color: #999">excerpt</a> <a href="/junblog/tags/novel/" style="font-size: 14px; color: #999">novel</a> <a href="/junblog/tags/%E5%85%B3%E4%BA%8E/" style="font-size: 14px; color: #999">关于</a> <a href="/junblog/tags/%E6%8A%BD%E8%B1%A1%E4%BB%A3%E6%95%B0/" style="font-size: 14px; color: #999">抽象代数</a> <a href="/junblog/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 14px; color: #999">数据库</a> <a href="/junblog/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/" style="font-size: 14px; color: #999">概率论</a> <a href="/junblog/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 14px; color: #999">测试</a> <a href="/junblog/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/" style="font-size: 14px; color: #999">疑难杂症</a> <a href="/junblog/tags/%E7%A1%AC%E7%9B%98/" style="font-size: 14px; color: #999">硬盘</a>
     </div>
   </section>
 
@@ -1036,6 +1202,59 @@
 
 	<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
 	
+
+	
+	    <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 	
 

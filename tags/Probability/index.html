@@ -18,7 +18,7 @@
 
   <!-- 页面元数据 -->
   
-    <title>分类：Linux - Jun&#39;s Blog</title>
+    <title>标签：Probability - Jun&#39;s Blog</title>
   
   
 
@@ -360,8 +360,8 @@
         
           
   <h2 class="title">
-    <a href="/junblog/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/">
-      Linux Mint安装及LaTeX-Lyx配置踩坑记
+    <a href="/junblog/2021/02/19/R%20Basics/">
+      R Basics
     </a>
   </h2>
 
@@ -386,9 +386,9 @@
               
   
   <div class='new-meta-item category'>
-    <a href='/junblog/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Linux/' rel="nofollow">
+    <a href='/junblog/categories/R/' rel="nofollow">
       <i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>
-      <p>计算机/Linux</p>
+      <p>R</p>
     </a>
   </div>
 
@@ -399,7 +399,7 @@
               <div class="new-meta-item date">
   <a class='notlink'>
     <i class="fas fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2020年7月26日 16:43</p>
+    <p>发布于：2021年2月19日 15:15</p>
   </a>
 </div>
 
@@ -427,13 +427,20 @@
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本文记录安装Linux Mint系统过程中以及使用Linux版的LaTeX和Lyx时出现的问题，并给出解决方案。</p>
+        <h2 id="vectors">Vectors</h2>
+<p>To create a vector, use the <code>c</code> command, which stands for <em>concatenate or combine</em>.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; v &lt;- c(<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>)</span><br></pre></td></tr></table></figure>
+<p>To create a scalar, type</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; n &lt;- <span class="number">100</span></span><br></pre></td></tr></table></figure>
+<p>and R views n as a vector of length 1.</p>
+<p>We can know many properties of a vector immediately. For instance, <code>sum(V)</code> adds up all the components of a vector and <code>max(v)</code> gives the largests element of v, <code>length(v)</code> returns the length of the vector v.</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; sum(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">23</span></span><br><span class="line">&gt; max(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">9</span></span><br><span class="line">&gt; min(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">1</span></span><br><span class="line">&gt; length(v)</span><br><span class="line">[<span class="number">1</span>] <span class="number">6</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
       
         <div class="button readmore">
-          <a href="/junblog/2020/07/26/Linux-Mint%E5%AE%89%E8%A3%85%E5%8F%8ALaTeX-Lyx%E9%85%8D%E7%BD%AE%E8%B8%A9%E5%9D%91%E8%AE%B0/">
+          <a href="/junblog/2021/02/19/R%20Basics/">
             阅读全文 <i class="fas fa-chevron-right"></i>
           </a>
         </div>
@@ -452,13 +459,65 @@
     <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
     
     
+      <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3.0/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
 
     
   
-
 </div>
 <aside class='l_side'>
   
