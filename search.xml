@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>开集构造定理</title>
+      <link href="/junblog/2021/03/03/%E5%BC%80%E9%9B%86%E6%9E%84%E9%80%A0%E5%AE%9A%E7%90%86/"/>
+      <url>/junblog/2021/03/03/%E5%BC%80%E9%9B%86%E6%9E%84%E9%80%A0%E5%AE%9A%E7%90%86/</url>
+      
+        <content type="html"><![CDATA[<p>今日概率论课程, 使用了此定理. 即<span class="math inline">\(\mathbb{R}\)</span>中的非空开集是可数个互不相交的开区间的并, 下面我们给出证明.</p><a id="more"></a><p><img src="/junblog/2021/03/03/%E5%BC%80%E9%9B%86%E6%9E%84%E9%80%A0%E5%AE%9A%E7%90%86/0001.jpg"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 问题与杂记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 杂记 </tag>
+            
+            <tag> 实分析 </tag>
+            
+            <tag> 集合论 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>R Basics</title>
       <link href="/junblog/2021/02/19/R%20Basics/"/>
       <url>/junblog/2021/02/19/R%20Basics/</url>
